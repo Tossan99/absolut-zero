@@ -3,7 +3,7 @@
 
 <center> 
 
-![Logo]()
+![Logo](documentation/readme_images/absolut_zero_logo.JPG)
 
 Welcome to Absolute Zero, your ultimate destination for exquisite alcohol-free beverages! At Absolute Zero, we believe that enjoyment shouldn't compromise your lifestyle choices. Our carefully curated collection spans a wide range of flavors and styles, from sparkling sodas to artisanal mocktails, ensuring there's something to tantalize every taste bud. With a commitment to quality, innovation, and customer satisfaction, Absolute Zero is more than just a store – it's a lifestyle. Join us on a journey of flavor discovery and elevate your drinking experience with Absolute Zero. Because here, zero alcohol never means zero excitement. Cheers to a life of taste without compromise!🥂
     
@@ -153,9 +153,11 @@ Welcome to Absolute Zero! If you're new to our website, we're excited to introdu
 
 - [USER STORY: Placeholder]()
 
-### [EPIC 4: Site Owner Moderate Content](https://github.com/Tossan99/osrs-tips/issues/4)
+### [EPIC 4: Site Owner Moderating Content](https://github.com/Tossan99/osrs-tips/issues/4)
 
 - [USER STORY: Placeholder]()
+
+These user stories provide a framework for developing features and functionalities that cater to different aspects of the e-commerce platform, ensuring a seamless user experience from the initial impression to ongoing engagement and moderation.
 
 For more information vissit the complete [Kanban Board here.]()
 
@@ -263,7 +265,7 @@ All epics and user stories implementation progress was registered using [GitHub]
 - **[Epic 3: User Interaction and Engagement]()**<br>
   - [USER STORY: Placeholder]()
 - <img src="EPIC 3"><br><br>
-- **[Epic 4: Site Owner Moderate Content]()**<br>
+- **[Epic 4: Site Owner Moderating Content]()**<br>
   - [USER STORY: Placeholder]()
 - <img src="EPIC 4"><br><br>
 
