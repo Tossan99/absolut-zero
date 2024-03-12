@@ -159,9 +159,9 @@ Welcome to Absolute Zero! If you're new to our website, we're excited to introdu
 
 These user stories provide a framework for developing features and functionalities that cater to different aspects of the e-commerce platform, ensuring a seamless user experience from the initial impression to ongoing engagement and moderation.
 
-For more information vissit the complete [Kanban Board here.]()
+For more information vissit the complete [Kanban Board here.](https://github.com/users/Tossan99/projects/7)
 
-![Kanban Board]()
+![Kanban Board](documentation/readme_images/absolut_zero_kanban_board.JPG)
 
 [Back to top ⇧](#table-of-contents)
 
@@ -255,7 +255,7 @@ All epics and user stories implementation progress was registered using [GitHub]
 <summary>Kanban Board Details</summary>
 
 - **KANBAN BOARD**<br><br>
-    <img src=""><br><br>
+    <img src="documentation/readme_images/absolut_zero_kanban_board.JPG"><br><br>
 - **[Epic 1: Users First Impression]()**<br>
   - [USER STORY: Placeholder]()
 - <img src="EPIC 1"><br><br>
@@ -285,7 +285,13 @@ We document bugs found during development as GitHub issues. This provides detail
 
 ### User Story Distribution (MoSCoW)
 
-For this project, MoSCoW was used for the userstories to prioritizes implementation of features. MoSCoW is a project management framework that prioritizes requirements into four categories: Must-haves (critical for success), Should-haves (important), Could-haves (desirable if resources permit), and Won't-haves (explicitly excluded or deferred).
+For this project, MoSCoW was used for the user stories to prioritizes implementation of features. MoSCoW is a project management framework that prioritizes requirements into four categories: `Must Have` (critical for success), `Should Have` (important), `Could Have` (desirable if resources permit), and `Won't Have` (explicitly excluded or deferred).
+
+As seen in the chart below, the user stories prioritized as `Must Have` account for approximately 60%, while those prioritized as `Could Have` account for approximately 20%. The remaining 20% is shared between `Should Have` and `Won't Have`.
+
+![MoSCoW Pie Chart](documentation/readme_images/absolut_zero_moscow_piechart.png)
+
+<small>The percentages aren't displayed in the pie chart since it's considered poor data representation to use percentage points for any data with fewer than 100 data points.</small>
 
 [Back to top ⇧](#table-of-contents)
 
