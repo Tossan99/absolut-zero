@@ -1,6 +1,5 @@
 body {
     font-family: "Roboto", sans-serif;
-    color: #383B39;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -13,16 +12,14 @@ h4,
 h5,
 h6 {
     font-family: "Roboto Slab", serif;
-    color: #383B39;
 }
 
 .main-header {
     position: relative;
-    background-color: #343a40;
-    background: url("/static/images/header-img.webp") no-repeat center center;
+    background: url("https://media.istockphoto.com/id/1044909356/photo/wet-blue-glass-background.jpg?s=612x612&w=0&k=20&c=Uq0sCfGVKaenpn7-h55ZCHPoNjyoYS7inR778Ozd5W4=") no-repeat center center;
     background-size: cover;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }
 
 .features-icons {
