@@ -14,6 +14,8 @@ h6 {
     font-family: "Roboto Slab", serif;
 }
 
+
+/* Header section -------------------------------------------------- */
 .main-header {
     position: relative;
     background: url("https://media.istockphoto.com/id/1044909356/photo/wet-blue-glass-background.jpg?s=612x612&w=0&k=20&c=Uq0sCfGVKaenpn7-h55ZCHPoNjyoYS7inR778Ozd5W4=") no-repeat center center;
@@ -22,40 +24,33 @@ h6 {
     padding-bottom: 6rem;
 }
 
-.features-icons {
+/* Features section -------------------------------------------------- */
+.features {
     padding-top: 7rem;
     padding-bottom: 7rem;
 }
 
-.features-icons .features-icons-item {
-    max-width: 20rem;
+.features .features-item {
+    max-width: 25rem;
 }
 
-.features-icons .features-icons-item .features-icons-icon {
-    height: 7rem;
+.features .features-item .features-icon {
+    font-size: 6rem;
+    color: #1565C0 ;
 }
 
-.features-icons .features-icons-item .features-icons-icon i {
-    font-size: 4.5rem;
-}
 
-.showcase .showcase-text {
-    padding: 3rem;
-}
-
+/* Showcase section -------------------------------------------------- */
 .showcase .showcase-img {
     min-height: 30rem;
     background: url("/static/images/section3-img.jpeg") no-repeat center center;
     background-size: cover;
 }
 
-.testimonials {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-}
 
+/* Customer reviews section -------------------------------------------------- */
 .testimonials .testimonial-item {
-    max-width: 18rem;
+    max-width: 20rem;
 }
 
 .testimonials .testimonial-item img {
