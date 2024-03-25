@@ -29,25 +29,25 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="{% url 'home' %}"><h2><strong>Absolut <em class="text-primary">Zero</em></strong></h2></a>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container-fluid px-3 px-xxl-5">
+            <a href="{% url 'home' %}"><img id="logo" src="{% static 'images/absolut-zero-logo.png' %}" alt=""></a>
             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <ul class="navbar-nav me-auto ms-3">
                     <li class="nav-item">
-                        <a class="nav-link nav-text {% if request.path == home_url %}active" 
+                        <a class="nav-link nav-text fs-5 fw-bold {% if request.path == home_url %}active" 
                             aria-current="page{% endif %}" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-text {% if request.path == about_url %}active" 
+                        <a class="nav-link nav-text fs-5 fw-bold {% if request.path == about_url %}active" 
                             aria-current="page{% endif %}" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-text {% if request.path == about_url %}active" 
+                        <a class="nav-link nav-text fs-5 fw-bold {% if request.path == about_url %}active" 
                         aria-current="page{% endif %}" href="#">Products</a>
                     </li>
                 </ul>
