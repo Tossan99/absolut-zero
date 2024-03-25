@@ -41,10 +41,19 @@ h6 {
 
 
 /* Showcase section -------------------------------------------------- */
-.showcase .showcase-img {
+.showcase .showcase-item {
     min-height: 30rem;
-    background: url("/static/images/section3-img.jpeg") no-repeat center center;
-    background-size: cover;
+    max-height: 60rem;
+}
+
+.showcase .showcase-item .showcase-img {
+    height: 30rem;
+    
+}
+
+.showcase .showcase-item .showcase-text {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
 }
 
 
