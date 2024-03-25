@@ -4,16 +4,14 @@
 {% block content %}
 <!-- index.html content starts here -->
 
-
-
-<!-- Header -->
+<!-- Header section -->
 <header class="main-header">
     <div class="container px-5">
         <div class="row gx-5 align-items-center justify-content-center">
             <div class="col-lg-8 col-xl-7 col-xxl-6">
                 <div class="my-5 text-center text-xl-start">
                     <h1 class="display-4 fw-bold text-white mb-2">Absolut Zero</h1>
-                    <h2 class="fw-bold text-white mb-2"><em>- Indulge in Zero Limits with Absolut Zero!</em></h2>
+                    <h2 class="fw-bold text-white mb-2"><em>Indulge in Zero Limits with Absolut Zero!</em></h2>
                     <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start mt-5">
                         <a class="btn btn-primary btn-outline-light btn-lg px-4 me-sm-3" href="#features">Browse Products</a>
                         <a class="btn btn-primary btn-outline-light btn-lg px-4" href="#!">Sign Up</a>
@@ -25,7 +23,7 @@
     </div>
 </header>
 
-<!-- Features -->
+<!-- Features section -->
 <section class="features text-center">
     <div class="container">
         <div class="row">
@@ -57,13 +55,13 @@
     </div>
 </section>
 
-<!-- Image Showcases-->
+<!-- Showcases section -->
 <section class="showcase bg-light">
     <div class="container-fluid p-0">
         <div class="row g-0 showcase-item">
             <img class="col-lg-6 order-lg-2 object-fit-cover showcase-img" src="{% static '/images/top-brands.jpg' %}" alt="...">
             <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                <h2 class="mx-4">Curation of Top Brands and Products</h2>
+                <h3 class="mx-4">Curation of Top Brands and Products</h3>
                 <p class="lead mb-0 mx-4">We pride ourselves on sourcing the finest alcohol-free beverages from around the world. 
                     Our platform showcases a carefully curated collection of top brands and innovative products, ensuring that 
                     customers have access to the best non-alcoholic options available.</p>
@@ -72,7 +70,7 @@
         <div class="row g-0 showcase-item">
             <img class="col-lg-6 object-fit-cover showcase-img" src="{% static '/images/health-wellness.jpg' %}" alt="...">
             <div class="col-lg-6 my-auto showcase-text">
-                <h2 class="mx-4">Commitment to Health and Wellness</h2>
+                <h3 class="mx-4">Commitment to Health and Wellness</h3>
                 <p class="lead mb-0 mx-4">Absolut Zero is dedicated to promoting a healthier lifestyle by offering a curated selection of premium 
                     alcohol-free beverages. Through our platform, customers can discover delicious alternatives that allow them to enjoy the social 
                     aspect of drinking without the negative effects of alcohol.</p>
@@ -81,7 +79,7 @@
         <div class="row g-0 showcase-item">
             <img class="col-lg-6 order-lg-2 object-fit-cover showcase-img" src="{% static '/images/community-engagement.jpg' %}" alt="...">
             <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                <h2 class="mx-4">Community Engagement</h2>
+                <h3 class="mx-4">Community Engagement</h3>
                 <p class="lead mb-0 mx-4">Absolut Zero actively engages with its customers through social media platforms, newsletters, and events, 
                     fostering a vibrant community of like-minded individuals passionate about alcohol-free living and exploration of new tastes.</p>
             </div>
@@ -89,39 +87,38 @@
     </div>
 </section>
 
-
-<!-- Testimonials-->
-<section class="testimonials text-center">
+<!-- Customer reviews section -->
+<section class="reviews text-center">
     <div class="container">
-        <h2 class="mb-5">What people are saying...</h2>
+        <h3 class="mb-5">Customer reviews</h3>
         <div class="row">
             <div class="col-lg-4">
-                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                    <img class="img-fluid rounded-circle mb-3" src="{% static 'images/placeholder-user.jpg' %}" alt="..." />
+                <div class="reviews-item mx-auto mb-5 mb-lg-0">
+                    <img class="object-fit-cover mb-3" src="{% static 'images/margaret-e.jpg' %}" alt="..." />
                     <h5>Margaret E.</h5>
-                    <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+                    <p class="font-weight-light mb-0">Absolut Zero made my alcohol-free journey so enjoyable! The variety of 
+                        beverages is amazing, and the detailed descriptions helped me find new favorites easily.</p>
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                    <img class="img-fluid rounded-circle mb-3" src="{% static 'images/placeholder-user.jpg' %}" alt="..." />
+                <div class="reviews-item mx-auto mb-5 mb-lg-0">
+                    <img class="object-fit-cover mb-3" src="{% static 'images/fred-s.jpg' %}" alt="..." />
                     <h5>Fred S.</h5>
-                    <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
+                    <p class="font-weight-light mb-0">The convenience of ordering from Absolut Zero is unmatched. 
+                        Quick delivery, secure payments, and top-notch customer service make it my go-to for alcohol-free drinks.</p>
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                    <img class="img-fluid rounded-circle mb-3" src="{% static 'images/placeholder-user.jpg' %}" alt="..." />
+                <div class="reviews-item mx-auto mb-5 mb-lg-0">
+                    <img class="object-fit-cover mb-3" src="{% static 'images/sarah-w.jpg' %}" alt="..." />
                     <h5>Sarah W.</h5>
-                    <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
+                    <p class="font-weight-light mb-0">As someone focused on wellness, Absolut Zero has been a game-changer. I 
+                        love that I can explore different brands and flavors without compromising on taste or quality. Highly recommend!</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-        
-
-
 
 <!-- index.html content ends here -->
 {% endblock %}
