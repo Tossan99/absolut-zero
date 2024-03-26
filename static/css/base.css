@@ -22,7 +22,7 @@ h6 {
 /* Header section -------------------------------------------------- */
 .main-header {
     position: relative;
-    background: url("https://media.istockphoto.com/id/1044909356/photo/wet-blue-glass-background.jpg?s=612x612&w=0&k=20&c=Uq0sCfGVKaenpn7-h55ZCHPoNjyoYS7inR778Ozd5W4=") no-repeat center center;
+    background: url(https://st3.depositphotos.com/3255011/15684/i/450/depositphotos_156840726-stock-photo-frosted-glass-texture.jpg);
     background-size: cover;
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -30,7 +30,15 @@ h6 {
 
 #header-logo {
     width: 30rem;
-    background-color: white;
+}
+
+.carousel-img {
+    width: auto;
+    height: 25rem;
+}
+
+#productCarousel {
+    height: 30rem;
 }
 
 /* Features section -------------------------------------------------- */

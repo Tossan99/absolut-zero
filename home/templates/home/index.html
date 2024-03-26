@@ -9,16 +9,45 @@
     <div class="container px-5">
         <div class="row gx-5 align-items-center justify-content-center">
             <div class="col-lg-8 col-xl-7 col-xxl-6">
-                <div class="my-5 text-center text-xl-start">
+                <div class="my-5 p-2 p-md-4">
                     <img id="header-logo" src="{% static '/images/absolut-zero-logo.png' %}" alt="">
-                    <h2 class="fw-bold text-white mb-2"><em>Indulge in Zero Limits with Absolut Zero!</em></h2>
-                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start mt-5">
+                    <h2 class="fw-bold my-2"><em>Indulge in Zero Limits with Absolut Zero!</em></h2>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start mt-3">
                         <a class="btn btn-primary btn-outline-light btn-lg px-4 me-sm-3" href="#features">Browse Products</a>
                         <a class="btn btn-primary btn-outline-light btn-lg px-4" href="#!">Sign Up</a>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid" src="" alt="..."></div>
+            <div class="col-6">
+                <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="6000">
+                            <img src="{% static '/images/richard-juhlin.png' %}" class="d-block mx-auto carousel-img" alt="...">
+                            <div class="carousel-caption position-static text-black p-0 m-0">
+                                <h4 class="mt-2 mb-1">Richard Juhlin</h4>
+                                <p class="m-0"><em>Non Alcoholic Blanc de Blancs</em></p>
+                                <p class="m-0"><strong>750ml</strong><strong class="ms-4">89:-</strong></p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="6000">
+                            <img src="{% static '/images/oppigårds-winter-ale.png' %}" class="d-block mx-auto carousel-img" alt="...">
+                            <div class="carousel-caption position-static text-black p-0 m-0">
+                                <h4 class="mt-2 mb-1">Oppigårds Winter Ale</h4>
+                                <p class="m-0"><em>Alkoholfri</em></p>
+                                <p class="m-0"><strong>330ml</strong><strong class="ms-4">18:90:-</strong></p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="6000">
+                            <img src="{% static '/images/leitz-eins.png' %}" class="d-block mx-auto carousel-img" alt="...">
+                            <div class="carousel-caption position-static text-black p-0 m-0">
+                                <h4 class="mt-2 mb-1">Leitz Eins Zwei Zero</h4>
+                                <p class="m-0"><em>Riesling Alcohol Free</em></p>
+                                <p class="m-0"><strong>750ml</strong><strong class="ms-4">74:-</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </header>
