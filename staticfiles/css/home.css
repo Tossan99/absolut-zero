@@ -1,0 +1,71 @@
+/* Header section -------------------------------------------------- */
+.main-header {
+    position: relative;
+    background: url(https://st3.depositphotos.com/3255011/15684/i/450/depositphotos_156840726-stock-photo-frosted-glass-texture.jpg);
+    background-size: cover;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+#header-logo {
+    width: 30rem;
+}
+
+.carousel-img {
+    width: auto;
+    height: 25rem;
+}
+
+#productCarousel {
+    height: 30rem;
+}
+
+/* Features section -------------------------------------------------- */
+.features {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.features .features-item {
+    max-width: 25rem;
+}
+
+.features .features-item .features-icon {
+    font-size: 6rem;
+    color: #1565C0 ;
+}
+
+
+/* Showcase section -------------------------------------------------- */
+.showcase .showcase-item {
+    min-height: 30rem;
+    max-height: 60rem;
+}
+
+.showcase .showcase-item .showcase-img {
+    height: 30rem;
+    
+}
+
+.showcase .showcase-item .showcase-text {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+
+/* Customer reviews section -------------------------------------------------- */
+.reviews {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.reviews .reviews-item {
+    max-width: 20rem;
+}
+
+.reviews .reviews-item img {
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    box-shadow: 0px 5px 5px 0px #adb5bd;
+}

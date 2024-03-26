@@ -1,6 +1,5 @@
 body {
     font-family: "Roboto", sans-serif;
-    color: #383B39;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -13,56 +12,9 @@ h4,
 h5,
 h6 {
     font-family: "Roboto Slab", serif;
-    color: #383B39;
 }
 
-.main-header {
-    position: relative;
-    background-color: #343a40;
-    background: url("/static/images/header-img.webp") no-repeat center center;
-    background-size: cover;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-}
-
-.features-icons {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-}
-
-.features-icons .features-icons-item {
-    max-width: 20rem;
-}
-
-.features-icons .features-icons-item .features-icons-icon {
-    height: 7rem;
-}
-
-.features-icons .features-icons-item .features-icons-icon i {
-    font-size: 4.5rem;
-}
-
-.showcase .showcase-text {
-    padding: 3rem;
-}
-
-.showcase .showcase-img {
-    min-height: 30rem;
-    background: url("/static/images/section3-img.jpeg") no-repeat center center;
-    background-size: cover;
-}
-
-.testimonials {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-}
-
-.testimonials .testimonial-item {
-    max-width: 18rem;
-}
-
-.testimonials .testimonial-item img {
-    max-width: 12rem;
-    box-shadow: 0px 5px 5px 0px #adb5bd;
+#logo {
+    width: 17rem;
 }
 
