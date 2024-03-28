@@ -62,7 +62,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-text fs-5 fw-bold {% if request.path == about_url %}active" 
-                            aria-current="page{% endif %}" href="#">About Us</a>
+                            aria-current="page{% endif %}" href="{% url 'about' %}">About Us</a>
                     </li>
                     <li class="nav-item dropdown has-megamenu">
 				        <a class="nav-link dropdown-toggle show nav-text fs-5 fw-bold {% if request.path == about_url %}active" 
