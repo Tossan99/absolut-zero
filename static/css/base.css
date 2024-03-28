@@ -18,3 +18,17 @@ h6 {
     width: 17rem;
 }
 
+
+.navbar .megamenu{ 
+    padding: 1rem; 
+}
+
+.navbar .has-megamenu {
+    position:static!important;
+}
+
+.navbar .megamenu {
+    left:0; right:0; width:100%; margin-top:0;  
+}
+
+

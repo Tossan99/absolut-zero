@@ -62,12 +62,68 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-text fs-5 fw-bold {% if request.path == about_url %}active" 
-                            aria-current="page{% endif %}" href="#">About</a>
+                            aria-current="page{% endif %}" href="#">About Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-text fs-5 fw-bold {% if request.path == about_url %}active" 
-                        aria-current="page{% endif %}" href="#">Products</a>
-                    </li>
+                    <li class="nav-item dropdown has-megamenu">
+				        <a class="nav-link dropdown-toggle show nav-text fs-5 fw-bold {% if request.path == about_url %}active" 
+                            aria-current="page{% endif %}" href="#" data-bs-toggle="dropdown" aria-expanded="true">Beverages</a>
+                        <div class="dropdown-menu megamenu show" role="menu" data-bs-popper="none">
+                            <div class="row g-3">
+                                <div class="col-lg-3 col-6">
+                                    <div class="col-megamenu">
+                                        <h5 class="title">Beer</h5>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-lg-3 col-6">
+                                    <div class="col-megamenu">
+                                        <h5 class="title">Wine</h5>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-lg-3 col-6">
+                                    <div class="col-megamenu">
+                                        <h5 class="title">Cider</h5>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div>    
+                                <div class="col-lg-3 col-6">
+                                    <div class="col-megamenu">
+                                        <h5 class="title">Sparkling Wine</h5>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                            </div><!-- end row --> 
+                        </div> <!-- dropdown-mega-menu.// -->
+			        </li>
                 </ul>
                 <div class="d-flex">
                     <a class="btn btn-outline-dark" type="submit">
