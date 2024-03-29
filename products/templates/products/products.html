@@ -19,28 +19,39 @@
     </div>
 </header>
 
-<section class="py-5">
+<section class="py-5 bg-light">
     <div class="container px-4 px-lg-5 mt-5">
-        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <!-- Product image-->
-                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
-                    <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">Product name</h5>
-                            <!-- Product price-->
-                            <P>Price</P>
+        <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-lg-2 row-cols-xxl-3 justify-content-center">
+            {% for product in products %}
+                <div class="col mb-5 product-card">
+                    <div class="card h-100 p-3">
+                        <div class="row">
+                            <div class="col-4 p-0">
+                                <!-- Product image-->
+                                <img class="card-img-top object-fit-scale" src="{% static 'images/oppigårds-winter-ale.png' %}" height="230" alt="...">
+                            </div>
+                            <div class="col-8 p-0">
+                                <!-- Product details-->
+                                <div class="card-body p-0">
+                                    <!-- Product name-->
+                                    <p class="fs-5 m-0">{{ product.category.friendly_name }}, {{ product.subcategory.friendly_name }}</p>
+                                    <h5 class="fw-bolder fs-3 mb-1">{{ product.name }}</h5>
+                                    <h6 class="fs-4 mb-1">{{ product.subname }}</h6>
+                                </div>
+                                <div class="mt-5">
+                                    <!-- Product price-->
+                                    <span><em>{{ product.volume }}ml</em> <em class="ms-2">{{ product.percentage }}%</em> <strong class="ms-2">{{ product.price }}:-</strong></span>
+                                </div>
+                                <!-- Product actions-->
+                                <div class="row">
+                                    <div class="col-6"><a class="btn btn-outline-dark mt-auto" href="#">View Details</a></div>
+                                    <div class="col-6"><a class="btn btn-outline-dark mt-auto" href="#">Add To Cart</a></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
-                    </div>
                 </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
