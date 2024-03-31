@@ -1,3 +1,7 @@
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
 .product-card {
-    width: 40rem;
+    transition: all 0.3s;
 }
