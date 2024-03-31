@@ -9,7 +9,7 @@
 <!-- products.html content starts here -->
 
 <header class="bg-dark py-5">
-    <div class="container px-4 px-lg-5 my-5">
+    <div class="container-xxl px-4 px-lg-5 my-5">
         <div class="d-flex">
             <img src="{% static 'images/absolut-zero-logo.png' %}"  class="mx-auto" alt="" width="80%">
         </div>
@@ -19,33 +19,29 @@
     </div>
 </header>
 
-<section class="py-5 bg-light">
-    <div class="container px-4 px-lg-5 mt-5">
+<section class="py-5">
+    <div class="container-fluid px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
+            <!-- Product card -->
             {% for product in products %}
                 <div class="col-12 col-md-6 col-xl-4 mb-5 product-card">
-                    <div class="card h-100 p-3">
-                        <div class="row">
-                            <div class="col-4 p-0">
-                                <!-- Product image-->
+                    <div class="card container-fluid h-100 p-0">
+                        <div class="row mx-0">
+                            <div class="col-4 py-3 px-0">
                                 <img class="card-img-top object-fit-scale" src="{% static 'images/oppigårds-winter-ale.png' %}" height="230" alt="...">
                             </div>
-                            <div class="col-8 p-0">
-                                <!-- Product details-->
-                                <div class="card-body p-0">
-                                    <!-- Product name-->
+                            <div class="col-8 d-flex flex-column p-0 pt-2">
+                                <div class="p-0">
                                     <p class="fs-5 m-0">{{ product.category.friendly_name }}, {{ product.subcategory.friendly_name }}</p>
                                     <h5 class="fw-bolder fs-3 mb-1">{{ product.name }}</h5>
                                     <h6 class="fs-4 mb-1">{{ product.subname }}</h6>
                                 </div>
-                                <div class="mt-5">
-                                    <!-- Product price-->
-                                    <span><em>{{ product.volume }}ml</em> <em class="ms-2">{{ product.percentage }}%</em> <strong class="ms-2">{{ product.price }}:-</strong></span>
+                                <div class="mt-auto mb-2">
+                                    <span class="d-flex justify-content-between me-3"><em>{{ product.volume }}ml</em> <em>{{ product.percentage }}%</em> <strong>{{ product.price }}:-</strong></span>
                                 </div>
-                                <!-- Product actions-->
-                                <div class="row">
-                                    <div class="col-6"><a class="btn btn-outline-dark mt-auto" href="#">View Details</a></div>
-                                    <div class="col-6"><a class="btn btn-outline-dark mt-auto" href="#">Add To Cart</a></div>
+                                <div class="mb-3">
+                                    <span class=""><a class="btn btn-sm btn-outline-dark me-2" href="#">View Details</a></span>
+                                    <span class=""><a class="btn btn-sm btn-outline-dark" href="#">Add To Cart</a></span>
                                 </div>
                             </div>
                         </div>
