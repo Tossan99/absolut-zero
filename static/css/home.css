@@ -1,14 +1,12 @@
 /* Header section -------------------------------------------------- */
 .main-header {
     position: relative;
-    background: url(https://st3.depositphotos.com/3255011/15684/i/450/depositphotos_156840726-stock-photo-frosted-glass-texture.jpg);
+    background-image: url("../images/header_background.jpg");
     background-size: cover;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
 }
 
 #header-logo {
-    width: 30rem;
+    height: 4rem;
 }
 
 .carousel-img {

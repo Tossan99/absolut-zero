@@ -9,20 +9,18 @@
 <!-- index.html content starts here -->
 
 <!-- Header section -->
-<header class="main-header">
-    <div class="container px-5">
-        <div class="row gx-5 align-items-center justify-content-center">
-            <div class="col-lg-8 col-xl-7 col-xxl-6">
-                <div class="my-5 p-2 p-md-4">
-                    <img id="header-logo" src="{% static '/images/absolut-zero-logo.png' %}" alt="">
-                    <h2 class="fw-bold my-2"><em>Indulge in Zero Limits with Absolut Zero!</em></h2>
-                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start mt-3">
-                        <a class="btn btn-primary btn-outline-light btn-lg px-4 me-sm-3" href="#features">Browse Products</a>
-                        <a class="btn btn-primary btn-outline-light btn-lg px-4" href="#!">Sign Up</a>
-                    </div>
+<header class="main-header py-lg-5 py-3">
+    <div class="container-xxl">
+        <div class="row align-items-center justify-content-center my-3 ms-xl-5 ms-3 me-0">
+            <div class="col-lg-8 col-12 my-4 mb-lg-0 text-center order-lg-1 order-2">
+                <img id="header-logo" class="object-fit-cover" src="{% static '/images/absolut-zero-logo.png' %}" alt="">
+                <h2 class="fw-bold display-7 my-2">Indulge in Zero Limits with Absolut Zero!</h2>
+                <div class="">
+                    <a class="btn btn-primary btn-outline-light btn-lg px-4 me-sm-3" href="{% url 'products' %}">Browse Products</a>
+                    <a class="btn btn-primary btn-outline-light btn-lg px-4" href="#!">Sign Up</a>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-lg-4 col-12 order-lg-2 order-1">
                 <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="4000">
@@ -58,7 +56,7 @@
 
 <!-- Features section -->
 <section class="features text-center">
-    <div class="container">
+    <div class="container-xxl">
         <div class="row">
             <div class="col-lg-4">
                 <div class="features-item mx-auto mb-5 mb-lg-0 mb-lg-3">
