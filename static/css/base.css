@@ -61,6 +61,13 @@ a:hover::before {
     transform: scaleX(1);
 }
 
+/* Header section -------------------------------------------------- */
+.main-header {
+    position: relative;
+    background-image: url("../images/header_background.jpg");
+    background-size: cover;
+}
+
 /* Buttons -------------------------------------------------- */
 .main-btn {
     /* CSS code snippet from https://copy-paste-css.com/ */

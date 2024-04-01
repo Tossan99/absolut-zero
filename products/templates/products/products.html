@@ -8,19 +8,19 @@
 {% block content %}
 <!-- products.html content starts here -->
 
-<header class="bg-dark py-5">
+<header class="main-header py-5">
     <div class="container-xxl px-4 px-lg-5 my-5">
         <div class="d-flex">
             <img src="{% static 'images/absolut-zero-logo.png' %}"  class="mx-auto" alt="" width="80%">
         </div>
-        <div class="text-center text-white">
-            <h3 class="fw-normal text-white-50 mb-0 mt-4">All Products</h3>
+        <div class="text-center">
+            <h2 class="fw-bold mb-0 mt-4">All Products</h2>
         </div>
     </div>
 </header>
 
 <section class="py-5">
-    <div class="container-fluid px-4 px-lg-5 mt-5">
+    <div class="container-xxl px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <!-- Product card -->
             {% for product in products %}
@@ -40,7 +40,7 @@
                                     <span class="d-flex justify-content-between me-3"><em>{{ product.volume }}ml</em> <em>{{ product.percentage }}%</em> <strong>{{ product.price }}:-</strong></span>
                                 </div>
                                 <div class="mb-3">
-                                    <span class=""><a class="btn btn-sm btn-outline-dark me-2" href="#">View Details</a></span>
+                                    <span class=""><a class="btn btn-sm btn-outline-dark me-2" href="{% url 'product_information' product.slug %}">View Details</a></span>
                                     <span class=""><a class="btn btn-sm btn-outline-dark" href="#">Add To Cart</a></span>
                                 </div>
                             </div>

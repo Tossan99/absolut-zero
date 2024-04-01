@@ -1,9 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from .models import Product, Category
 
 def products_list(request):
-    """ Shows all products with sorting and search queries """
+    """ Shows all products and handles sorting and search queries """
 
     products = Product.objects.all()
     query = None
@@ -16,3 +16,16 @@ def products_list(request):
     }
 
     return render(request, 'products/products.html', context)
+
+
+def product_details(request, slug):
+    """ Shows product details """
+    
+    queryset = Product.objects.all()
+    product = get_object_or_404(queryset, slug=slug)
+
+    context = {
+        'product': product,
+    }
+
+    return render(request, 'products/product_details.html', context)
