@@ -43,9 +43,38 @@
     </div>
 </section>
 
-<section class="py-5 bg-light">
-    <div class="container px-4 px-lg-5 mt-5">
-        <h2 class="fw-bolder mb-4">Related products</h2>
+<section class="py-5">
+    <div class="container-xxl px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 text-center justify-content-center">
+            <h2 class="display-5 fw-bold">Related Products</h2>
+            <hr class="mb-5">
+            <!-- Product card -->
+            {% for product in related_products %}
+                <div class="col-12 col-md-6 col-xl-4 mb-5 product-card">
+                    <div class="card container-fluid h-100 p-0">
+                        <div class="row mx-0">
+                            <div class="col-4 py-3 px-0">
+                                <img class="card-img-top object-fit-scale" src="{% static 'images/oppigårds-winter-ale.png' %}" height="230" alt="...">
+                            </div>
+                            <div class="col-8 d-flex flex-column p-0 pt-2">
+                                <div class="p-0">
+                                    <p class="fs-5 m-0">{{ product.category.friendly_name }}, {{ product.subcategory.friendly_name }}</p>
+                                    <h5 class="fw-bolder fs-3 mb-1">{{ product.name }}</h5>
+                                    <h6 class="fs-4 mb-1">{{ product.subname }}</h6>
+                                </div>
+                                <div class="mt-auto mb-2">
+                                    <span class="d-flex justify-content-between me-3"><em>{{ product.volume }}ml</em> <em>{{ product.percentage }}%</em> <strong>{{ product.price }}:-</strong></span>
+                                </div>
+                                <div class="mb-3">
+                                    <span class=""><a class="btn btn-sm btn-outline-dark me-2" href="{% url 'product_information' product.slug %}">View Details</a></span>
+                                    <span class=""><a class="btn btn-sm btn-outline-dark" href="#">Add To Cart</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 </section>
 

@@ -23,9 +23,11 @@ def product_details(request, slug):
     
     queryset = Product.objects.all()
     product = get_object_or_404(queryset, slug=slug)
+    related_products = Product.objects.all()
 
     context = {
         'product': product,
+        'related_products': related_products,
     }
 
     return render(request, 'products/product_details.html', context)
