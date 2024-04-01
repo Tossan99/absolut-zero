@@ -1,0 +1,65 @@
+<li class="nav-item dropdown has-megamenu">
+    <a class="nav-link dropdown-toggle show nav-text fs-5 fw-bold {% if request.path == products %}active" 
+        aria-current="page{% endif %}" href="#" data-bs-toggle="dropdown" aria-expanded="true">Beverages</a>
+    <div class="dropdown-menu megamenu bg-light" role="menu" data-bs-popper="none">
+        <div class="container-xxl">
+            <div class="row g-3">
+                <div class="col-lg-3 col-6">
+                    <div class="col-megamenu">
+                        <a href="" class="fs-4 fw-bold">
+                            Beer
+                        </a>
+                        <ul class="list-unstyled fs-5">
+                            <li><a href="#">Ale</a></li>
+                            <li><a href="#">Light Lager</a></li>
+                            <li><a href="#">Wheat Beer</a></li>
+                            <li><a href="#">Dark Lager</a></li>
+                            <li><a href="#">Sour Beer</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="col-megamenu">
+                        <a href="" class="fs-4 fw-bold">
+                            Wine
+                        </a>
+                        <ul class="list-unstyled fs-5">
+                            <li><a href="#">White</a></li>
+                            <li><a href="#">Red</a></li>
+                            <li><a href="#">Rosé</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="col-megamenu">
+                        <a href="" class="fs-4 fw-bold">
+                        Cider & Mixed Drinks
+                        </a>
+                        <ul class="list-unstyled fs-5">
+                            <li><a href="#">Cocktails</a></li>
+                            <li><a href="#">Cider</a></li>
+                            <li><a href="#">Alcohol-free Mix</a></li>
+                        </ul>
+                    </div>
+                </div>    
+                <div class="col-lg-3 col-6">
+                    <div class="col-megamenu">
+                        <a href="" class="fs-4 fw-bold">
+                            Sparkling Wine
+                        </a>
+                        <ul class="list-unstyled fs-5">
+                            <li><a href="#">Sparkling White</a></li>
+                            <li><a href="#">Sparkling Rosé</a></li>
+                            <li><a href="#">Other</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 text-center">
+                <a href="{% url 'products' %}" class="fs-4 fw-bold">
+                    All Products
+                </a>
+            </div>
+        </div>
+    </div>
+</li>

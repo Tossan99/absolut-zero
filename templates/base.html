@@ -64,71 +64,7 @@
                         <a class="nav-link nav-text fs-5 fw-bold {% if request.path == about_url %}active" 
                             aria-current="page{% endif %}" href="{% url 'about' %}">About Us</a>
                     </li>
-                    <li class="nav-item dropdown has-megamenu">
-				        <a class="nav-link dropdown-toggle show nav-text fs-5 fw-bold {% if request.path == products %}active" 
-                            aria-current="page{% endif %}" href="#" data-bs-toggle="dropdown" aria-expanded="true">Beverages</a>
-                        <div class="dropdown-menu megamenu" role="menu" data-bs-popper="none">
-                            <div class="row g-3">
-                                <div class="col-12 text-center">
-                                    <a href="{% url 'products' %}" class="text-reset">
-                                        <h4>All Beverages</h4>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-6">
-                                    <div class="col-megamenu">
-                                        <h5 class="title">Beer</h5>
-                                        <ul class="list-unstyled">
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                        </ul>
-                                    </div>  <!-- col-megamenu.// -->
-                                </div><!-- end col-3 -->
-                                <div class="col-lg-3 col-6">
-                                    <div class="col-megamenu">
-                                        <h5 class="title">Wine</h5>
-                                        <ul class="list-unstyled">
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                        </ul>
-                                    </div>  <!-- col-megamenu.// -->
-                                </div><!-- end col-3 -->
-                                <div class="col-lg-3 col-6">
-                                    <div class="col-megamenu">
-                                        <h5 class="title">Cider</h5>
-                                        <ul class="list-unstyled">
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                        </ul>
-                                    </div>  <!-- col-megamenu.// -->
-                                </div>    
-                                <div class="col-lg-3 col-6">
-                                    <div class="col-megamenu">
-                                        <h5 class="title">Sparkling Wine</h5>
-                                        <ul class="list-unstyled">
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                        </ul>
-                                    </div>  <!-- col-megamenu.// -->
-                                </div><!-- end col-3 -->
-                            </div><!-- end row --> 
-                        </div> <!-- dropdown-mega-menu.// -->
-			        </li>
+                    {% include "includes/megamenu.html" %}
                 </ul>
                 <div class="d-flex">
                     <a class="btn btn-outline-dark" type="submit">
@@ -246,7 +182,6 @@
             </div>
         </section>
 
-        
         <section class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
             Absolut Zero
         </section>
