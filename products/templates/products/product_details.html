@@ -21,7 +21,7 @@
     <div class="container-xxl px-4 px-lg-5 my-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
             <div class="col-md-6"> <img class="card-img-top object-fit-scale mb-5 mb-md-0" 
-                src="{% static 'images/oppigårds-winter-ale.png' %}" height="400px" alt="..."> </div>
+                src="{{ product.image.url }}" height="400px" alt="{{ product.name }}"> </div>
             <div class="col-md-6">
                 <h2 class="display-5 fw-bold">{{ product.name }}</h2>
                 <h3 class="display-7">{{ product.subname }}</h3>
@@ -57,7 +57,7 @@
                         <div class="row mx-0">
                             <div class="col-4 py-3 px-0">
                                 <img class="card-img-top object-fit-scale" 
-                                    src="{% static 'images/oppigårds-winter-ale.png' %}" height="230" alt="...">
+                                    src="{{ product.image.url }}" height="230" alt="{{ product.name }}">
                             </div>
                             <div class="col-8 d-flex flex-column p-0 pt-2">
                                 <div class="p-0">
