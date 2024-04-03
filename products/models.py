@@ -38,7 +38,6 @@ class Subcategory(models.Model):
 
 class Product(models.Model):
     name = models.CharField(max_length=100, blank=False)
-    subname = models.CharField(max_length=100, blank=True)
     category = models.ForeignKey(
         'Category', null=True, blank=False, on_delete=models.SET_NULL, related_name="product_category")
     subcategory = models.ForeignKey(
@@ -54,6 +53,7 @@ class Product(models.Model):
     sweetness = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
     bitterness = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
     body = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
+    organic = models.BooleanField(default=False)
 
 
 
