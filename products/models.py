@@ -49,7 +49,7 @@ class Product(models.Model):
     volume = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10000)], blank=False) #Volume in ml
     price = models.DecimalField(max_digits=7, decimal_places=2, blank=False) #Price in sek
     percentage = models.DecimalField(max_digits=4, decimal_places=2, blank=False) #Alcohol percentage
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     sweetness = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
     bitterness = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
