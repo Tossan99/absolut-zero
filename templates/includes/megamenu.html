@@ -6,15 +6,15 @@
             <div class="row g-3">
                 <div class="col-lg-3 col-6">
                     <div class="col-megamenu">
-                        <a href="" class="fs-4 fw-bold">
+                        <a href="{% url 'products' %}?category=beer" class="fs-4 fw-bold">
                             Beer
                         </a>
                         <ul class="list-unstyled fs-5">
-                            <li><a href="#">Ale</a></li>
-                            <li><a href="#">Light Lager</a></li>
-                            <li><a href="#">Wheat Beer</a></li>
-                            <li><a href="#">Dark Lager</a></li>
-                            <li><a href="#">Sour Beer</a></li>
+                            <li><a href="{% url 'products' %}?subcategory=ale">Ale</a></li>
+                            <li><a href="{% url 'products' %}?subcategory=light-lager">Light Lager</a></li>
+                            <li><a href="{% url 'products' %}?subcategory=wheat-beer">Wheat Beer</a></li>
+                            <li><a href="{% url 'products' %}?subcategory=dark-lager">Dark Lager</a></li>
+                            <li><a href="{% url 'products' %}?subcategory=sour-beer">Sour Beer</a></li>
                         </ul>
                     </div>
                 </div>
