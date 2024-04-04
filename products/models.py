@@ -61,16 +61,16 @@ class Product(models.Model):
         return self.name
     
     def save(self, *args, **kwargs):
-        if not self.slug:
-            """
-            Generate a unique slug based on the name and timestamp and a unique sku
-            """
-            base_slug = slugify(self.name)
-            timestamp = timezone.now().strftime('%Y%m%d%H%M%S')
-            unique_slug = f"{base_slug}-{timestamp}"
-            self.slug = unique_slug
-        
+        """
+        Generate a unique sku and a slug based on the name and the sku 
+        """
         if not self.sku:
-            self.sku = get_random_string(10).upper()
+            self.sku = get_random_string(8).upper()
+
+        if not self.slug:
+            base_slug = slugify(self.name)
+            sku = self.sku
+            unique_slug = f"{base_slug}-{sku}"
+            self.slug = unique_slug
 
         super().save(*args, **kwargs)
