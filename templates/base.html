@@ -66,6 +66,18 @@
                     </li>
                     {% include "includes/megamenu.html" %}
                 </ul>
+                <form method="GET" action="{% url 'products' %}">
+                    <div class="input-group w-100">
+                        <input class="form-control" type="text" name="q" placeholder="Search for a product...">
+                        <div class="input-group-append">
+                            <button class="form-control" type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
                 <div class="d-flex">
                     <a class="btn btn-outline-dark" type="submit">
                         <i class="fa-solid fa-cart-shopping me-1"></i>
