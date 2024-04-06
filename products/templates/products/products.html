@@ -13,15 +13,15 @@
         <div class="d-flex">
             <img src="{% static 'images/absolut-zero-logo.png' %}"  class="mx-auto" alt="Absolut Zero logo" width="80%">
         </div>
-        <div class="text-center">
-            <h2 class="fw-bold mb-0 mt-4">All Products</h2>
-        </div>
     </div>
 </header>
 
-<section class="py-5">
+<section class="py-5 bg-light">
     <div class="container-xxl px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="text-center">
+                <h2 class="fw-bold mb-0 mt-4">{{ categories }}</h2>
+            </div>
             <!-- Product card -->
             {% for product in products %}
                 <div class="col-12 col-md-6 col-xl-4 mb-5 product-card">

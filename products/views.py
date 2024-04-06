@@ -36,6 +36,7 @@ def products_list(request):
     context = {
         "products": products,
         "search_term": query,
+        "categories": categories,
     }
 
     return render(request, "products/products.html", context)
