@@ -20,8 +20,24 @@
     <div class="container-xxl px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="text-center">
-                <h2 class="fw-bold mb-0 mt-4">{{ categories }}</h2>
+                <h2 class="fw-bold mb-0 mt-4 fs-1">{{ category.friendly_name }}</h2>
             </div>
+            <div class="dropdown">
+                <button class="btn btn-primary mb-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Sort <i class="fa-solid fa-sort"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">
+                        By Price Ascending <i class="fa-solid fa-arrow-up-wide-short"></i></a></li>
+                    <li><a href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item">
+                        By Price Descending <i class="fa-solid fa-arrow-down-wide-short"></i></a></li>
+                    <li><a href="{% url 'products' %}?sort=rating&direction=asc" class="dropdown-item ">
+                        By Rating Ascending <i class="fa-solid fa-arrow-up-wide-short"></i></a></li>
+                    <li><a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">
+                        By Rating Descending <i class="fa-solid fa-arrow-down-wide-short"></i></a></li>
+                </ul>
+            </div>
+            <hr>
             <!-- Product card -->
             {% for product in products %}
                 <div class="col-12 col-md-6 col-xl-4 mb-5 product-card">
