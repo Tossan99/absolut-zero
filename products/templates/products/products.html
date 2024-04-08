@@ -27,14 +27,22 @@
                     Sort <i class="fa-solid fa-sort"></i>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">
-                        By Price Ascending <i class="fa-solid fa-arrow-up-wide-short"></i></a></li>
-                    <li><a href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item">
-                        By Price Descending <i class="fa-solid fa-arrow-down-wide-short"></i></a></li>
-                    <li><a href="{% url 'products' %}?sort=rating&direction=asc" class="dropdown-item ">
-                        By Rating Ascending <i class="fa-solid fa-arrow-up-wide-short"></i></a></li>
-                    <li><a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">
-                        By Rating Descending <i class="fa-solid fa-arrow-down-wide-short"></i></a></li>
+                    <li>
+                        <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">
+                        Price Ascending <i class="fa-solid fa-arrow-up-long"></i><i class="fa-solid fa-coins"></i></a>
+                    </li>
+                    <li>
+                        <a href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item">
+                        Price Descending <i class="fa-solid fa-arrow-down-long"></i><i class="fa-solid fa-coins"></i></a>
+                    </li>
+                    <li>
+                        <a href="{% url 'products' %}?sort=rating&direction=asc" class="dropdown-item ">
+                        Rating Ascending <i class="fa-solid fa-arrow-up-long"></i><i class="fa-regular fa-star"></i></a>
+                    </li>
+                    <li>
+                        <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">
+                        Rating Descending <i class="fa-solid fa-arrow-down-long"></i><i class="fa-regular fa-star"></i></a>
+                    </li>
                 </ul>
             </div>
             <hr>
