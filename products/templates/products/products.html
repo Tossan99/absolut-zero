@@ -20,7 +20,12 @@
     <div class="container-xxl px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="text-center">
-                <h2 class="fw-bold mb-0 mt-4 fs-1">{{ category.friendly_name }}</h2>
+                {% for category in current_categories %}
+                    <span class="fw-bold mb-0 mt-4 fs-1">{{ category.friendly_name }}</span>
+                {% endfor %}
+                {% for subcategory in current_subcategories %}
+                    <span class="fw-bold mb-0 mt-4 fs-1">{{ subcategory.friendly_name }}</span>
+                {% endfor %}
             </div>
             <div class="dropdown">
                 <button class="btn btn-primary mb-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -53,7 +53,8 @@ def products_list(request):
     context = {
         "products": products,
         "search_term": query,
-        "categories": categories,
+        "current_categories": categories,
+        "current_subcategories": subcategories,
         "current_sorting": current_sorting,
     }
 
