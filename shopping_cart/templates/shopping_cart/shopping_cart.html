@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/shopping_cart.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- shopping_cart.html content starts here -->
+
+<header class="main-header py-5">
+    <div class="container-xxl px-4 px-lg-5 my-5">
+        <div class="d-flex">
+            <img src="{% static 'images/absolut-zero-logo.png' %}"  class="mx-auto" 
+                alt="Absolut Zero logo" width="80%">
+        </div>
+    </div>
+</header>
+
+<!-- shopping_cart.html content ends here -->
+{% endblock %}
