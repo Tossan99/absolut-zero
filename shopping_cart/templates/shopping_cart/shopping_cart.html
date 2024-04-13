@@ -17,19 +17,69 @@
     </div>
 </header>
 
-<section class="py-5">
-    <div class="container-xxl px-4 px-lg-5 my-5">
-        <div class="row gx-4 gx-lg-5 align-items-center">
-            {% if shopping_cart_items %}
-                <div class="col-12">
-                    {{ shopping_cart_items }}
+<section style="background-color: #eee;">
+    <div class="container-xxl py-5">
+        {% for item in shopping_cart_items %}
+            <div class="row justify-content-center mb-3">
+                <div class="col-md-12">
+                    <div class="card shadow-0 border rounded-0">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
+                                    <div class="bg-image hover-zoom ripple rounded ripple-surface">
+                                        <img src="{{ item.product.image.url }}"
+                                        class="w-100" />
+                                        <a href="#!">
+                                        <div class="hover-overlay">
+                                            <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h5>{{ item.product.name }}</h5>
+                                    <div class="d-flex flex-row">
+                                        <div class="mb-1 me-2">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <span>placeholder rating</span>
+                                    </div>
+                                    <div class="mt-1 mb-0 text-muted small">
+                                        {{ item.product.volume }}ml
+                                    </div>
+                                    <div class="mt-1 mb-0 text-muted small">
+                                        {{ item.product.percentage }}%
+                                    </div>
+                                    <div class="mt-1 mb-0 text-muted small">
+                                        SKU: {{ item.product.sku }}
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
+                                        <div class="d-flex flex-row align-items-center mb-1">
+                                            <h4 class="mb-1 me-1">{{ item.product.price }}:-</h4>
+                                        </div>
+                                    <h6 class="">Quantity: {{ item.quantity }}</h6>
+                                    <div class="d-flex flex-column mt-4">
+                                        <button class="btn btn-primary btn-sm" type="button">Add more products</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            {% else %}
-                <div class="clo-12">
-                    <h3>No items</h3>
-                </div>
-            {% endif %}
-        </div>
+            </div>     
+        {% endfor %}
+        <h6><strong>Bag Total: {{ total|floatformat:2 }}:-</strong></h6>
+        <h6>Delivery: {{ delivery|floatformat:2 }}:-</h6>
+        <h4 class="mt-4"><strong>Grand Total: {{ grand_total|floatformat:2 }}:-</strong></h4>
+        {% if free_delivery_delta > 0 %}
+            <p class="mb-1 text-danger">
+                You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+            </p>
+        {% endif %}
     </div>
 </section>
 

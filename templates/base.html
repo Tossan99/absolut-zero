@@ -35,6 +35,13 @@
     {% block extra_css %}
     {% endblock %}
 
+    {% block corejs %}
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    {% endblock %}
+
+    {% block extra_js %}
+    {% endblock %}
+
     <!-- Google Fonts CSS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -81,7 +88,13 @@
                 <div class="d-flex">
                     <a href="{% url 'shopping_cart' %}" class="btn btn-outline-dark" type="submit">
                         <i class="fa-solid fa-cart-shopping me-1"></i>
-                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">
+                            {% if grand_total %}
+                                {{ grand_total|floatformat:2 }}kr
+                            {% else %}
+                                0.00kr
+                            {% endif %}
+                        </span>
                     </a>
                 </div>
             </div>
@@ -198,6 +211,8 @@
             Absolut Zero
         </section>
     </footer>
+    {% block postloadjs %}
+    {% endblock %}
 </body>
 
 </html>
