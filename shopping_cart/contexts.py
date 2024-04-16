@@ -10,15 +10,16 @@ def shopping_cart_contents(request):
     product_count = 0
     shopping_cart = request.session.get("shopping_cart", {})
 
-    for item_id, quantitiy in shopping_cart.items():
-        product = get_object_or_404(Product, pk=item_id)
-        total += quantitiy * product.price
-        product_count += quantitiy
-        shopping_cart_items.append({
-            "item_id": item_id,
-            "quantity": quantitiy,
-            "product": product,
-        })
+    for item_id, item_data in shopping_cart.items():
+        if isinstance(item_data, int):
+            product = get_object_or_404(Product, pk=item_id)
+            total += item_data * product.price
+            product_count += item_data
+            shopping_cart_items.append({
+                "item_id": item_id,
+                "quantity": item_data,
+                "product": product,
+            })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
