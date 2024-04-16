@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load shopping_cart_tools %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'css/shopping_cart.css' %}">
@@ -55,7 +56,7 @@
                                         </div>
                                         <div class="col-12 col-md-6">
                                             <div class="d-flex flex-row align-items-center mb-1">
-                                                <h4 class="mb-1 me-1">Total: {{ item.product.price }}:-</h4>
+                                                <h4 class="mb-1 me-1">Total: {{ item.product.price|calc_subtotal:item.quantity }}:-</h4>
                                             </div>
                                             <form class="form update-form" method="POST" action="{% url 'adjust_shopping_cart' item.item_id %}">
                                             {% csrf_token %}
