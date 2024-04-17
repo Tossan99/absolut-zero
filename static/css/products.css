@@ -1,3 +1,4 @@
+/* Product card -------------------------------------------------- */
 .product-card:hover {
     transform: translateY(-6px);
     cursor: pointer;

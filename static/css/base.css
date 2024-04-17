@@ -1,3 +1,4 @@
+/* General -------------------------------------------------- */
 body {
     font-family: "Roboto", sans-serif;
     min-height: 100vh;
@@ -23,6 +24,7 @@ a {
 #logo {
     width: 17rem;
 }
+
 
 /* Navbar section -------------------------------------------------- */
 .navbar .megamenu{ 
@@ -61,12 +63,14 @@ a {
     transform: scaleX(1);
 }
 
+
 /* Header section -------------------------------------------------- */
 .main-header {
     position: relative;
     background-image: url("../images/header_background.jpg");
     background-size: cover;
 }
+
 
 /* Buttons -------------------------------------------------- */
 .main-btn {
@@ -95,4 +99,33 @@ a {
 .main-btn:active{
     box-shadow: inset 0px 3px 7px #3c4fe0;
     transform: translateY(2px);
+}
+
+
+/* Toasts -------------------------------------------------- */
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.border-bottom-success {
+    border-bottom: 3px solid #14A44D;
+}
+
+.border-bottom-info {
+    border-bottom: 3px solid #54B4D3;
+}
+
+.border-bottom-error {
+    border-bottom: 3px solid #DC4C64;
+}
+
+.border-bottom-warning {
+    border-bottom: 3px solid #E4A11B;
 }
