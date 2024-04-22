@@ -56,7 +56,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <nav class="navbar navbar-expand-md bg-light navbar-light">
         <div class="container-xxl px-xl-5 px-lg-4 px-3">
             <a href="{% url 'home' %}"><img id="logo" src="{% static 'images/absolut-zero-logo.png' %}" alt=""></a>
             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
@@ -92,9 +92,9 @@
                     </div>
                 </form>
                 <div class="d-flex">
-                    <a href="{% url 'shopping_cart' %}" class="btn cart-btn" type="submit">
+                    <a href="{% url 'shopping_cart' %}" class="main-btn fs-6" type="submit">
                         <i class="fa-solid fa-cart-shopping me-1"></i>
-                        <span class="badge bg-blue text-white ms-1 rounded-pill">
+                        <span class="text-white ms-1">
                             {% if grand_total %}
                                 {{ grand_total|floatformat:2 }}kr
                             {% else %}
@@ -134,10 +134,11 @@
     </main>
 
     <!-- Footer -->
-    <footer class="text-center text-lg-start bg-light text-muted mt-auto">
+    <section class="spikes"></section>
+    <footer class="text-center text-lg-start text-muted mt-auto">
 
         <!-- Section: Social Media  -->
-        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 container-xxl">
             <div class="me-5 d-none d-lg-block">
                 <span>Get connected with us on social networks:</span>
             </div>
@@ -162,19 +163,18 @@
                 </a>
             </div>
         </section>
+        <hr class="m-0">
 
         <!-- Section: Links  -->
         <section class="">
-            <div class="container text-center text-md-start mt-5">
+            <div class="container-xxl text-center text-md-start mt-5">
                 <div class="row mt-3">
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            <h5><strong>Absolut <em class="text-primary">Zero </em></strong><i class="fa-solid fa-champagne-glasses"></i></h5>
-                        </h6>
+                        <a href="{% url 'home' %}"><img src="{% static 'images/absolut-zero-logo.png' %}" class="mb-2" alt="Absolut Zero logo" width="70%"></a>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ullam 
-                            enim nulla dolor quos facilis cupiditate quo eos? Ea quae 
-                            commodi natus saepe debitis 
+                            Welcome to Absolute Zero, your ultimate destination for exquisite alcohol-free 
+                            beverages! At Absolute Zero, we believe that enjoyment shouldn't compromise your 
+                            lifestyle choices.
                         </p>
                     </div>
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -228,9 +228,6 @@
                         </p>
                     </div>
                 </div>
-            </div>
-            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-                Absolut Zero
             </div>
         </section>
     </footer>

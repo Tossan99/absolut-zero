@@ -25,7 +25,7 @@
 
 .features .features-item .features-icon {
     font-size: 6rem;
-    color: #1565C0 ;
+    color: var(--blue);
 }
 
 

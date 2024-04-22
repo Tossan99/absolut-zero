@@ -1,3 +1,8 @@
+:root {
+    --blue: #1F75FE;
+    --black: #494F55;
+}
+
 /* General -------------------------------------------------- */
 body {
     font-family: "Roboto", sans-serif;
@@ -28,7 +33,7 @@ a {
 
 /* Navbar section -------------------------------------------------- */
 .navbar {
-    border-bottom: 4px solid #4B9CD3;
+    border-bottom: 4px solid var(--blue);
 }
 .navbar .megamenu{ 
     padding: 1rem; 
@@ -45,10 +50,7 @@ a {
     margin-top:0;
     border-radius: 0;
     border: 0; 
-    border-top: 4px solid #4B9CD3;
-    transition:height 0.3s ease-in-out;
-    transition-delay: 0.1s;
-
+    border-top: 4px solid var(--blue);
 }
 
 .megamenu a::before {
@@ -70,7 +72,7 @@ a {
 
 .search-bar {
     border: none;
-    border: 2px solid #4B9CD3;
+    border: 2px solid var(--black);
     border-radius: 7px;
 }
 
@@ -79,19 +81,29 @@ a {
 }
 
 .search-field {
-    border-right: 2px solid #4B9CD3;
+    border-right: 2px solid var(--black);
 }
 
 .cart-btn {
-    border: 2px solid #4B9CD3;
-    color: #4B9CD3;
+    border: 2px solid var(--black);
+    color: var(--black);
 }
 
 .bg-blue {
-    background-color: #4B9CD3;
+    background-color: var(--blue);
 }
 
+.color-blue {
+    color: var(--blue);
+}
 
+.color-black {
+    color: var(--black);
+}
+
+.bg-black {
+    color: var(--black);
+}
 
 
 /* Header section -------------------------------------------------- */
@@ -103,8 +115,32 @@ a {
 }
 
 .header-wraper {
-    background-color: rgba(0, 0, 0, 0.3);
+    
 }
+
+/* Footer section -------------------------------------------------- */
+footer {
+    background-color: #E6E6E6;
+}
+
+.spikes {
+    /* CSS code snippet from https://wweb.dev/resources/css-separator-generator */
+    position: relative;
+  }
+  
+  .spikes::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: -0%;
+    top: 100%;
+    z-index: 10;
+    display: block;
+    height: 25px;
+    background-size: 25px 100%;
+    background-image: linear-gradient(135deg, white 25%, transparent 25%), linear-gradient(225deg, white 25%, transparent 25%);
+    background-position: 0 0;
+  }
 
 
 /* Buttons -------------------------------------------------- */
@@ -122,7 +158,7 @@ a {
     color: #fff;
     font-size: 22px;
     text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
-    transition: box-shadow 0.15s ease,transform 0.15s ease;
+    transition: box-shadow 0.15s ease,transform 0.2s ease;
     text-decoration: none;
 }
 
@@ -134,6 +170,26 @@ a {
 .main-btn:active{
     box-shadow: inset 0px 3px 7px #3c4fe0;
     transform: translateY(1px);
+}
+
+.secondary-btn {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    font-weight: 600;
+    color: #fff;
+    font-size: 14px;
+    height: 38px;
+    padding: 8px 24px;
+    border-radius: 50px;
+    background-image: linear-gradient(180deg,#7c8aff,#3c4fe0);
+    box-shadow: 0 4px 11px 0 rgb(37 44 97 / 15%), 0 1px 3px 0 rgb(93 100 148 / 20%);
+    transition: all .2s ease-out;
+}
+
+.secondary-btn:hover {
+    box-shadow: 0 8px 22px 0 rgb(37 44 97 / 15%), 0 4px 6px 0 rgb(93 100 148 / 20%);
 }
 
 
