@@ -78,6 +78,26 @@
                 </div>
             </div>
         </div>
+        <div class="row mt-5">
+            <div class="col-12 col-lg-7 col-md-9 mb-3">
+                <div class="progress shadow" role="progressbar" aria-label="Sweetness" 
+                    aria-valuenow="{{ product.sweetness }}0" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-sweetness" style="width: {{ product.sweetness }}0%">Sweetness</div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-7 col-md-9 mb-3">
+                <div class="progress shadow" role="progressbar" aria-label="Bitterness" 
+                    aria-valuenow="{{ product.bitterness }}0" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-bitterness" style="width: {{ product.bitterness }}0%">Bitterness</div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-7 col-md-9">
+                <div class="progress shadow" role="progressbar" aria-label="Body" 
+                    aria-valuenow="{{ product.body }}0" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-body" style="width: {{ product.body }}0%">Body</div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
