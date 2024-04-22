@@ -27,6 +27,9 @@ a {
 
 
 /* Navbar section -------------------------------------------------- */
+.navbar {
+    border-bottom: 4px solid #4B9CD3;
+}
 .navbar .megamenu{ 
     padding: 1rem; 
 }
@@ -42,6 +45,10 @@ a {
     margin-top:0;
     border-radius: 0;
     border: 0; 
+    border-top: 4px solid #4B9CD3;
+    transition:height 0.3s ease-in-out;
+    transition-delay: 0.1s;
+
 }
 
 .megamenu a::before {
@@ -54,8 +61,6 @@ a {
     bottom: -3px;
     left: 0;
     transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .3s ease-in-out;
 }
 
 .megamenu a:hover::before {
@@ -63,12 +68,42 @@ a {
     transform: scaleX(1);
 }
 
+.search-bar {
+    border: none;
+    border: 2px solid #4B9CD3;
+    border-radius: 7px;
+}
+
+.search-btn {
+    border: none;
+}
+
+.search-field {
+    border-right: 2px solid #4B9CD3;
+}
+
+.cart-btn {
+    border: 2px solid #4B9CD3;
+    color: #4B9CD3;
+}
+
+.bg-blue {
+    background-color: #4B9CD3;
+}
+
+
+
 
 /* Header section -------------------------------------------------- */
 .main-header {
     position: relative;
     background-image: url("../images/header_background.jpg");
     background-size: cover;
+    
+}
+
+.header-wraper {
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 
@@ -98,7 +133,7 @@ a {
 
 .main-btn:active{
     box-shadow: inset 0px 3px 7px #3c4fe0;
-    transform: translateY(2px);
+    transform: translateY(1px);
 }
 
 

@@ -73,13 +73,17 @@
                         <a class="nav-link nav-text fs-5 fw-bold {% if request.path == about_url %}active" 
                             aria-current="page{% endif %}" href="{% url 'about' %}">About Us</a>
                     </li>
-                    {% include "includes/megamenu.html" %}
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link nav-text dropdown-toggle show fs-5 fw-bold {% if request.path == products %}active" 
+                            aria-current="page{% endif %}" href="#" data-bs-toggle="dropdown" aria-expanded="true">Beverages</a>
+                        {% include "includes/megamenu.html" %}
+                    </li>
                 </ul>
-                <form method="GET" action="{% url 'products' %}">
-                    <div class="input-group w-100">
-                        <input class="form-control" type="text" name="q" placeholder="Search for a product...">
+                <form class="me-3" method="GET" action="{% url 'products' %}">
+                    <div class="input-group search-bar w-100">
+                        <input class="form-control search-field" type="text" name="q" placeholder="Search for a product...">
                         <div class="input-group-append">
-                            <button class="form-control" type="submit">
+                            <button class="form-control search-btn" type="submit">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
@@ -88,9 +92,9 @@
                     </div>
                 </form>
                 <div class="d-flex">
-                    <a href="{% url 'shopping_cart' %}" class="btn btn-outline-dark" type="submit">
+                    <a href="{% url 'shopping_cart' %}" class="btn cart-btn" type="submit">
                         <i class="fa-solid fa-cart-shopping me-1"></i>
-                        <span class="badge bg-dark text-white ms-1 rounded-pill">
+                        <span class="badge bg-blue text-white ms-1 rounded-pill">
                             {% if grand_total %}
                                 {{ grand_total|floatformat:2 }}kr
                             {% else %}
@@ -104,7 +108,7 @@
     </nav>
 
     {% if messages %}
-        <div class="message-container">
+        <div class="message-container mb-3">
             {% for message in messages %}
                 {% with message.level as level %}
                     {% if level == 40 %}
