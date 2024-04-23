@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "crispy_forms",
     "crispy_bootstrap5",
     "about",
+    "checkout",
     "home",
     "products",
     "storages",
@@ -155,7 +156,7 @@ STATIC_URL = "static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"), ]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
-FREE_DELIVERY_THRESHOLD = 30
+FREE_DELIVERY_THRESHOLD = 300
 STANDARD_DELIVERY_PERCENTAGE = 10
 
 
