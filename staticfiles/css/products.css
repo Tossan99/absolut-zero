@@ -1,0 +1,38 @@
+/* Product card -------------------------------------------------- */
+.product-card:hover {
+    transform: translateY(-6px);
+    cursor: pointer;
+}
+
+.product-card {
+    transition: all 0.3s;
+}
+
+.card {
+    border-radius: 0;
+    border: 0;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: all 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.progress {
+    height: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.progress-bar-sweetness {
+    background-color: #80CBC4;
+}
+
+.progress-bar-bitterness {
+    background-color: #B0BEC5;
+}
+
+.progress-bar-body {
+    background-color: #A1887F;
+}

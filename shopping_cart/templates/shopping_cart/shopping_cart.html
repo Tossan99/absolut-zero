@@ -18,7 +18,7 @@
     </div>
 </header>
 
-<section style="background-color: #eee;">
+<section>
     <div class="container-xxl py-5">
         {% for item in shopping_cart_items %}
             <div class="row justify-content-center mb-3">
@@ -26,69 +26,58 @@
                     <div class="card shadow-0 border rounded-0">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-4 col-md-3">
+                                <div class="col-12 col-sm-4 col-md-3">
                                     <div class="text-center">
-                                        <img src="{{ item.product.image.url }}" class="" height="230px"/>
+                                        <img src="https://product-cdn.systembolaget.se/productimages/31639029/31639029_400.png?q=75&w=1024" class="" height="230px"/>
                                     </div>
                                 </div>
-                                <div class="col-8 col-md-9">
+                                <div class="col-12 col-sm-8 col-md-9">
                                     <div class="row">
                                         <div class="col-12 col-md-6">
-                                            <h5>{{ item.product.name }}</h5>
-                                            <div class="d-flex flex-row">
-                                                <div class="mb-1 me-2">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                                <span>placeholder rating</span>
-                                            </div>
-                                            <div class="mt-1 mb-0 text-muted small">
-                                                {{ item.product.volume }}ml
-                                            </div>
-                                            <div class="mt-1 mb-0 text-muted small">
-                                                {{ item.product.percentage }}%
-                                            </div>
-                                            <div class="mt-1 mb-0 text-muted small">
-                                                SKU: {{ item.product.sku }}
+                                            <h2 class="fw-bold mt-2 mt-sm-0">{{ item.product.name }}</h2>
+                                            <div class="fs-6">
+                                                <p class="mb-1"><span class="fw-bold">Volume:</span> {{ item.product.volume }}ml</p>
+                                                
+                                                <p class="mb-1"><span class="fw-bold">Percentage:</span> {{ item.product.percentage }}%</p>
+                                                
+                                                <p class="mb-1"><span class="fw-bold">SKU:</span> {{ item.product.sku }} </p>
                                             </div>
                                         </div>
-                                        <div class="col-12 col-md-6">
-                                            <div class="d-flex flex-row align-items-center mb-1">
-                                                <h4 class="mb-1 me-1">Total: {{ item.product.price|calc_subtotal:item.quantity }}:-</h4>
+                                        <div class="col-12 col-md-6 mt-3 mt-md-1">
+                                            <div class="row justify-content-center justify-content-sm-start justify-content-md-center">
+                                                <div class="col-10 col-sm-6 col-md-12">
+                                                    <h4 class="mb-1 me-1 text-center text-sm-start text-md-center">Total: {{ item.product.price|calc_subtotal:item.quantity }}:-</h4>
+                                                    <form class="form update-form" method="POST" action="{% url 'adjust_shopping_cart' item.item_id %}">
+                                                    {% csrf_token %}
+                                                        <div class="form-group form">
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                    <button class="decrement-qty form-btn left-form-btn" 
+                                                                        data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                                        <span class="icon">
+                                                                            <i class="fas fa-minus"></i>
+                                                                        </span>
+                                                                    </button>
+                                                                </div>
+                                                                <input class="form-control form-field qty_input" type="number" name="quantity" value="{{item.quantity}}" 
+                                                                    min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                                                <div class="input-group-append">
+                                                                    <button class="increment-qty form-btn right-form-btn"
+                                                                        data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                                        <span class="icon">
+                                                                            <i class="fas fa-plus"></i>
+                                                                        </span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mt-3 text-center">
+                                                            <button type="submit" class="uppdate-btn me-2"><i class="fa-solid fa-rotate"></i></button>
+                                                            <a href="{% url 'remove_from_shopping_cart' item.item_id %}" class="remove-btn" type="button"><i class="fa-solid fa-trash-can"></i></a>
+                                                        </div>
+                                                    </form>
+                                                </div>
                                             </div>
-                                            <form class="form update-form" method="POST" action="{% url 'adjust_shopping_cart' item.item_id %}">
-                                            {% csrf_token %}
-                                                <div class="form-group w-50">
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-                                                            <button class="decrement-qty btn btn-black rounded-0" 
-                                                                data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
-                                                                <span class="icon">
-                                                                    <i class="fas fa-minus"></i>
-                                                                </span>
-                                                            </button>
-                                                        </div>
-                                                        <input class="form-control qty_input" type="number"
-                                                            name="quantity" value="{{item.quantity}}" min="1" max="99"
-                                                            data-item_id="{{ item.item_id }}"
-                                                            id="id_qty_{{ item.item_id }}">
-                                                        <div class="input-group-append">
-                                                            <button class="increment-qty btn btn-black rounded-0"
-                                                                data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
-                                                                <span class="icon">
-                                                                    <i class="fas fa-plus"></i>
-                                                                </span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-column mt-4">
-                                                    <button type="submit" class="btn btn-black rounded-0 text-uppercase mt-5">Uppdate</button>
-                                                    <a href="{% url 'remove_from_shopping_cart' item.item_id %}" class="btn btn-secondary btn-sm" type="button">Remove</a>
-                                                </div>
-                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -98,9 +87,9 @@
                 </div>
             </div>     
         {% endfor %}
-        <h6><strong>Bag Total: {{ total|floatformat:2 }}:-</strong></h6>
-        <h6>Delivery: {{ delivery|floatformat:2 }}:-</h6>
-        <h4 class="mt-4"><strong>Grand Total: {{ grand_total|floatformat:2 }}:-</strong></h4>
+        <h6 class="fs-5"><strong>Bag Total: {{ total|floatformat:2 }}:-</strong></h6>
+        <h6 class="fs-6">Delivery: {{ delivery|floatformat:2 }}:-</h6>
+        <h6 class="mt-4 fs-4"><strong>Grand Total: {{ grand_total|floatformat:2 }}:-</strong></h6>
         {% if free_delivery_delta > 0 %}
             <p class="mb-1 text-danger">
                 You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!

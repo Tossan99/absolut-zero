@@ -1,0 +1,56 @@
+/* Buttons -------------------------------------------------- */
+.uppdate-btn {
+    /* CSS code snippet from https://copy-paste-css.com/ */
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    will-change: box-shadow,transform;
+    background: #82E0AA;
+    box-shadow: 0px 2px 4px rgba(39, 66, 35, 0.4), 0px 7px 13px -3px rgba(36, 66, 35, 0.3), inset 0px -3px 0px rgba(60, 111, 58, 0.5);
+    padding: 5px 12px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 22px;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+    transition: box-shadow 0.2s ease,transform 0.2s ease;
+    text-decoration: none;
+}
+
+.uppdate-btn:hover{
+    box-shadow: 0px 4px 8px rgba(36, 66, 35, 0.4), 0px 7px 13px -3px rgba(38, 66, 35, 0.3), inset 0px -3px 0px #2ECC71;
+    transform: translateY(-2px);
+}
+
+.uppdate-btn:active{
+    box-shadow: inset 0px 3px 7px #2ECC71 ;
+    transform: translateY(1px);
+}
+
+.remove-btn {
+    /* CSS code snippet from https://copy-paste-css.com/ */
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    will-change: box-shadow,transform;
+    background: #EC7063 ;
+    box-shadow: 0px 2px 4px rgba(66, 35, 35, 0.4), 0px 7px 13px -3px rgba(66, 35, 35, 0.3), inset 0px -3px 0px rgba(111, 58, 58, 0.5);
+    padding: 5px 14px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 22px;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+    transition: box-shadow 0.2s ease,transform 0.2s ease;
+    text-decoration: none;
+}
+
+.remove-btn:hover{
+    box-shadow: 0px 4px 8px rgba(66, 35, 35, 0.4), 0px 7px 13px -3px rgba(66, 35, 35, 0.3), inset 0px -3px 0px #CB4335;
+    transform: translateY(-2px);
+}
+
+.remove-btn:active{
+    box-shadow: inset 0px 3px 7px #CB4335;
+    transform: translateY(1px);
+}
