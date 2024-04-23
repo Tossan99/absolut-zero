@@ -36,6 +36,7 @@ a {
 .navbar {
     border-bottom: 4px solid var(--blue);
 }
+
 .navbar .megamenu{ 
     padding: 1rem; 
 }
@@ -85,37 +86,11 @@ a {
     border-right: 2px solid var(--black);
 }
 
-.cart-btn {
-    border: 2px solid var(--black);
-    color: var(--black);
-}
-
-.bg-blue {
-    background-color: var(--blue);
-}
-
-.color-blue {
-    color: var(--blue);
-}
-
-.color-black {
-    color: var(--black);
-}
-
-.bg-black {
-    color: var(--black);
-}
-
-
 /* Header section -------------------------------------------------- */
 .main-header {
     position: relative;
     background-image: url("../images/header_background.jpg");
     background-size: cover;
-    
-}
-
-.header-wraper {
     
 }
 
