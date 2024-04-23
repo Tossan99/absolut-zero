@@ -2,7 +2,7 @@
 
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
-{% url 'products' as products_url %}
+{% url 'products_list' as products_url %}
 
 
 <!DOCTYPE html>
@@ -74,12 +74,12 @@
                             aria-current="page{% endif %}" href="{% url 'about' %}">About Us</a>
                     </li>
                     <li class="nav-item dropdown has-megamenu">
-                        <a class="nav-link nav-text dropdown-toggle show fs-5 fw-bold {% if request.path == products %}active" 
+                        <a class="nav-link nav-text dropdown-toggle show fs-5 fw-bold {% if request.path == products_url %}active" 
                             aria-current="page{% endif %}" href="#" data-bs-toggle="dropdown" aria-expanded="true">Beverages</a>
                         {% include "includes/megamenu.html" %}
                     </li>
                 </ul>
-                <form class="me-3" method="GET" action="{% url 'products' %}">
+                <form class="me-3" method="GET" action="{% url 'products_list' %}">
                     <div class="input-group search-bar w-100">
                         <input class="form-control search-field" type="text" name="q" placeholder="Search for a product...">
                         <div class="input-group-append">

@@ -4,7 +4,7 @@ from django.db.models import Q
 from .models import Product, Category, Subcategory
 from django.db.models.functions import Lower
 
-def products_list(request):
+def view_products_list(request):
     """ Shows all products and handles sorting and search queries """
 
     products = Product.objects.all()
@@ -61,7 +61,7 @@ def products_list(request):
     return render(request, "products/products.html", context)
 
 
-def product_details(request, slug):
+def view_product_details(request, slug):
     """ Shows product details """
     
     queryset = Product.objects.all()

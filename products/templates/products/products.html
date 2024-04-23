@@ -33,19 +33,19 @@
                 </button>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">
+                        <a href="{% url 'products_list' %}?sort=price&direction=asc" class="dropdown-item">
                         Price Ascending <i class="fa-solid fa-arrow-up-long"></i><i class="fa-solid fa-coins"></i></a>
                     </li>
                     <li>
-                        <a href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item">
+                        <a href="{% url 'products_list' %}?sort=price&direction=desc" class="dropdown-item">
                         Price Descending <i class="fa-solid fa-arrow-down-long"></i><i class="fa-solid fa-coins"></i></a>
                     </li>
                     <li>
-                        <a href="{% url 'products' %}?sort=rating&direction=asc" class="dropdown-item ">
+                        <a href="{% url 'products_list' %}?sort=rating&direction=asc" class="dropdown-item ">
                         Rating Ascending <i class="fa-solid fa-arrow-up-long"></i><i class="fa-regular fa-star"></i></a>
                     </li>
                     <li>
-                        <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">
+                        <a href="{% url 'products_list' %}?sort=rating&direction=desc" class="dropdown-item ">
                         Rating Descending <i class="fa-solid fa-arrow-down-long"></i><i class="fa-regular fa-star"></i></a>
                     </li>
                 </ul>
@@ -54,7 +54,7 @@
             <!-- Product card -->
             {% for product in products %}
                 <div class="col-12 col-md-6 mb-5 product-card">
-                    <a href="{% url 'product_information' product.slug %}">
+                    <a href="{% url 'product_details' product.slug %}">
                         <div class="card container-fluid h-100 p-0">
                             <div class="row mx-0">
                                 <div class="col-4 d-flex justify-content-center">
