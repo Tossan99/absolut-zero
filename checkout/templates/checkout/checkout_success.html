@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/checkout.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- checkout_success.html content starts here -->
+
+<header class="main-header py-5">
+    <div class="container-xxl px-4 px-lg-5 my-5">
+        <div class="d-flex">
+            <img src="{% static 'images/absolut-zero-logo.png' %}"  class="mx-auto" 
+                alt="Absolut Zero logo" width="80%">
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container-xxl py-5">
+        <div class="row">
+            <div class="col">
+                <h2 class="logo-font mb-4">Thank You For Ordering From Absolut Zero!</h2>
+                <hr>
+                <p>about order Lorem, ipsuimilique, laboriosam quae inventore dolor quidem tenetur sapiente delectus possimus libero deserunt optio fuga.{{ order.email }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-7"></div>
+        </div>
+    </div>
+</section>
+
+<!-- checkout_success.html content ends here -->
+{% endblock %}
