@@ -43,7 +43,7 @@ def view_products_list(request):
             query = request.GET["q"]
             if not query:
                 messages.error(request, "You didn't search for anything.")
-                return redirect(reverse("products"))
+                return redirect(reverse("products_list"))
             
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
