@@ -74,16 +74,17 @@ a {
 
 .search-bar {
     border: none;
-    border: 2px solid var(--black);
+    border: 2px solid var(--blue);
     border-radius: 7px;
 }
 
 .search-btn {
+    color: var(--blue);
     border: none;
 }
 
 .search-field {
-    border-right: 2px solid var(--black);
+    border-right: 2px solid var(--blue);
 }
 
 /* Header section -------------------------------------------------- */
@@ -95,28 +96,10 @@ a {
 }
 
 /* Footer section -------------------------------------------------- */
-footer {
-    background-color: #778899;
-}
 
-.spikes {
-    /* CSS code snippet from https://wweb.dev/resources/css-separator-generator */
-    position: relative;
-  }
-  
-  .spikes::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    left: -0%;
-    top: 100%;
-    z-index: 10;
-    display: block;
-    height: 25px;
-    background-size: 25px 100%;
-    background-image: linear-gradient(135deg, #f8f9fa 25%, transparent 25%), linear-gradient(225deg, #f8f9fa 25%, transparent 25%);
-    background-position: 0 0;
-  }
+footer {
+    background-color: var(--blue);
+}
 
 
 /* Buttons -------------------------------------------------- */
@@ -144,6 +127,34 @@ footer {
 }
 
 .main-btn:active{
+    box-shadow: inset 0px 3px 7px #3c4fe0;
+    transform: translateY(1px);
+}
+
+.second-btn {
+    /* CSS code snippet from https://copy-paste-css.com/ */
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    will-change: box-shadow,transform;
+    background: #fff;
+    box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px rgb(58 65 111 / 50%);
+    padding: 8px 20px;
+    border-radius: 6px;
+    color: var(--blue);
+    font-size: 22px;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+    transition: box-shadow 0.2s ease,transform 0.2s ease;
+    text-decoration: none;
+}
+
+.second-btn:hover{
+    box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #3c4fe0;
+    transform: translateY(-2px);
+}
+
+.second-btn:active{
     box-shadow: inset 0px 3px 7px #3c4fe0;
     transform: translateY(1px);
 }
@@ -177,6 +188,11 @@ footer {
 }
 
 /* Forms -------------------------------------------------- */
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
 .form-btn {
     /* CSS code snippet from https://copy-paste-css.com/ */
     display: inline-block;
@@ -193,6 +209,11 @@ footer {
     transition: box-shadow 0.2s ease,transform 0.2s ease;
     text-decoration: none;
 }
+
+.form-select:focus {
+    outline: none;
+    box-shadow: none;
+  }
 
 .form-btn:hover{
     box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #3c4fe0;
