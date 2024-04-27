@@ -8,13 +8,13 @@
 {% block content %}
 <!-- index.html content starts here -->
 
-<!-- Header section -->
-<header class="main-header">
-    <div class="header-wraper py-lg-5 py-3">
+<!-- Hero image section -->
+<section class="hero-img">
+    <div class="hero-img-wraper py-lg-5 py-3">
         <div class="container-xxl">
             <div class="row align-items-center justify-content-center my-3 ms-xl-5 ms-3 me-0">
                 <div class="col-lg-8 col-12 my-4 mb-lg-0 text-center order-lg-1 order-2">
-                    <img id="header-logo" class="object-fit-cover" src="{% static 'images/absolut-zero-logo.png' %}" alt="">
+                    <img id="hero-logo" src="{% static 'images/absolut-zero-logo.png' %}" alt="">
                     <h2 class="fw-bold display-7 my-3">Indulge in Zero Limits with Absolut Zero!</h2>
                     <div class="">
                         {% if request.user.is_authenticated %}
@@ -58,7 +58,7 @@
             </div>
         </div>
     </div>
-</header>
+</section>
 
 <!-- Features section -->
 <section class="features text-center">

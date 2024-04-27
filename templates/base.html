@@ -60,7 +60,7 @@
         <div class="container-xxl">
             <div class="row pt-3 pb-1">
                 <div class="col-12 col-lg-4 text-center text-lg-left my-lg-auto my-2">
-                    <a href="{% url 'home' %}"><img id="logo" src="{% static 'images/absolut-zero-logo.png' %}" alt=""></a>
+                    <a href="{% url 'home' %}"><img id="nav-logo" src="{% static 'images/absolut-zero-logo.png' %}" alt=""></a>
                 </div>
                 <div class="col-12 col-lg-4 my-lg-auto my-2 px-5 px-lg-3">
                     <form class="" method="GET" action="{% url 'products_list' %}">
@@ -78,7 +78,7 @@
                 </div>
                 <div class="col-12 col-lg-4 my-lg-auto my-2">
                     <div class="row align-items-center justify-content-center text-center">
-                        <div class="col-1 p-0 me-lg-3">
+                        <div class="col-1 p-0 me-lg-3 me-3 me-sm-0">
                             <a class="fs-2" href="#" data-bs-toggle="dropdown" aria-expanded="true"><i class="fa-solid fa-user"></i></a>
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
@@ -90,7 +90,7 @@
                                 {% endif %}
                             </div>
                         </div>
-                        <div class="col-4 col-sm-3 col-md-2 col-lg-5 col-xl-5 col-xxl-4 p-0">
+                        <div class="col-6 col-sm-3 col-md-2 col-lg-5 col-xl-5 col-xxl-4 p-0">
                             <a href="{% url 'shopping_cart' %}" class="main-btn cart-btn fs-6" type="submit">
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 <span class="text-white ms-1">

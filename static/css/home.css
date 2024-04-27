@@ -1,6 +1,8 @@
-/* Header section -------------------------------------------------- */
-#header-logo {
-    height: 4rem;
+/* Hero image section -------------------------------------------------- */
+#hero-logo {
+    width: 80%;
+    min-width: 250px;
+    max-width: 700px;
 }
 
 .carousel-img {
@@ -10,6 +12,12 @@
 
 #productCarousel {
     height: 30rem;
+}
+
+.hero-img {
+    position: relative;
+    background-image: url("../images/header_background.jpg");
+    background-size: cover;
 }
 
 
