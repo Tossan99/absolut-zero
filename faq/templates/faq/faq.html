@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/faq.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -17,10 +17,96 @@
     </div>
 </section>
 
-<section class="container-xxl">
-    <div class="row px-3">
+<section class="container-xxl my-4 my-sm-5">
+    <h2 class="text-center mb-3 h1 fw-bold">Frequently Asked Questions</h2>
+    <div class="row px-3 justify-content-center">
         <div class="col-12 col-lg-10">
-
+            <div class="accordion" id="accordionFaq">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What types of alcohol-free beverages do you offer?
+                    </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                        <div class="accordion-body">
+                            <strong>Answer: </strong>We offer a diverse range of alcohol-free beverages including beer, wine, mixed drinks, cider, and sparkling wine, ensuring there's something for every taste preference.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        How much does shipping cost?
+                    </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                        <div class="accordion-body">
+                            <strong>Answer: </strong>Shipping costs 15% of the total order value. However, orders over 300:- qualify for free shipping!
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                        How long does shipping take?
+                    </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                        <div class="accordion-body">
+                            <strong>Answer: </strong>Shipping times may vary depending on your location. Typically, orders are processed and shipped within 1-2 business days, with delivery times ranging from 3-7 business days.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                        Do you ship internationally?
+                    </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                        <div class="accordion-body">
+                            <strong>Answer: </strong>At the moment, we only offer shipping within Sweden. We hope to expand our shipping options in the future to serve customers worldwide.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                        Can I track my order?
+                    </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                        <div class="accordion-body">
+                            <strong>Answer: </strong>Yes, once your order has been shipped, you will receive a order number via email. You can use this order number to monitor the status and location of your package.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                        What is your return policy?
+                    </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                        <div class="accordion-body">
+                            <strong>Answer: </strong>We want you to be completely satisfied with your purchase. If for any reason you're not happy with your order, please contact us within 14 days of receiving your package to arrange for a return or exchange.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                        How can I contact customer support?
+                    </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                        <div class="accordion-body">
+                            <strong>Answer: </strong>You can reach our customer support team via email at absolutzero987@gmail.com or by phone at  + 01 234 567 88. We're here to assist you with any questions or concerns you may have regarding your order or our products.
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
