@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     # Project apps
     "about",
     "checkout",
+    "faq",
     "home",
     "products",
     "profiles",

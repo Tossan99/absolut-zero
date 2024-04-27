@@ -131,7 +131,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-text fs-5 fw-bold {% if request.path == about_url %}active" 
-                            aria-current="page{% endif %}" href="{% url 'about' %}">FAQ</a>
+                            aria-current="page{% endif %}" href="{% url 'faq' %}">FAQ</a>
                     </li>
                 </ul>
             </div>
@@ -231,7 +231,7 @@
                             <a href="{% url 'profile' %}" class="text-reset">Profile</a>
                         </p>
                         <p>
-                            <a href="" class="text-reset">FAQ</a>
+                            <a href="{% url 'faq' %}" class="text-reset">FAQ</a>
                         </p>
                         <p>
                             <a href="" class="text-reset">Privacy</a>

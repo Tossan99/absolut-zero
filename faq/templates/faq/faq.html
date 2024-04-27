@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- about.html content starts here -->
+
+<!-- Hero image section -->
+<section class="hero-img py-5">
+    <div class="container-xxl">
+        <div class="d-flex">
+            <img src="{% static 'images/absolut-zero-logo.png' %}" id="logo" class="mx-auto my-0 my-sm-3 my-md-4" alt="Absolut Zero logo">
+        </div>
+    </div>
+</section>
+
+<section class="container-xxl">
+    <div class="row px-3">
+        <div class="col-12 col-lg-10">
+
+        </div>
+    </div>
+</section>
+
+<!-- about.html content ends here -->
+{% endblock %}
