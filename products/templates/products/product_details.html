@@ -34,7 +34,7 @@
                     <p class="px-2 fw-bolder">·</p>
                     <p class="">SKU: {{ product.sku }} </p>
                 </div>
-                <h6 class="fw-bold fs-3 mb-0">{{ product.price }}:-</h6>
+                <h6 class="fw-bold fs-3 mb-0">{{ product.average_rating }}:-</h6>
                 <div class="d-flex">
                     <form class="form" action="{% url 'add_to_shopping_cart' product.id %}" method="POST">
                         {% csrf_token %}

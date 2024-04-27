@@ -66,6 +66,7 @@
                                         </div>
                                         <hr class="m-0 me-2">
                                     </div>
+                                    <p>Rating: {{ product.average_rating|floatformat:1  }} ({{ product.count_rating }})</p>
                                     <div class="fs-6 mt-3 d-flex justify-content-start mt-auto fw-bold">
                                         <p class="">{{ product.volume }}ml</p>
                                         <p class="px-2 fw-bold">·</p>

@@ -4,6 +4,8 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 from django.utils import timezone
 from django.utils.text import slugify
 from django.utils.crypto import get_random_string
+from django.db.models import Avg, Count
+from profiles.models import UserProfile
 
 
 class Category(models.Model):
@@ -55,8 +57,6 @@ class Product(models.Model):
     body = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
     organic = models.BooleanField(default=False)
 
-
-
     def __str__(self):
         return self.name
     
@@ -74,3 +74,26 @@ class Product(models.Model):
             self.slug = unique_slug
 
         super().save(*args, **kwargs)
+
+    def average_rating(self):
+        reviews = ProductRating.objects.filter(product=self).aggregate(average=Avg('rating'))
+        avg = 0
+        if reviews['average'] is not None:
+            avg = float(reviews['average'])
+        return avg
+    
+    def count_rating(self):
+        reviews = ProductRating.objects.filter(product=self).aggregate(count=Count('id'))
+        count = 0
+        if reviews['count'] is not None:
+            count = int(reviews['count'])
+        return count
+
+
+class ProductRating(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    rating = models.FloatField(validators=[MinValueValidator(1), MaxValueValidator(5)])
+
+    def __str__(self):
+        return f"{self.user} gave {self.product} a {self.rating} star rating"
