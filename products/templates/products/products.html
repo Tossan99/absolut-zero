@@ -33,7 +33,7 @@
                 {% endif %}
             </div>
             <div class="col-12 mb-3 fs-6">
-                <select id="sort-selector" class="sort-btn">
+                <select id="sort-selector" class="sort-btn shadow-sm">
                     <option class="pb-3" value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                     <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                     <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
