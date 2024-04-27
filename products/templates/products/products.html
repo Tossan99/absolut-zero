@@ -18,7 +18,7 @@
 </section>
 
 <section class="py-4">
-    <div class="container-xxl px-4 px-lg-5">
+    <div class="container-xxl px-2 px-md-4 px-lg-5">
         <div class="row">
             <div class="col-12 text-center">
                 {% if current_categories or current_subcategories %}
@@ -29,10 +29,10 @@
                         <h2 class="fw-bold mb-0 mt-4 h1">{{ subcategory.friendly_name }}</h2>
                     {% endfor %}
                 {% else %}
-                    <h2 class="fw-bold mb-0 mt-4 h1">All Products</h2>
+                    <h2 class="fw-bold mb-2 mt-4 h1">All Products</h2>
                 {% endif %}
             </div>
-            <div class="col-12 mb-3 fs-6">
+            <div class="col-12 mb-3 fs-6 text-center text-sm-start">
                 <select id="sort-selector" class="sort-btn shadow-sm">
                     <option class="pb-3" value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                     <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
@@ -45,10 +45,10 @@
             </div>
             <hr>
         </div>
-        <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="row gx-3 gx-lg-5 justify-content-center">
             <!-- Product card -->
             {% for product in products %}
-                <div class="col-12 col-md-6 mb-5 product-card">
+                <div class="col-12 col-md-6 mb-3 mb-md-4 mb-xl-5 product-card">
                     <a href="{% url 'product_details' product.slug %}">
                         <div class="card container-fluid h-100 p-0">
                             <div class="row mx-0">

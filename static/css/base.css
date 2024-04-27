@@ -156,6 +156,16 @@ footer {
     padding: 8px 15px;
 }
 
+.profile-icon {
+    transition: all 0.3s;
+    color: var(--black);
+}
+
+.profile-icon:hover,
+.profile-icon-active {
+    color: var(--blue);
+}
+
 /* Toasts -------------------------------------------------- */
 .message-container {
     position: fixed;
