@@ -42,6 +42,10 @@ a {
     background-size: cover;
 }
 
+.text-rating {
+    color: #F1C40F;
+}
+
 /* Navbar section -------------------------------------------------- */
 .navbar {
     border-bottom: 4px solid var(--blue);

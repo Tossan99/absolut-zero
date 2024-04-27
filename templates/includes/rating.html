@@ -1,0 +1,91 @@
+{% if product.average_rating > 4.5 %}
+<div>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <span><span class="fw-bold">{{ product.average_rating|floatformat:1  }}</span> <span class="text-black">({{ product.count_rating }})</span></span>
+</div>
+{% elif product.average_rating > 4 %}
+<div>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star-half-stroke"></i>
+    <span><span class="fw-bold">{{ product.average_rating|floatformat:1  }}</span> <span class="text-black">({{ product.count_rating }})</span></span>
+</div>
+{% elif product.average_rating > 3.5 %}
+<div>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <span><span class="fw-bold">{{ product.average_rating|floatformat:1  }}</span> <span class="text-black">({{ product.count_rating }})</span></span>
+</div>
+{% elif product.average_rating > 3 %}
+<div>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star-half-stroke"></i>
+    <i class="fa-regular fa-star"></i>
+    <span><span class="fw-bold">{{ product.average_rating|floatformat:1  }}</span> <span class="text-black">({{ product.count_rating }})</span></span>
+</div>
+{% elif product.average_rating > 2.5 %}
+<div>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <span><span class="fw-bold">{{ product.average_rating|floatformat:1  }}</span> <span class="text-black">({{ product.count_rating }})</span></span>
+</div>
+{% elif product.average_rating > 2 %}
+<div>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star-half-stroke"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <span><span class="fw-bold">{{ product.average_rating|floatformat:1  }}</span> <span class="text-black">({{ product.count_rating }})</span></span>
+</div>
+{% elif product.average_rating > 1.5 %}
+<div>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <span><span class="fw-bold">{{ product.average_rating|floatformat:1  }}</span> <span class="text-black">({{ product.count_rating }})</span></span>
+</div>
+{% elif product.average_rating > 1 %}
+<div>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star-half-stroke"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <span><span class="fw-bold">{{ product.average_rating|floatformat:1  }}</span> <span class="text-black">({{ product.count_rating }})</span></span>
+</div>
+{% elif product.average_rating > 0 %}
+<div>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <span><span class="fw-bold">{{ product.average_rating|floatformat:1  }}</span> <span class="text-black">({{ product.count_rating }})</span></span>
+</div>
+{% else %}
+<div>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <span><span class="fw-bold">{{ product.average_rating|floatformat:1  }}</span> <span class="text-black">({{ product.count_rating }})</span></span>
+</div>
+{% endif %}

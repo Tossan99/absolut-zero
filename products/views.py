@@ -1,8 +1,11 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product, Category, Subcategory
+from .models import Product, Category, Subcategory, ProductRating
 from django.db.models.functions import Lower
+from .forms import RatingForm
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 
 def view_products_list(request):
     """ Shows all products and handles sorting and search queries """
@@ -70,9 +73,42 @@ def view_product_details(request, slug):
     product = get_object_or_404(queryset, slug=slug)
     related_products = Product.objects.all()
 
+    if request.user.is_authenticated:
+        user_rating = ProductRating.objects.filter(user=request.user, product=product).exists()
+    else:
+        user_rating = False
+
+    if request.method == "POST":
+        rating_form = RatingForm(data=request.POST)
+        if rating_form.is_valid() and request.user.is_authenticated:
+            rating = rating_form.save(commit=False)
+            rating.user = request.user
+            rating.product = product
+            rating.save()
+            messages.add_message(request, messages.SUCCESS, 'Product rating submitted')
+            return HttpResponseRedirect(reverse("product_details", args=[slug]))
+        else:
+            messages.add_message(request, messages.ERROR, 'Error rating product')
+    
+    rating_form = RatingForm()
+
     context = {
         "product": product,
+        "rating_form": rating_form,
+        "user_rating": user_rating,
         "related_products": related_products,
     }
 
     return render(request, "products/product_details.html", context)
+
+
+@login_required
+def view_remove_rating(request, slug):
+    if request.method == "POST":
+        product = get_object_or_404(Product, slug=slug)
+        user = request.user
+        rating = get_object_or_404(ProductRating, product=product, user=user)
+        rating.delete()
+        messages.success(request, "Your rating has been removed.")
+
+    return HttpResponseRedirect(reverse("product_details", args=[slug]))

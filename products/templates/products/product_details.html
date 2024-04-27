@@ -28,13 +28,41 @@
                 <h2 class="h1 fw-bold">{{ product.name }}</h2>
                 <p class="lead mb-2">{{ product.description }}</p>
                 <div class="fs-6 fw-bold mt-3 d-flex justify-content-start">
-                    <p class="">{{ product.volume }}ml</p>
-                    <p class="px-2 fw-bolder">·</p>
-                    <p class="">{{ product.percentage }}%</p>
-                    <p class="px-2 fw-bolder">·</p>
-                    <p class="">SKU: {{ product.sku }} </p>
+                    <p class="mb-0">{{ product.volume }}ml</p>
+                    <p class="px-2 fw-bolder mb-0">·</p>
+                    <p class="mb-0">{{ product.percentage }}%</p>
+                    <p class="px-2 fw-bolder mb-0">·</p>
+                    <p class="mb-0">SKU: {{ product.sku }} </p>
                 </div>
-                <h6 class="fw-bold fs-3 mb-0">{{ product.average_rating }}:-</h6>
+                <hr class="mt-1">
+                <div class="text-rating fs-5">
+                    {% include "includes/rating.html" %}
+                </div>
+                {% if request.user.is_authenticated %}
+                    {% if user_rating %}
+                    <form action="{% url 'remove_rating' product.slug %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="second-btn fs-6 mt-2">Remove Rating</button>
+                    </form>
+                    {% else %}
+                    <form id="rating-form" action="{% url 'product_details' product.slug %}" method="post">
+                        {% csrf_token %}
+                        <p class="mb-0 mt-2">Rate Product</p>
+                        <div class="d-flex align-items-center">
+                            <select name="rating" class="form-control me-2 w-25">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <button type="submit" class="main-btn fs-6">Submit Rating</button>
+                        </div>
+                    </form>
+                    {% endif %}
+                {% endif %}
+                <hr>
+                <h6 class="fw-bold fs-3 mb-0 mt-3">{{ product.price }}:-</h6>
                 <div class="d-flex">
                     <form class="form" action="{% url 'add_to_shopping_cart' product.id %}" method="POST">
                         {% csrf_token %}
@@ -74,27 +102,30 @@
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>
-        <div class="row mt-4 justify-content-end">
-            <div class="col-12 col-lg-7 col-md-8 mb-4">
-                <div class="progress shadow" role="progressbar" aria-label="Sweetness" 
-                    aria-valuenow="{{ product.sweetness }}0" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar progress-bar-sweetness" style="width: {{ product.sweetness }}0%">Sweetness</div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-7 col-md-8 mb-4">
-                <div class="progress shadow" role="progressbar" aria-label="Bitterness" 
-                    aria-valuenow="{{ product.bitterness }}0" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar progress-bar-bitterness" style="width: {{ product.bitterness }}0%">Bitterness</div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-7 col-md-8">
-                <div class="progress shadow" role="progressbar" aria-label="Body" 
-                    aria-valuenow="{{ product.body }}0" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar progress-bar-body" style="width: {{ product.body }}0%">Body</div>
+        <div class="row justify-content-start">
+            <div class="col-12 col-md-9 mt-4 mt-md-0">
+                <div class="row">
+                    <div class="col-12 col-md-8 mb-4">
+                        <div class="progress shadow" role="progressbar" aria-label="Sweetness" 
+                            aria-valuenow="{{ product.sweetness }}0" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-sweetness" style="width: {{ product.sweetness }}0%">Sweetness</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8 mb-4">
+                        <div class="progress shadow" role="progressbar" aria-label="Bitterness" 
+                            aria-valuenow="{{ product.bitterness }}0" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-bitterness" style="width: {{ product.bitterness }}0%">Bitterness</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <div class="progress shadow" role="progressbar" aria-label="Body" 
+                            aria-valuenow="{{ product.body }}0" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-body" style="width: {{ product.body }}0%">Body</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
