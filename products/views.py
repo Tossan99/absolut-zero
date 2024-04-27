@@ -15,27 +15,27 @@ def view_products_list(request):
     direction = None
 
     if request.GET:
-        if 'sort' in request.GET:
-            sortkey = request.GET['sort']
+        if "sort" in request.GET:
+            sortkey = request.GET["sort"]
             sort = sortkey
-            if sortkey == 'name':
-                sortkey = 'lower_name'
-                products = products.annotate(lower_name=Lower('name'))
-            if sortkey == 'category':
-                sortkey = 'category__name'
-            if 'direction' in request.GET:
-                direction = request.GET['direction']
-                if direction == 'desc':
-                    sortkey = f'-{sortkey}'
+            if sortkey == "name":
+                sortkey = "lower_name"
+                products = products.annotate(lower_name=Lower("name"))
+            if sortkey == "category":
+                sortkey = "category__name"
+            if "direction" in request.GET:
+                direction = request.GET["direction"]
+                if direction == "desc":
+                    sortkey = f"-{sortkey}"
             products = products.order_by(sortkey)
 
-        if 'category' in request.GET:
-            categories = request.GET['category'].split()
+        if "category" in request.GET:
+            categories = request.GET["category"].split()
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
         
-        if 'subcategory' in request.GET:
-            subcategories = request.GET['subcategory'].split()
+        if "subcategory" in request.GET:
+            subcategories = request.GET["subcategory"].split()
             products = products.filter(subcategory__name__in=subcategories)
             subcategories = Subcategory.objects.filter(name__in=subcategories)
 
@@ -48,7 +48,7 @@ def view_products_list(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
-    current_sorting = f'{sort}_{direction}'
+    current_sorting = f"{sort}_{direction}"
 
     context = {
         "products": products,
@@ -56,6 +56,8 @@ def view_products_list(request):
         "current_categories": categories,
         "current_subcategories": subcategories,
         "current_sorting": current_sorting,
+        "direction": direction,
+        "sort": sort,
     }
 
     return render(request, "products/products.html", context)

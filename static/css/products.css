@@ -37,3 +37,15 @@
 .progress-bar-body {
     background-color: #A1887F;
 }
+
+/* Products list page -------------------------------------------------- */
+.sort-btn {
+    display: inline-block;
+    outline: 0;
+    border: 2px solid var(--blue);
+    cursor: pointer;
+    background: #f8f9fa;
+    padding: 6px 18px;
+    border-radius: 6px;
+    color: var(--blue);
+}
