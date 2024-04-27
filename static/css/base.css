@@ -63,6 +63,11 @@ a {
     border-radius: 0;
     border: 0; 
     border-top: 4px solid var(--blue);
+    border-bottom: 2px solid var(--blue);
+}
+
+.navbar .megamenu a:hover {
+    color: var(--blue);
 }
 
 .search-bar {
