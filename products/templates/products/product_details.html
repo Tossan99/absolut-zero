@@ -66,10 +66,10 @@
                                 </div>
                             </div>
                             <div class="col-12 mt-3 mt-md-4">
-                                <input type="submit" class="main-btn fs-6 text-uppercase" value="Add to Bag">
-                                <a href="{% url 'products_list' %}" class="main-btn fs-6 ms-3">
+                                <a href="{% url 'products_list' %}" class="second-btn fs-6 me-sm-3">
                                     <span class="text-uppercase"><i class="fas fa-chevron-left me-2"></i>Keep Shopping</span>
                                 </a>
+                                <input type="submit" class="main-btn fs-6 text-uppercase mt-sm-0 mt-2" value="Add to Bag">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
