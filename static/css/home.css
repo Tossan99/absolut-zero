@@ -17,6 +17,10 @@
     }
 }
 
+.bg-stars i,
+.bg-stars span {
+    color: rgb(0, 0, 0);
+}
 
 
 /* Features section -------------------------------------------------- */

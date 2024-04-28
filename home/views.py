@@ -1,7 +1,14 @@
 from django.shortcuts import render
+from products.models import Product
 
 def home_page(request):
-    return render (request, "home/index.html")
+    random_products = Product.objects.order_by('?')[:3]
+
+    context = {
+        'random_products': random_products,
+    }
+    return render (request, "home/index.html", context)
+
 
 # Custom error views
 def view_custom403(request, exception=None):

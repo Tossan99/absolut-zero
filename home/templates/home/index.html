@@ -28,30 +28,21 @@
                 <div class="col-lg-4 col-12">
                     <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="4000">
-                                <img src="{% static 'images/richard-juhlin.png' %}" class="d-block mx-auto carousel-img" alt="...">
-                                <div class="carousel-caption position-static text-black p-0 m-0">
-                                    <h4 class="mt-2 mb-1 h3">Richard Juhlin</h4>
-                                    <p class="m-0 fs-5">Non Alcoholic Blanc de Blancs</p>
-                                    <p class="m-0 fs-5 fw-bold"><span class="me-2">750ml</span> 89:-</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="4000">
-                                <img src="{% static 'images/oppigårds-winter-ale.png' %}" class="d-block mx-auto carousel-img" alt="...">
-                                <div class="carousel-caption position-static text-black p-0 m-0">
-                                    <h4 class="mt-2 mb-1 h3">Richard Juhlin</h4>
-                                    <p class="m-0 fs-5">Non Alcoholic Blanc de Blancs</p>
-                                    <p class="m-0 fs-5 fw-bold"><span class="me-2">750ml</span> 89:-</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="4000">
+                            {% for product in random_products %}
+                            <div class="carousel-item {% if forloop.first %}active{% endif %}" data-bs-interval="4000">
                                 <img src="{% static 'images/leitz-eins.png' %}" class="d-block mx-auto carousel-img" alt="...">
                                 <div class="carousel-caption position-static text-black p-0 m-0">
-                                    <h4 class="mt-2 mb-1 h3">Richard Juhlin</h4>
-                                    <p class="m-0 fs-5">Non Alcoholic Blanc de Blancs</p>
-                                    <p class="m-0 fs-5 fw-bold"><span class="me-2">750ml</span> 89:-</p>
+                                    <h4 class="mt-2 mb-1 h2 fw-bold">{{ product.name }}</h4>
+                                    <div class="fs-4 my-1  text-center fw-bold">
+                                        <span class="">{{ product.volume }}ml</span>
+                                        <span class="px-2 fw-bold">·</span>
+                                        <span class="">{{ product.percentage }}%</span>
+                                        <span class="px-2 fw-bold">·</span>
+                                        <span class="">{{ product.price }}:- </span>
+                                    </div>
                                 </div>
                             </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>

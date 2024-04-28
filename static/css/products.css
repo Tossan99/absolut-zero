@@ -56,8 +56,8 @@
 }
 
 .review-border {
-    border-radius: 8px;
-    border: 2px solid var(--blue);
+    border-radius: 5px;
+    border: 1px solid var(--blue);
 }
 
 .delete-btn {
