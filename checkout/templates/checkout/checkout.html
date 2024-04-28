@@ -13,7 +13,8 @@
 <section class="hero-img py-5">
     <div class="container-xxl">
         <div class="d-flex">
-            <img src="{% static 'images/absolut-zero-logo.png' %}" id="logo" class="mx-auto my-0 my-sm-3 my-md-4" alt="Absolut Zero logo">
+            <img src="{% static 'images/absolut-zero-logo.png' %}" id="logo" 
+                class="mx-auto my-0 my-sm-3 my-md-4" alt="Absolut Zero logo">
         </div>
     </div>
 </section>
@@ -41,7 +42,8 @@
                     <div class="row">
                         <div class="col-2 mb-3 text-center">
                             <a href="{% url 'product_details' item.product.slug %}">
-                                <img class="" src="https://product-cdn.systembolaget.se/productimages/1036900/1036900_400.png?q=75&w=2000" height="150" alt="{{ product.name }}">
+                                <img class="" src="https://product-cdn.systembolaget.se/productimages/1036900/1036900_400.png?q=75&w=2000" 
+                                    height="150" alt="{{ product.name }}">
                             </a>
                         </div>
                         <div class="col-7 mt-2">
@@ -88,8 +90,10 @@
                         {{ order_form.country | as_crispy_field }}
                         <div class="form-check form-check-inline float-right ps-0">
 							{% if user.is_authenticated %}
-                                <input class="form-check-input ms-2" type="checkbox" id="id-save-info" name="save-info" checked>
-								<label class="form-check-label ms-2" for="id-save-info">Save this delivery information to my profile</label>
+                                <input class="form-check-input ms-2" type="checkbox" id="id-save-info" 
+                                    name="save-info" checked>
+								<label class="form-check-label ms-2" for="id-save-info">Save this delivery 
+                                    information to my profile</label>
 							{% else %}
 								<label class="form-check-label" for="id-save-info">
                                     <a class="text-info" href="">Create an account</a> or 
@@ -115,7 +119,8 @@
 							<span class="">Complete Order <i class="fas fa-lock ms-2"></i></span>
 						</button>
 						<p class="small text-danger mt-2">
-							<span><i class="fas fa-exclamation-circle me-2"></i>Your card will be charged <strong>{{ grand_total|floatformat:2 }}:-</strong></span>
+							<span><i class="fas fa-exclamation-circle me-2"></i>Your card will be charged 
+                                <strong>{{ grand_total|floatformat:2 }}:-</strong></span>
 						</p>
 					</div>
                 </form>

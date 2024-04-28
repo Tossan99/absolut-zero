@@ -32,7 +32,7 @@ urlpatterns = [
     path("shopping_cart/", include("shopping_cart.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler403 = "home.views.view_custom403"
-handler404 = "home.views.view_custom404"
-handler405 = "home.views.view_custom405"
-handler500 = "home.views.view_custom500"
+HANDLER403 = "home.views.view_custom403"
+HANDLER404 = "home.views.view_custom404"
+HANDLER405 = "home.views.view_custom405"
+HANDLER500 = "home.views.view_custom500"
