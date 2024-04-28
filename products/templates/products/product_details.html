@@ -45,8 +45,9 @@
                         <button type="submit" class="second-btn fs-6 mt-2">Remove Rating</button>
                     </form>
                     {% else %}
-                    <form id="rating-form" action="{% url 'product_details' product.slug %}" method="post">
+                    <form id="" action="{% url 'product_details' product.slug %}" method="post">
                         {% csrf_token %}
+                        <input type="hidden" name="rating_form" value="rating_form">
                         <p class="mb-0 mt-2">Rate Product</p>
                         <div class="d-flex align-items-center">
                             <select name="rating" class="form-control me-2 w-25">
@@ -126,6 +127,55 @@
                             <div class="progress-bar progress-bar-body" style="width: {{ product.body }}0%">Body</div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4 mt-sm-5">
+            <div class="col-12 col-lg-7">
+                <h4>Leave a Product Review</h4>
+                <form method="post" action="{% url 'product_details' product.slug %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="review_form" value="review_form">
+                    {{ review_form.content | as_crispy_field }}
+                    <button class="main-btn fs-6" type="submit">Submit Review</button>
+                </form>
+            </div>
+            <div class="col-12">
+                <div class="row justify-content-start">
+                    <h3 class="col-12 col-lg-7 mt-4 mb-3 p-0">Product Reviews</h3>
+                    <hr>
+                    {% for review in product_reviews %}
+                    <div class="card review-border col-12 col-lg-7 mb-3 p-3 
+                        {% if not review.approved and review.author == user %}not-approved
+                        {% elif not review.approved %}d-none{% endif %}">
+                        <div class="row mt-2">
+                            <div class="col-4">
+                                <h5 class="mb-1 h4">{{ review.author }}</h5>
+                            </div>
+                            <div class="col-8">
+                                {% if not review.approved and review.author == user %}
+                                <p class="float-end mb-1"> review is awaiting approval</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <hr class="m-0">
+                        <div class="mt-2" id="review{{ review.id }}">{{ review.content | linebreaks }}</div>
+                        {% if user.is_authenticated and review.author == user %}
+                        <div class="row mt-2">
+                            <div class="col-5">
+                                <button class="edit-btn me-2" review_id="{{ review.id }}">Edit</button>
+                                <button class="delete-btn mt-2" review_id="{{ review.id }}">Delete</button>
+                            </div>
+                            <div class="col-7">
+                                <p class="text-muted fst-italic text-italic float-end m-0">
+                                    Created on: {{ review.created_on }}
+                                    <br>Last edited: {{ review.updated_on }}
+                                </p>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

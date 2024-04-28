@@ -97,3 +97,17 @@ class ProductRating(models.Model):
 
     def __str__(self):
         return f"{self.user} gave {self.product} a {self.rating} star rating"
+
+
+class ProductReview(models.Model):
+    """
+    Model for product comments by users
+    """
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="product_reviewer")
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name="product_reviews")
+    content = models.TextField(max_length=500, blank=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
+    approved = models.BooleanField(default=False)

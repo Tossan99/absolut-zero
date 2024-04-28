@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from .models import Product, Category, Subcategory, ProductRating
 from django.db.models.functions import Lower
-from .forms import RatingForm
+from .forms import RatingForm, ReviewForm
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 
@@ -69,34 +69,55 @@ def view_products_list(request):
 def view_product_details(request, slug):
     """ Shows product details """
     
+    # Assuming Product is a model with a slug field
     queryset = Product.objects.all()
     product = get_object_or_404(queryset, slug=slug)
-    related_products = Product.objects.all()
+    product_reviews = product.product_reviews.all().order_by("-created_on")
 
+    user_rating = False
     if request.user.is_authenticated:
         user_rating = ProductRating.objects.filter(user=request.user, product=product).exists()
-    else:
-        user_rating = False
 
     if request.method == "POST":
-        rating_form = RatingForm(data=request.POST)
-        if rating_form.is_valid() and request.user.is_authenticated:
-            rating = rating_form.save(commit=False)
-            rating.user = request.user
-            rating.product = product
-            rating.save()
-            messages.add_message(request, messages.SUCCESS, 'Product rating submitted')
-            return HttpResponseRedirect(reverse("product_details", args=[slug]))
-        else:
-            messages.add_message(request, messages.ERROR, 'Error rating product')
-    
+        if "rating_form" in request.POST:
+            """
+            Rating form
+            """
+            rating_form = RatingForm(data=request.POST)
+            if rating_form.is_valid() and request.user.is_authenticated:
+                rating = rating_form.save(commit=False)
+                rating.user = request.user
+                rating.product = product
+                rating.save()
+                messages.add_message(request, messages.SUCCESS, "Product rating submitted")
+                return HttpResponseRedirect(reverse("product_details", args=[slug]))
+            else:
+                messages.add_message(request, messages.ERROR, "Error rating product")
+
+        if "review_form" in request.POST:
+            """
+            Review form
+            """
+            review_form = ReviewForm(data=request.POST)
+            if review_form.is_valid() and request.user.is_authenticated:
+                review = review_form.save(commit=False)
+                review.author = request.user
+                review.product = product
+                review.save()
+                messages.add_message(request, messages.SUCCESS, "Review submitted and awaiting approval")
+                return HttpResponseRedirect(reverse("product_details", args=[slug]))
+            else:
+                messages.add_message(request, messages.ERROR, "Error submitting review")
+        
     rating_form = RatingForm()
+    review_form = ReviewForm()
 
     context = {
         "product": product,
+        "product_reviews": product_reviews,
+        "review_form": review_form,
         "rating_form": rating_form,
         "user_rating": user_rating,
-        "related_products": related_products,
     }
 
     return render(request, "products/product_details.html", context)
