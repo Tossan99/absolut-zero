@@ -139,8 +139,6 @@ def view_delete_product_review(request, slug, review_id):
     """
     view to delete product review
     """
-    queryset = Product.objects.all()
-    product = get_object_or_404(queryset, slug=slug)
     review = get_object_or_404(ProductReview, pk=review_id)
 
     if review.author == request.user:

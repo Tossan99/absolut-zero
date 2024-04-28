@@ -1,11 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
-from django.utils import timezone
 from django.utils.text import slugify
 from django.utils.crypto import get_random_string
 from django.db.models import Avg, Count
-from profiles.models import UserProfile
+from decimal import Decimal
 
 
 class Category(models.Model):
@@ -111,3 +110,28 @@ class ProductReview(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     approved = models.BooleanField(default=False)
+
+
+class DiscountProduct(models.Model):
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name="discounts"
+    )
+    discount_price = models.DecimalField(
+        max_digits=7, decimal_places=2, blank=True,
+        help_text="Leave this field empty, it will be calculated based on the products price"
+    )
+    discount_percentage = models.DecimalField(
+        max_digits=4, decimal_places=2, blank=False,
+        help_text="The percentage of the discount applied to the product. (1-100)"
+    )
+
+    def __str__(self):
+        return f"{self.product.name} - {self.discount_percentage}% off"
+
+    def save(self, *args, **kwargs):
+        """
+        Ensure the discount price is calculated based on the product's original price
+        """
+        if not self.discount_price:
+            self.discount_price = self.product.price - (self.product.price * (self.discount_percentage / 100))
+        super().save(*args, **kwargs)
