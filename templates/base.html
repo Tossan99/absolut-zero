@@ -215,16 +215,16 @@
                             Products
                         </h6>
                         <p>
-                            <a href="{% url 'products_list' %}?category=beer" class="text-reset">Beer</a>
+                            <a href="{% url 'products_list' %}?category=beer" class="">Beer</a>
                         </p>
                         <p>
-                            <a href="" class="text-reset">Cider</a>
+                            <a href="" class="">Cider</a>
                         </p>
                         <p>
-                            <a href="" class="text-reset">Wine</a>
+                            <a href="" class="">Wine</a>
                         </p>
                         <p>
-                            <a href="" class="text-reset">Sparkling Wine</a>
+                            <a href="" class="">Sparkling Wine</a>
                         </p>
                     </div>
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -232,16 +232,16 @@
                             Useful links
                         </h6>
                         <p>
-                            <a href="{% url 'profile' %}" class="text-reset">Profile</a>
+                            <a href="{% if request.user.is_authenticated %}{% url 'profile' %}{% else %}{% url 'account_signup' %}{% endif %}" class="">Profile</a>
                         </p>
                         <p>
-                            <a href="{% url 'faq' %}" class="text-reset">FAQ</a>
+                            <a href="{% url 'faq' %}" class="">FAQ</a>
                         </p>
                         <p>
-                            <a href="" class="text-reset">Privacy</a>
+                            <a href="{% url 'privacy' %}" class="">Privacy</a>
                         </p>
                         <p>
-                            <a href="{% url 'about' %}" class="text-reset">About Us</a>
+                            <a href="{% url 'about' %}" class="">About Us</a>
                         </p>
                     </div>
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">

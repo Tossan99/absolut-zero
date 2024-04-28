@@ -76,6 +76,7 @@ a {
 
 .navbar .megamenu a:hover {
     color: var(--blue);
+    transition: all 0.3s;
 }
 
 .search-bar {
@@ -96,6 +97,15 @@ a {
 /* Footer section -------------------------------------------------- */
 footer {
     background-color:  #607D8B ;
+}
+
+footer a {
+    transition: all 0.3s;
+    color: #fff;
+}
+
+footer a:hover {
+    color: var(--blue);
 }
 
 
