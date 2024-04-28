@@ -65,7 +65,7 @@
                 {% endif %}
                 <hr>
                 {% if product.discount == True %}
-                    <h6 class="fw-bold fs-4 mb-0 mt-3"><s>{{ old_price }}:-</s> <span class="text-discount fs-3 ms-1">{{ product.price }}:-</span></h6>
+                    <h6 class="text-muted fs-4 mb-0 mt-3"><s>{{ product.old_price }}:-</s> <span class="text-discount fs-3">{{ product.price }}:-</span></h6>
                 {% else %}
                     <h6 class="fw-bold fs-3 mb-0 mt-3">{{ product.price }}:-</h6>
                 {% endif %}

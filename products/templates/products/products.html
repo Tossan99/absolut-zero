@@ -74,7 +74,11 @@
                                         <p class="px-2 fw-bold">·</p>
                                         <p class="">{{ product.percentage }}%</p>
                                         <p class="px-2 fw-bold">·</p>
-                                        <p class="">{{ product.price }}:- </p>
+                                        {% if product.discount == True %}
+                                            <p class="text-muted"><s>{{ product.old_price }}:-</s> <span class="text-discount">{{ product.price }}:-</span></p>
+                                        {% else %}
+                                            <p class="">{{ product.price }}:-</p>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>

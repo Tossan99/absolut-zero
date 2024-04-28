@@ -62,6 +62,8 @@ class Product(models.Model):
     organic = models.BooleanField(default=False)
     discount = models.BooleanField(default=False, 
         help_text="Leave this checkbox empty, it will be set to True if a discount is set")
+    old_price = models.DecimalField(max_digits=7, decimal_places=2, blank=True, null=True, 
+        help_text="Leave this field empty, it will be set later")
 
     def __str__(self):
         return self.name
@@ -134,12 +136,16 @@ class DiscountProduct(models.Model):
 
     def __str__(self):
         return f"{self.product.name} - {self.discount_percentage}% off"
+    
+    def price1(self):
+        return 10
 
     def save(self, *args, **kwargs):
 
         if self.discount_price is None:
             self.discount_price = self.product.price - (self.product.price * (self.discount_percentage / 100))
         new_price = self.product.price - (self.product.price * (self.discount_percentage / 100))
+        self.product.old_price = self.product.price
         self.product.price = new_price
         self.product.discount = True
         self.product.save()

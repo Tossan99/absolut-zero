@@ -73,7 +73,7 @@ def view_product_details(request, slug):
     queryset = Product.objects.all()
     product = get_object_or_404(queryset, slug=slug)
     product_reviews = product.product_reviews.all().order_by("-created_on")
-    old_price = 10
+
 
     user_rating = False
     if request.user.is_authenticated:
@@ -115,7 +115,6 @@ def view_product_details(request, slug):
 
     context = {
         "product": product,
-        "old_price": old_price,
         "product_reviews": product_reviews,
         "review_form": review_form,
         "rating_form": rating_form,
