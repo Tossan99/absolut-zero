@@ -84,17 +84,17 @@ class Product(models.Model):
         super().save(*args, **kwargs)
 
     def average_rating(self):
-        reviews = ProductRating.objects.filter(product=self).aggregate(average=Avg('rating'))
+        reviews = ProductRating.objects.filter(product=self).aggregate(average=Avg("rating"))
         avg = 0
-        if reviews['average'] is not None:
-            avg = float(reviews['average'])
+        if reviews["average"] is not None:
+            avg = float(reviews["average"])
         return avg
     
     def count_rating(self):
-        reviews = ProductRating.objects.filter(product=self).aggregate(count=Count('id'))
+        reviews = ProductRating.objects.filter(product=self).aggregate(count=Count("id"))
         count = 0
-        if reviews['count'] is not None:
-            count = int(reviews['count'])
+        if reviews["count"] is not None:
+            count = int(reviews["count"])
         return count
 
 
@@ -136,9 +136,6 @@ class DiscountProduct(models.Model):
 
     def __str__(self):
         return f"{self.product.name} - {self.discount_percentage}% off"
-    
-    def price1(self):
-        return 10
 
     def save(self, *args, **kwargs):
 

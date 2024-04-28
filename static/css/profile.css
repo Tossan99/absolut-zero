@@ -1,4 +1,8 @@
 .order-history-table {
     border-radius: 8px;
-    border: 2px solid var(--blue);
+    border: 1px solid var(--blue);
+}
+
+.border-red {
+    border: 1px solid var(--bs-danger);
 }

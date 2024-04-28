@@ -1,5 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.urls import reverse
+from django.http import HttpResponseRedirect
 
 from .models import UserProfile
 from .forms import UserProfileForm
@@ -43,3 +46,13 @@ def view_order_history(request, order_number):
     }
 
     return render(request, "checkout/checkout_success.html", context)
+
+def view_delete_profile(request):
+    """ 
+    Delete the user's profile. 
+    """
+    if request.method == "POST":
+        user = request.user
+        user.delete()
+        messages.success(request, "Profile successfully deleted")
+    return HttpResponseRedirect(reverse("home"))
