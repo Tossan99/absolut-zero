@@ -150,7 +150,7 @@
                     <h3 class="col-12 col-lg-7 mt-4 mb-3 p-0">Product Reviews</h3>
                     <hr>
                     {% for review in product_reviews %}
-                    <div class="card review-border col-12 col-lg-7 mb-3 p-3 
+                    <div class="card review-border shadow col-12 col-lg-7 mb-3 p-3 
                         {% if not review.approved and review.author == user %}not-approved
                         {% elif not review.approved %}d-none{% endif %}">
                         <div class="row mt-2">
