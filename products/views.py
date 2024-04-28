@@ -137,7 +137,7 @@ def view_remove_rating(request, slug):
 
 def view_delete_product_review(request, slug, review_id):
     """
-    view to delete comments
+    view to delete product review
     """
     queryset = Product.objects.all()
     product = get_object_or_404(queryset, slug=slug)
@@ -148,5 +148,27 @@ def view_delete_product_review(request, slug, review_id):
         messages.add_message(request, messages.SUCCESS, "Product review deleted")
     else:
         messages.add_message(request, messages.ERROR, "Error deleting product review")
+
+    return HttpResponseRedirect(reverse("product_details", args=[slug]))
+
+
+def view_edit_product_review(request, slug, review_id):
+    """
+    View to edit product review
+    """
+    if request.method == "POST":
+        queryset = Product.objects.all()
+        product = get_object_or_404(queryset, slug=slug)
+        review = get_object_or_404(ProductReview, pk=review_id)
+        review_form = ReviewForm(data=request.POST, instance=review)
+
+        if review_form.is_valid() and review.author == request.user:
+            review = review_form.save(commit=False)
+            review.product = product
+            review.approved = False
+            review.save()
+            messages.add_message(request, messages.SUCCESS, "Product review edited and awaiting approval")
+        else:
+            messages.add_message(request, messages.ERROR, "Error editing product review")
 
     return HttpResponseRedirect(reverse("product_details", args=[slug]))

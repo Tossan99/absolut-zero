@@ -132,12 +132,12 @@
         </div>
         <div class="row mt-4 mt-sm-5">
             <div class="col-12 col-lg-7">
-                <h4>Leave a Product Review</h4>
-                <form method="post" action="{% url 'product_details' product.slug %}">
+                <h4 id="reviewHeading">Leave a Product Review</h4>
+                <form id="reviewForm" method="post" action="{% url 'product_details' product.slug %}">
                     {% csrf_token %}
                     <input type="hidden" name="review_form" value="review_form">
-                    {{ review_form.content | as_crispy_field }}
-                    <button class="main-btn fs-6" type="submit">Submit Review</button>
+                    <textarea type="text" id="content" name="content" rows="5" cols="200" class="form-control mb-3">{{ review.content | safe }}</textarea>
+                    <button class="main-btn fs-6" type="submit" id="submitButton">Submit Review</button>
                 </form>
             </div>
             <div class="col-12">
@@ -188,4 +188,23 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
+    <script>
+        const editButtons = document.getElementsByClassName("edit-btn");
+        const reviewText = document.getElementById("content");
+        const reviewForm = document.getElementById("reviewForm");
+        const submitButton = document.getElementById("submitButton");
+        const reviewHeading = document.getElementById("reviewHeading");
+
+        for (let button of editButtons) {
+            // Edits the targeted review
+            button.addEventListener("click", (e) => {
+                let reviewId = e.target.getAttribute("review_id");
+                let reviewContent = document.getElementById(`review${reviewId}`).innerText;
+                reviewText.value = reviewContent;
+                submitButton.innerText = "Update";
+                reviewHeading.innerText = "Edit your review";
+                reviewForm.setAttribute("action", `edit_product_review/${reviewId}`);
+            });
+        }
+    </script>
 {% endblock %}
