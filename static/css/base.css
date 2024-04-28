@@ -95,7 +95,7 @@ footer {
 }
 
 
-/* Buttons -------------------------------------------------- */
+/* Buttons and icons -------------------------------------------------- */
 .main-btn {
     /* CSS code snippet from https://copy-paste-css.com/ */
     display: inline-block;
@@ -166,6 +166,14 @@ footer {
     color: var(--blue);
 }
 
+.social-icon {
+    font-size: 22px;
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    color: var(--blue);
+}
 /* Toasts -------------------------------------------------- */
 .message-container {
     position: fixed;
