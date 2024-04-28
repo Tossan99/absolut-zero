@@ -50,6 +50,22 @@
     color: var(--blue);
 }
 
+.product-img {
+    height: 400px;
+}
+
+@media screen and (max-width: 767px) {
+    .product-img {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .product-img {
+        height: 200px;
+    }
+}
+
 /* Product reviews-------------------------------------------------- */
 .not-approved {
     opacity: 0.5;
