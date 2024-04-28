@@ -164,7 +164,7 @@
                         <div class="row mt-2">
                             <div class="col-5">
                                 <button class="edit-btn me-2" review_id="{{ review.id }}">Edit</button>
-                                <button class="delete-btn mt-2" review_id="{{ review.id }}">Delete</button>
+                                <a class="delete-btn mt-2" href="{% url 'delete_product_review' product.slug review.id %}">Delete</a>
                             </div>
                             <div class="col-7">
                                 <p class="text-muted fst-italic text-italic float-end m-0">

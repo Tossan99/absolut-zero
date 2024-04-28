@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product, Category, Subcategory, ProductRating
+from .models import Product, Category, Subcategory, ProductRating, ProductReview
 from django.db.models.functions import Lower
 from .forms import RatingForm, ReviewForm
 from django.contrib.auth.decorators import login_required
@@ -131,5 +131,22 @@ def view_remove_rating(request, slug):
         rating = get_object_or_404(ProductRating, product=product, user=user)
         rating.delete()
         messages.success(request, "Your rating has been removed.")
+
+    return HttpResponseRedirect(reverse("product_details", args=[slug]))
+
+
+def view_delete_product_review(request, slug, review_id):
+    """
+    view to delete comments
+    """
+    queryset = Product.objects.all()
+    product = get_object_or_404(queryset, slug=slug)
+    review = get_object_or_404(ProductReview, pk=review_id)
+
+    if review.author == request.user:
+        review.delete()
+        messages.add_message(request, messages.SUCCESS, "Product review deleted")
+    else:
+        messages.add_message(request, messages.ERROR, "Error deleting product review")
 
     return HttpResponseRedirect(reverse("product_details", args=[slug]))
