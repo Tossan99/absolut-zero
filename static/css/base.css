@@ -46,6 +46,10 @@ a {
     color: #F1C40F;
 }
 
+.text-discount {
+    color: #E74C3C ;
+}
+
 /* Navbar section -------------------------------------------------- */
 .navbar {
     border-bottom: 4px solid var(--blue);

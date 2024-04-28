@@ -40,21 +40,28 @@ class Subcategory(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=100, blank=False)
     category = models.ForeignKey(
-        'Category', null=True, blank=False, on_delete=models.SET_NULL, related_name="product_category")
+        "Category", null=True, blank=False, on_delete=models.SET_NULL, related_name="product_category")
     subcategory = models.ForeignKey(
-        'Subcategory', null=True, blank=False, on_delete=models.SET_NULL, related_name="product_subcategory")
-    sku = models.CharField(max_length=10, blank=True, editable=False, unique=True)
-    slug = models.SlugField(max_length=300, blank=True, editable=False, unique=True)
+        "Subcategory", null=True, blank=False, on_delete=models.SET_NULL, related_name="product_subcategory")
+    sku = models.CharField(max_length=10, blank=True, editable=False, unique=True, 
+        help_text="Leave this field empty, it will be set when creating the product")
+    slug = models.SlugField(max_length=300, blank=True, editable=False, unique=True, 
+        help_text="Leave this field empty, it will be set when creating the product")
     description = models.TextField(max_length=2000, blank=True)
-    volume = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10000)], blank=False) #Volume in ml
-    price = models.DecimalField(max_digits=7, decimal_places=2, blank=False) #Price in sek
-    percentage = models.DecimalField(max_digits=4, decimal_places=2, blank=False) #Alcohol percentage
+    volume = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10000)], blank=False, 
+        help_text="Volume in ml")
+    price = models.DecimalField(max_digits=7, decimal_places=2, blank=False, 
+        help_text="Price in SEK")
+    percentage = models.DecimalField(max_digits=4, decimal_places=2, blank=False, 
+        help_text="(e.g. 0,30 if 0.30%)")
     image = models.ImageField(null=True, blank=True)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     sweetness = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
     bitterness = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
     body = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
     organic = models.BooleanField(default=False)
+    discount = models.BooleanField(default=False, 
+        help_text="Leave this checkbox empty, it will be set to True if a discount is set")
 
     def __str__(self):
         return self.name
@@ -90,7 +97,7 @@ class Product(models.Model):
 
 
 class ProductRating(models.Model):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    product = models.ForeignKey("Product", on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     rating = models.FloatField(validators=[MinValueValidator(1), MaxValueValidator(5)])
 
@@ -105,7 +112,7 @@ class ProductReview(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="product_reviewer")
     product = models.ForeignKey(
-        Product, on_delete=models.CASCADE, related_name="product_reviews")
+        "Product", on_delete=models.CASCADE, related_name="product_reviews")
     content = models.TextField(max_length=500, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
@@ -114,11 +121,11 @@ class ProductReview(models.Model):
 
 class DiscountProduct(models.Model):
     product = models.ForeignKey(
-        Product, on_delete=models.CASCADE, related_name="discounts"
+        "Product", on_delete=models.CASCADE, related_name="discounts"
     )
     discount_price = models.DecimalField(
         max_digits=7, decimal_places=2, blank=True,
-        help_text="Leave this field empty, it will be calculated based on the products price"
+        help_text="Leave this field empty, it will be calculated based on the product price"
     )
     discount_percentage = models.DecimalField(
         max_digits=4, decimal_places=2, blank=False,
@@ -129,9 +136,11 @@ class DiscountProduct(models.Model):
         return f"{self.product.name} - {self.discount_percentage}% off"
 
     def save(self, *args, **kwargs):
-        """
-        Ensure the discount price is calculated based on the product's original price
-        """
-        if not self.discount_price:
+
+        if self.discount_price is None:
             self.discount_price = self.product.price - (self.product.price * (self.discount_percentage / 100))
+        new_price = self.product.price - (self.product.price * (self.discount_percentage / 100))
+        self.product.price = new_price
+        self.product.discount = True
+        self.product.save()
         super().save(*args, **kwargs)

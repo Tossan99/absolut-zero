@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product, Category, Subcategory, ProductRating, ProductReview
 from django.db.models.functions import Lower
-from .forms import RatingForm, ReviewForm
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect
+
+from .models import Product, Category, Subcategory, ProductRating, ProductReview, DiscountProduct
+from .forms import RatingForm, ReviewForm
 
 def view_products_list(request):
     """ Shows all products and handles sorting and search queries """
@@ -68,11 +69,11 @@ def view_products_list(request):
 
 def view_product_details(request, slug):
     """ Shows product details """
-    
-    # Assuming Product is a model with a slug field
+
     queryset = Product.objects.all()
     product = get_object_or_404(queryset, slug=slug)
     product_reviews = product.product_reviews.all().order_by("-created_on")
+    old_price = 10
 
     user_rating = False
     if request.user.is_authenticated:
@@ -114,6 +115,7 @@ def view_product_details(request, slug):
 
     context = {
         "product": product,
+        "old_price": old_price,
         "product_reviews": product_reviews,
         "review_form": review_form,
         "rating_form": rating_form,

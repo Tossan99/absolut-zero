@@ -64,13 +64,17 @@
                     {% endif %}
                 {% endif %}
                 <hr>
-                <h6 class="fw-bold fs-3 mb-0 mt-3">{{ product.price }}:-</h6>
+                {% if product.discount == True %}
+                    <h6 class="fw-bold fs-4 mb-0 mt-3"><s>{{ old_price }}:-</s> <span class="text-discount fs-3 ms-1">{{ product.price }}:-</span></h6>
+                {% else %}
+                    <h6 class="fw-bold fs-3 mb-0 mt-3">{{ product.price }}:-</h6>
+                {% endif %}
                 <div class="d-flex">
                     <form class="form" action="{% url 'add_to_shopping_cart' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row mt-2 mt-md-3">
                             <div class="col-12">
-                                <div class="form-group form w-50">
+                                <div class="form-group form w-75">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <button class="decrement-qty form-btn left-form-btn" 
