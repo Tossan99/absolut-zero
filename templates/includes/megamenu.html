@@ -2,7 +2,12 @@
     <div class="dropdown-menu megamenu" role="menu" data-bs-popper="none">
         <div class="container-xxl">
             <div class="row g-3">
-                <div class="col-lg-3 col-6">
+                <div class="col-12 text-center">
+                    <a href="{% url 'products_list' %}" class="fs-4 fw-bold">
+                        <h3 class="my-2 h2">All Products</h3>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-12">
                     <div class="col-megamenu">
                         <a href="{% url 'products_list' %}?category=beer" class="fs-4 fw-bold">
                             <h3 class="mb-0">Beer</h3>
@@ -17,7 +22,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-3 col-sm-6 col-12">
                     <div class="col-megamenu">
                         <a href="" class="fs-4 fw-bold">
                             <h3 class="mb-0">Wine</h3>
@@ -31,7 +36,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-3 col-sm-6 col-12">
                     <div class="col-megamenu">
                         <a href="" class="fs-5 fw-bold">
                             <h3 class="mb-1 fs-4">Cider & Mixed Drinks</h3>
@@ -44,7 +49,7 @@
                         </ul>
                     </div>
                 </div>    
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-3 col-sm-6 col-12">
                     <div class="col-megamenu">
                         <a href="" class="fs-4 fw-bold">
                             <h3 class="mb-0">Sparkling Wine</h3>
@@ -57,11 +62,6 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 text-center">
-                <a href="{% url 'products_list' %}" class="fs-4 fw-bold">
-                    <h3 class="my-0">All Products</h3>
-                </a>
             </div>
         </div>
     </div>
