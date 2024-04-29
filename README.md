@@ -257,11 +257,12 @@ During development, the designs have evolved and changed due to testing and user
 
 [Back to top ⇧](#table-of-contents)
 
-## Database
+## Database and models
 
-ElephantSQL was used as a database for the whole project
+[ElephantSQL](https://customer.elephantsql.com/) was used as a database for the whole project.
 
-Mapping out the database structure before coding is crucial for organizing information, reducing errors, and improving efficiency. That is why a Database schema was made before the start of development.
+Mapping out the database structure before coding is crucial for organizing information, reducing errors, and improving efficiency. That is why a Database schema was made before the start of development. 
+[dbdiagram.io](https://dbdiagram.io/) was used to generate the database schema.
 
 The Database schema has been slightly altered through development due to new ideas.
 
@@ -320,10 +321,14 @@ The ``OrderLineItem`` model is linked to the ``Order`` model and assists it to c
 
 ### Frameworks
 
-- **Django:** Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.
+- **Django v4.2:** Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.
+
 - **Crispy Forms:** Django-crispy-forms is an application that helps to manage Django forms. It allows adjusting forms' properties (such as method, send button or CSS classes) on the backend without having to re-write them in the template.
-- **Bootstrap v5.0:** Bootstrap is a free, open source front-end development framework for the creation of websites and web apps. Designed to enable responsive development of mobile-first websites, Bootstrap provides a collection of syntax for template designs.
-- **AWS:** A cloud-based media management platform used for storing and serving images in the E-commerce project.
+
+- **Bootstrap v5.3:** Bootstrap is a free, open source front-end development framework for the creation of websites and web apps. Designed to enable responsive development of mobile-first websites, Bootstrap provides a collection of syntax for template designs.
+
+### Cloud Service
+- **AWS:** AWS is a leading cloud computing platform offered by Amazon. It provides a wide range of services for businesses to build and deploy scalable, reliable, and secure applications and infrastructure. With AWS, businesses can innovate and grow without the burden of managing physical hardware.
 
 ### Database
 
@@ -331,42 +336,108 @@ The ``OrderLineItem`` model is linked to the ``Order`` model and assists it to c
 
 ### Tools
 
+- **Git**: A distributed version control system used for tracking changes in the project's source code.
+
 - **GitHub:** GitHub is a web-based platform for version control using Git. It facilitates collaborative software development, allowing multiple contributors to work on projects, track changes, and manage code repositories.
+
 - **Heroku:** Heroku is a cloud platform that enables developers to deploy, manage, and scale applications easily. It supports various programming languages and eliminates the need for infrastructure management, making it simpler to focus on building and deploying applications.
+
 - **Google Fonts:** Google Fonts is a free and extensive collection of web fonts provided by Google. It allows website developers to embed customizable fonts, enhancing the typography of web content.
+
 - **Font Awesome:** Font Awesome is a popular icon toolkit that provides a wide range of scalable vector icons. It's commonly used in web development to enhance the visual appeal and functionality of websites by easily incorporating icons into the design.
 
+- **DB diagram:** An online database design and diagramming tool that simplifies the process of creating and visualizing database schemas. dbdiagram.io was used for designing and documenting the database schema of the EasyKeyboardMaker project.
+
+- **Balsamiq:** Balsamiq is an intuitive wireframe tool that simplifies the process of designing user interfaces for web and mobile applications. With its user-friendly interface and extensive library of pre-built components, Balsamiq enables developers and designers to quickly create mockups and prototypes, facilitating collaboration and iteration throughout the design process.
+
+- **Mailchimp:** Mailchimp is an all-in-one marketing platform that empowers businesses to manage their email marketing campaigns, build customer relationships, and drive growth. With its intuitive interface and powerful features, Mailchimp simplifies the process of creating, sending, and tracking email campaigns, allowing businesses to engage with their audience effectively and efficiently.
+
 ### Supporting Libraries and Packages
+- asgiref==3.7.2
+- boto3==1.34.76
+- botocore==1.34.76
+- certifi==2024.2.2
+- cffi==1.16.0
+- charset-normalizer==3.3.2
+- crispy-bootstrap5==2024.2
+- cryptography==42.0.5
+- defusedxml==0.7.1
+- dj-database-url==2.1.0
+- Django==4.2.11
+- django-allauth==0.62.1
+- django-countries==7.6.1
+- django-crispy-forms==2.1
+- django-storages==1.14.2
+- gunicorn==21.2.0
+- idna==3.6
+- jmespath==1.0.1
+- oauthlib==3.2.2
+- packaging==24.0
+- pillow==10.2.0
+- psycopg2==2.9.9
+- pycparser==2.21
+- PyJWT==2.8.0
+- python-dateutil==2.9.0.post0
+- python3-openid==3.2.0
+- requests==2.31.0
+- requests-oauthlib==1.4.0
+- s3transfer==0.10.1
+- six==1.16.0
+- sqlparse==0.4.4
+- stripe==2.42.0
+- typing_extensions==4.10.0
+- tzdata==2024.1
+- urllib3==1.26.18
+- whitenoise==6.6.0
 
 [Back to top ⇧](#table-of-contents)
 
 ## Agile Methodology
 
-This project was developed using the Agile methodology.<br>
-All epics and user stories implementation progress was registered using [GitHub](https://github.com/). As the user stories were accomplished, they were moved in the GitHub Kanban board from **ToDo**, to **In Progress**, **Done** and **Incomplete** lists.
+Agile methodology emphasizes iterative development and collaboration, enabling teams to respond to change quickly and deliver high-quality products efficiently. We chose Agile for this project to foster adaptability, enhance collaboration, and ensure continuous improvement throughout the development process.
+
+### Kanban Board
+
+All epics and user stories implementation progress was registered using [GitHub](https://github.com/). As the user stories were accomplished, they were moved in the GitHub Kanban board from **To Do**, to **In Progress**, **Done** and **Future features/Won't have** sections on the board.
+
+Visit the project page to view the live [Kanban board](https://github.com/users/Tossan99/projects/7)
+
 <details>
-<summary>Kanban Board Details</summary>
-
-- **KANBAN BOARD**<br><br>
-    <img src="documentation/readme_images/absolut_zero_kanban_board.JPG"><br><br>
-- **[Epic 1: Users First Impression]()**<br>
-  - [USER STORY: Placeholder]()
-- <img src="EPIC 1"><br><br>
-- **[Epic 2: Users Purchasing Products]()**<br>
-  - [USER STORY: Placeholder]()
-- <img src="EPIC 2"><br><br>
-- **[Epic 3: User Interaction and Engagement]()**<br>
-  - [USER STORY: Placeholder]()
-- <img src="EPIC 3"><br><br>
-- **[Epic 4: Site Owner Moderating Content]()**<br>
-  - [USER STORY: Placeholder]()
-- <img src="EPIC 4"><br><br>
-
+<summary>Kanban Board</summary>
+<img src="documentation/readme_images/kanban-board.JPG">
 </details>
 
-### Agile Project Management with GitHub Projects
+### Epics
 
-To make managing projects easier, we use GitHub Projects as a central hub. User stories and tasks are like organized to-do lists, and the GitHub project board shows progress visually.
+All user stories were divided into epics, representing larger user stories. In total, four epics were created to cover the entire project.
+
+Visit the project page to view the live [epics](https://github.com/users/Tossan99/projects/7)
+
+<details>
+<summary>Epics</summary>
+    <img src="documentation/sprints&epics/epic1.JPG">
+    <img src="documentation/sprints&epics/epic2.JPG">
+    <img src="documentation/sprints&epics/epic3.JPG">
+    <img src="documentation/sprints&epics/epic4.JPG">
+</details>
+
+### Sprints
+
+Each user story was categorized into sprints to establish the sequence of completion for each. In total, seven sprints were created to organize all user stories.<br>
+All sprints were made with the Github milestones feature.
+
+Visit the milestones page to view the live [sprints](https://github.com/Tossan99/absolut-zero/milestones)
+
+<details>
+<summary>Sprints</summary>
+    <img src="documentation/sprints&epics/sprint1.JPG">
+    <img src="documentation/sprints&epics/sprint2.JPG">
+    <img src="documentation/sprints&epics/sprint3.JPG">
+    <img src="documentation/sprints&epics/sprint4.JPG">
+    <img src="documentation/sprints&epics/sprint5.JPG">
+    <img src="documentation/sprints&epics/sprint6.JPG">
+    <img src="documentation/sprints&epics/sprint7.JPG">
+</details>
 
 ### User Stories as GitHub Issues
 
@@ -432,20 +503,6 @@ All testing was conducted and documented in [Testing.md](TESTING.md) for easy ac
 
 [Back to top ⇧](#table-of-contents)
 
-## Bugs
-
-### Known bugs
-
-- [BUG: Plageholder]()
-
-### Fixed bugs
-
-- [BUG: Plageholder]()
-
-For more information visit the complete [Kanban Board here.]()
-
-[Back to top ⇧](#table-of-contents)
-
 ## Deployment and Local Development
 
 Live deployment can be found here [Absolute Zero]()
@@ -453,13 +510,13 @@ Live deployment can be found here [Absolute Zero]()
 ### How to Fork
 
 1. Log in (or Sign Up) to Github
-2. Go to repository for this project [Absolute Zero]()
+2. Go to repository for this project [Absolute Zero Github page]()
 3. Click the fork button in the top right corner
 
 ### How to Clone
 
 1. Log in (or Sign Up) to Github
-2. Go to repository for this project [Absolute Zero]()
+2. Go to repository for this project [Absolute Zero Github page]()
 3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 5. Type the following command in the terminal (after the git clone you will need to paste the link you copied in step 3 above)
@@ -468,7 +525,7 @@ Live deployment can be found here [Absolute Zero]()
 
 ### ElephantSQL Database
 
-[Absolute Zero]() is using [ElephantSQL](https://www.elephantsql.com/) PostgreSQL Database
+Absolute Zero is using [ElephantSQL](https://www.elephantsql.com/) PostgreSQL Database
 
 1. Click Create New Instance to start a new database.
 2. Provide a name.
