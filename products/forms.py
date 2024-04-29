@@ -1,5 +1,5 @@
-from .models import ProductReview, ProductRating
 from django import forms
+from .models import ProductReview, ProductRating
 
 class RatingForm(forms.ModelForm):
     """

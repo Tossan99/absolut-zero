@@ -12,7 +12,8 @@
 <section class="hero-img py-5">
     <div class="container-xxl">
         <div class="d-flex">
-            <img src="{% static 'images/absolut-zero-logo.png' %}" id="logo" class="mx-auto my-0 my-sm-3 my-md-4" alt="Absolut Zero logo">
+            <img src="{% static 'images/absolut-zero-logo.png' %}" id="logo" 
+                class="mx-auto my-0 my-sm-3 my-md-4" alt="Absolut Zero logo">
         </div>
     </div>
 </section>
@@ -34,13 +35,20 @@
             </div>
             <div class="col-12 mb-3 fs-6 text-center text-sm-start">
                 <select id="sort-selector" class="sort-btn shadow-sm">
-                    <option class="pb-3" value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                    <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
-                    <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
-                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                    <option class="pb-3" value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>
+                        Sort by...</option>
+                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>
+                        Price (low to high)</option>
+                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>
+                        Price (high to low)</option>
+                    <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>
+                        Rating (low to high)</option>
+                    <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>
+                        Rating (high to low)</option>
+                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>
+                        Name (A-Z)</option>
+                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>
+                        Name (Z-A)</option>
                 </select>
             </div>
             <hr>
@@ -53,7 +61,8 @@
                         <div class="card container-fluid h-100 p-0">
                             <div class="row mx-0">
                                 <div class="col-4 d-flex justify-content-center">
-                                    <img class="py-3" src="https://product-cdn.systembolaget.se/productimages/31639029/31639029_400.png?q=75&w=1024" 
+                                    <img class="py-3" 
+                                        src="https://product-cdn.systembolaget.se/productimages/31639029/31639029_400.png?q=75&w=1024" 
                                         height="200" alt="{{ product.name }}">
                                 </div>
                                 <div class="col-8 d-flex flex-column p-0 pt-2">
@@ -75,7 +84,8 @@
                                         <p class="">{{ product.percentage }}%</p>
                                         <p class="px-2 fw-bold">·</p>
                                         {% if product.discount == True %}
-                                            <p class="text-muted"><s>{{ product.old_price }}:-</s> <span class="text-discount">{{ product.price }}:-</span></p>
+                                            <p class="text-muted"><s>{{ product.old_price }}:-</s> 
+                                                <span class="text-discount">{{ product.price }}:-</span></p>
                                         {% else %}
                                             <p class="">{{ product.price }}:-</p>
                                         {% endif %}

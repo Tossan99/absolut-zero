@@ -5,7 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from django.contrib.auth.decorators import login_required
 
-from .models import Product, Category, Subcategory, ProductRating, ProductReview, DiscountProduct
+from .models import Product, Category, Subcategory, ProductRating, ProductReview
 from .forms import RatingForm, ReviewForm
 
 def view_products_list(request):
@@ -37,7 +37,7 @@ def view_products_list(request):
             categories = request.GET["category"].split()
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
-        
+
         if "subcategory" in request.GET:
             subcategories = request.GET["subcategory"].split()
             products = products.filter(subcategory__name__in=subcategories)
@@ -48,7 +48,7 @@ def view_products_list(request):
             if not query:
                 messages.error(request, "You didn't search for anything.")
                 return redirect(reverse("products_list"))
-            
+
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
@@ -81,9 +81,6 @@ def view_product_details(request, slug):
 
     if request.method == "POST":
         if "rating_form" in request.POST:
-            """
-            Rating form
-            """
             rating_form = RatingForm(data=request.POST)
             if rating_form.is_valid() and request.user.is_authenticated:
                 rating = rating_form.save(commit=False)
@@ -96,20 +93,18 @@ def view_product_details(request, slug):
                 messages.add_message(request, messages.ERROR, "Error rating product")
 
         if "review_form" in request.POST:
-            """
-            Review form
-            """
             review_form = ReviewForm(data=request.POST)
             if review_form.is_valid() and request.user.is_authenticated:
                 review = review_form.save(commit=False)
                 review.author = request.user
                 review.product = product
                 review.save()
-                messages.add_message(request, messages.SUCCESS, "Review submitted and awaiting approval")
+                messages.add_message(request, messages.SUCCESS,
+                                     "Review submitted and awaiting approval")
                 return HttpResponseRedirect(reverse("product_details", args=[slug]))
             else:
                 messages.add_message(request, messages.ERROR, "Error submitting review")
-        
+
     rating_form = RatingForm()
     review_form = ReviewForm()
 
@@ -166,7 +161,8 @@ def view_edit_product_review(request, slug, review_id):
             review.product = product
             review.approved = False
             review.save()
-            messages.add_message(request, messages.SUCCESS, "Product review edited and awaiting approval")
+            messages.add_message(request, messages.SUCCESS,
+                                  "Product review edited and awaiting approval")
         else:
             messages.add_message(request, messages.ERROR, "Error editing product review")
 

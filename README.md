@@ -7,9 +7,9 @@
 
 Welcome to Absolute Zero, your ultimate destination for exquisite alcohol-free beverages! At Absolute Zero, we believe that enjoyment shouldn't compromise your lifestyle choices. Our carefully curated collection spans a wide range of flavors and styles, from sparkling sodas to artisanal mocktails, ensuring there's something to tantalize every taste bud. With a commitment to quality, innovation, and customer satisfaction, Absolute Zero is more than just a store – it's a lifestyle. Join us on a journey of flavor discovery and elevate your drinking experience with Absolute Zero. Because here, zero alcohol never means zero excitement. Cheers to a life of taste without compromise!🥂
     
-Vissit Absolute Zero live website here! [Absolute Zero]()
+Visit Absolute Zero live website here! [Absolute Zero]()
 
-Vissit Absolute Zero repository here! [Git Hub Absolute Zero](https://github.com/Tossan99/Absolute-Zero)
+Visit Absolute Zero repository here! [Git Hub Absolute Zero](https://github.com/Tossan99/Absolute-Zero)
 
 ![GitHub Badge](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=fff&style=for-the-badge)
 ![Heroku Badge](https://img.shields.io/badge/Heroku-430098?logo=heroku&logoColor=fff&style=for-the-badge)
@@ -159,7 +159,7 @@ Welcome to Absolute Zero! If you're new to our website, we're excited to introdu
 
 These user stories provide a framework for developing features and functionalities that cater to different aspects of the e-commerce platform, ensuring a seamless user experience from the initial impression to ongoing engagement and moderation.
 
-For more information vissit the complete [Kanban Board here.](https://github.com/users/Tossan99/projects/7)
+For more information visit the complete [Kanban Board here.](https://github.com/users/Tossan99/projects/7)
 
 ![Kanban Board](documentation/readme_images/absolut_zero_kanban_board.JPG)
 
@@ -349,7 +349,7 @@ All testing was conducted and documented in [Testing.md](TESTING.md) for easy ac
 
 - [BUG: Plageholder]()
 
-For more information vissit the complete [Kanban Board here.]()
+For more information visit the complete [Kanban Board here.]()
 
 [Back to top ⇧](#table-of-contents)
 

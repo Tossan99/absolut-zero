@@ -27,13 +27,16 @@
 
 
     {% block corejs %}
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" 
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
 
     {% block bootstrap %}
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+            rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     {% endblock %}
 
     {% block corecss %}
@@ -62,12 +65,15 @@
         <div class="container-xxl">
             <div class="row pt-3 pb-1 justify-content-center">
                 <div class="col-12 col-lg-4 text-center text-lg-left my-lg-auto my-2">
-                    <a href="{% url 'home' %}"><img id="nav-logo" src="{% static 'images/absolut-logo-black.png' %}" alt=""></a>
+                    <a href="{% url 'home' %}"><img id="nav-logo" 
+                        src="{% static 'images/absolut-logo-black.png' %}" alt="">
+                    </a>
                 </div>
                 <div class="col-12 col-sm-10 col-lg-4 my-lg-auto my-2 px-5 px-lg-3">
                     <form class="" method="GET" action="{% url 'products_list' %}">
                         <div class="input-group search-bar w-100 shadow-sm">
-                            <input class="form-control search-field" type="text" name="q" placeholder="Search for a product...">
+                            <input class="form-control search-field" type="text" 
+                                name="q" placeholder="Search for a product...">
                             <div class="input-group-append">
                                 <button class="form-control search-btn" type="submit">
                                     <span class="icon">
@@ -82,7 +88,8 @@
                     <div class="row align-items-center justify-content-center">
                         <div class="col-1 p-0 me-lg-3 me-3 me-sm-0 text-end text-md-center">
                             <a class="fs-1 {% if request.path == profile_url %}profile-icon-active" 
-                                aria-current="page{% endif %}" href="#" data-bs-toggle="dropdown" aria-expanded="true">
+                                aria-current="page{% endif %}" href="#" data-bs-toggle="dropdown" 
+                                    aria-expanded="true">
                                 <i class="fa-solid fa-user profile-icon"></i></a>
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
@@ -114,8 +121,10 @@
     </header>
     <nav class="navbar navbar-expand-sm navbar-light pt-0">
         <div class="container-xxl px-xl-5 px-lg-4 px-3 text-center">
-            <button class="navbar-toggler collapsed mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler collapsed mx-auto" type="button" 
+                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" aria-expanded="false" 
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse collapse" id="navbarSupportedContent">
@@ -134,7 +143,8 @@
                     </li>
                     <li class="nav-item dropdown has-megamenu">
                         <a class="nav-link nav-text dropdown-toggle fs-5 fw-bold {% if request.path == products_url %}active" 
-                            aria-current="page{% endif %}" href="#" data-bs-toggle="dropdown" aria-expanded="true">Beverages</a>
+                            aria-current="page{% endif %}" href="#" data-bs-toggle="dropdown" 
+                            aria-expanded="true">Beverages</a>
                         {% include "includes/megamenu.html" %}
                     </li>
                 </ul>
@@ -176,22 +186,28 @@
                 <span>Get connected with us on social networks:</span>
             </div>
             <div class="">
-                <a href="https://www.facebook.com/" class="me-4 text-reset text-decoration-none" target="_blank" rel=”noopener”>
+                <a href="https://www.facebook.com/" class="me-4 text-reset text-decoration-none" 
+                    target="_blank" rel=”noopener”>
                     <i class="fab fa-facebook-f social-icon"></i>
                 </a>
-                <a href="https://www.twitter.com/" class="me-4 text-reset text-decoration-none" target="_blank" rel=”noopener”>
+                <a href="https://www.twitter.com/" class="me-4 text-reset text-decoration-none" 
+                    target="_blank" rel=”noopener”>
                     <i class="fab fa-twitter social-icon"></i>
                 </a>
-                <a href="https://www.google.com/" class="me-4 text-reset text-decoration-none" target="_blank" rel=”noopener”>
+                <a href="https://www.google.com/" class="me-4 text-reset text-decoration-none" 
+                    target="_blank" rel=”noopener”>
                     <i class="fab fa-google social-icon"></i>
                 </a>
-                <a href="https://www.instagram.com/" class="me-4 text-reset text-decoration-none" target="_blank" rel=”noopener”>
+                <a href="https://www.instagram.com/" class="me-4 text-reset text-decoration-none" 
+                    target="_blank" rel=”noopener”>
                     <i class="fab fa-instagram social-icon"></i>
                 </a>
-                <a href="https://www.linkedin.com/" class="me-4 text-reset text-decoration-none" target="_blank" rel=”noopener”>
+                <a href="https://www.linkedin.com/" class="me-4 text-reset text-decoration-none" 
+                    target="_blank" rel=”noopener”>
                     <i class="fab fa-linkedin social-icon"></i>
                 </a>
-                <a href="https://www.github.com/" class="me-4 text-reset text-decoration-none" target="_blank" rel=”noopener”>
+                <a href="https://www.github.com/" class="me-4 text-reset text-decoration-none" 
+                    target="_blank" rel=”noopener”>
                     <i class="fab fa-github social-icon"></i>
                 </a>
             </div>
@@ -203,7 +219,9 @@
             <div class="container-xxl text-center text-md-start mt-5">
                 <div class="row mt-3">
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <a href="{% url 'home' %}"><img src="{% static 'images/absolut-logo-black.png' %}" class="mb-2" alt="Absolut Zero logo" width="70%"></a>
+                        <a href="{% url 'home' %}"><img src="{% static 'images/absolut-logo-black.png' %}" 
+                            class="mb-2" alt="Absolut Zero logo" width="70%">
+                        </a>
                         <p>
                             Welcome to Absolute Zero, your ultimate destination for exquisite alcohol-free 
                             beverages! At Absolute Zero, we believe that enjoyment shouldn't compromise your 
@@ -232,7 +250,8 @@
                             Useful links
                         </h6>
                         <p>
-                            <a href="{% if request.user.is_authenticated %}{% url 'profile' %}{% else %}{% url 'account_signup' %}{% endif %}" class="">Profile</a>
+                            <a href="{% if request.user.is_authenticated %}{% url 'profile' %}{% else %}{% url 'account_signup' %}{% endif %}" 
+                            class="">Profile</a>
                         </p>
                         <p>
                             <a href="{% url 'faq' %}" class="">FAQ</a>

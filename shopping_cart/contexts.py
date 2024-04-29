@@ -27,9 +27,9 @@ def shopping_cart_contents(request):
     else:
         delivery = 0
         free_delivery_delta = 0
-    
+
     grand_total = delivery + total
-    
+
     context = {
         "shopping_cart_items": shopping_cart_items,
         "total": total,

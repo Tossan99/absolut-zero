@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
-from django.contrib import messages
 from products.models import Product
 
 
@@ -49,7 +48,7 @@ def view_remove_from_shopping_cart(request, item_id):
         product = get_object_or_404(Product, pk=item_id)
         shopping_cart = request.session.get("shopping_cart", {})
         shopping_cart.pop(item_id)
-        request.session["shopping_cart"] = shopping_cart 
+        request.session["shopping_cart"] = shopping_cart
         messages.success(request, f"Removed all {product} from shopping cart.")
         return redirect(reverse("shopping_cart"))
     except Exception as e:
