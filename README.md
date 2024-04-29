@@ -3,11 +3,13 @@
 
 <center> 
 
-![Logo](documentation/readme_images/absolut_zero_logo.JPG)
+![Logo](documentation/readme_images/absolut-logo-black.png)
+
+![Am I Responsive?](documentation/readme_images/)
 
 Welcome to Absolute Zero, your ultimate destination for exquisite alcohol-free beverages! At Absolute Zero, we believe that enjoyment shouldn't compromise your lifestyle choices. Our carefully curated collection spans a wide range of flavors and styles, from sparkling sodas to artisanal mocktails, ensuring there's something to tantalize every taste bud. With a commitment to quality, innovation, and customer satisfaction, Absolute Zero is more than just a store – it's a lifestyle. Join us on a journey of flavor discovery and elevate your drinking experience with Absolute Zero. Because here, zero alcohol never means zero excitement. Cheers to a life of taste without compromise!🥂
     
-Visit Absolute Zero live website here! [Absolute Zero]()
+Visit Absolute Zero live website here! [Absolute Zero](https://absolut-zero-9622981fe97d.herokuapp.com/)
 
 Visit Absolute Zero repository here! [Git Hub Absolute Zero](https://github.com/Tossan99/Absolute-Zero)
 
@@ -26,7 +28,7 @@ Visit Absolute Zero repository here! [Git Hub Absolute Zero](https://github.com/
 
 </center>
 
-# Table of Contents
+## Table of Contents
 
 - [Absolute Zero](#absolute-zero)
 - [Table of Contents](#table-of-contents)
@@ -103,9 +105,9 @@ Visit Absolute Zero repository here! [Git Hub Absolute Zero](https://github.com/
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
-# Project Goals
+## Project Goals
 
-## User Goals
+### User Goals
 
 1. **Discover Exciting Options:** Enable users to explore a wide variety of alcohol-free beverage options, from classic favorites to innovative new releases.
 2. **Convenient Shopping Experience:** Provide a seamless and user-friendly online shopping experience, allowing users to easily browse, select, and purchase their desired beverages.
@@ -114,7 +116,7 @@ Visit Absolute Zero repository here! [Git Hub Absolute Zero](https://github.com/
 5. **Educational Resources:** Provide informative content and resources to educate users about alcohol-free beverages, their benefits, and different flavor profiles.
 6. **Customer Support:** Offer responsive and helpful customer support to address any inquiries, concerns, or feedback from users promptly and effectively.
 
-## Site Owner Goals
+### Site Owner Goals
 
 1. **Curated Selection:** Continuously curate and expand the selection of alcohol-free beverages to cater to diverse tastes and preferences, ensuring a comprehensive range of options for users.
 2. **Supplier Partnerships:** Establish and maintain strong partnerships with reputable suppliers and brands to source high-quality ingredients and products consistently.
@@ -125,37 +127,79 @@ Visit Absolute Zero repository here! [Git Hub Absolute Zero](https://github.com/
   
 [Back to top ⇧](#table-of-contents)
 
-# User Experience
+## User Experience
 
-## Targeted Audience
+### Targeted Audience
 
 Absolute Zero is designed to cater to a diverse audience of individuals seeking high-quality, alcohol-free beverage options. Our primary target audience includes health-conscious consumers, designated drivers, non-drinkers, fitness enthusiasts, young adults exploring beverage options, and families seeking enjoyable, alcohol-free alternatives for gatherings and celebrations. By providing a welcoming and inclusive platform, Absolute Zero aims to offer delicious and satisfying beverages to suit the preferences and lifestyle choices of everyone.
 
-## First-Time Users
+### First-Time Users
 
-Welcome to Absolute Zero! If you're new to our website, we're excited to introduce you to our selection of exquisite alcohol-free beverages. As a first-time user, you can expect a seamless shopping experience as you explore our wide variety of beverages, ranging from classic favorites to innovative new releases. Rest assured that every beverage meets our high standards of taste and excellence. Not sure where to start? Let us help you discover your new favorite with personalized recommendations based on your preferences and previous purchases. And if you have any questions or concerns, our friendly customer support team is here to assist you every step of the way. We're thrilled to have you join us on this journey of flavor discovery at Absolute Zero. Cheers to a life of taste without compromise!
+As a first-time user, you'll find our website intuitive and user-friendly. Easily navigate through our curated selection of alcohol-free beverages with clear menus and prominent buttons. Discover detailed product descriptions to make informed choices, and enjoy a hassle-free checkout process.
 
-## Registered User
+### Registered User
 
-## Site Owner
+For our registered users, Absolut Zero offers added convenience and personalized features. Access your account dashboard to view order history and manage shipping details seamlessly.
+
+### Site Owner
+
+As a site owner, Absolut Zero provides you with comprehensive tools to manage and grow your e-commerce business efficiently. Easily update product listings and manage content through the admin panel.
 
 ## User Stories
 
-### [Epic 1: Users First Impression]()
+### [Epic 1: Users First Impression](https://github.com/Tossan99/absolut-zero/issues/1)
 
-- [USER STORY: Placeholder]()
+- [USER STORY: Landing page](https://github.com/Tossan99/absolut-zero/issues/5)
+- [USER STORY: Navigation](https://github.com/Tossan99/absolut-zero/issues/6)
+- [USER STORY: Responsiveness](https://github.com/Tossan99/absolut-zero/issues/7)
+- [USER STORY: Search Bar](https://github.com/Tossan99/absolut-zero/issues/8)
+- [USER STORY: Sort By Function](https://github.com/Tossan99/absolut-zero/issues/9)
+- [USER STORY: Categories](https://github.com/Tossan99/absolut-zero/issues/10)
+- [USER STORY: About Us Page](https://github.com/Tossan99/absolut-zero/issues/12)
+- [USER STORY: Privacy Page](https://github.com/Tossan99/absolut-zero/issues/13)
+- [USER STORY: Error Handler Page](https://github.com/Tossan99/absolut-zero/issues/14)
+- [USER STORY: Product Details Page](https://github.com/Tossan99/absolut-zero/issues/15)
+- [USER STORY: Browsing Products](https://github.com/Tossan99/absolut-zero/issues/16)
+- [USER STORY: SEO](https://github.com/Tossan99/absolut-zero/issues/17)
+- [USER STORY: Favicon ](https://github.com/Tossan99/absolut-zero/issues/46)
 
-### [EPIC 2: Users Purchasing Products]()
+### [EPIC 2: Users Purchasing Products](https://github.com/Tossan99/absolut-zero/issues/2)
 
-- [USER STORY: Placeholder]()
+- [USER STORY: FAQ Page](https://github.com/Tossan99/absolut-zero/issues/11)
+- [USER STORY: Add Products](https://github.com/Tossan99/absolut-zero/issues/18)
+- [USER STORY: Shopping Cart](https://github.com/Tossan99/absolut-zero/issues/19)
+- [USER STORY: Safe Payment](https://github.com/Tossan99/absolut-zero/issues/20)
+- [USER STORY: Confirmation Page](https://github.com/Tossan99/absolut-zero/issues/21)
+- [USER STORY: Email Confirmation](https://github.com/Tossan99/absolut-zero/issues/22)
+- [USER STORY: Sales](https://github.com/Tossan99/absolut-zero/issues/24)
+- [USER STORY: Loading Indicator](https://github.com/Tossan99/absolut-zero/issues/25)
+- [USER STORY: Related Products](https://github.com/Tossan99/absolut-zero/issues/26)
+- [USER STORY: Free Shipping](https://github.com/Tossan99/absolut-zero/issues/27)
 
-### [EPIC 3: User Interaction and Engagement]()
+### [EPIC 3: User Interaction and Engagement](https://github.com/Tossan99/absolut-zero/issues/3)
 
-- [USER STORY: Placeholder]()
+- [USER STORY: Redirecting](https://github.com/Tossan99/absolut-zero/issues/23)
+- [USER STORY: Profile Page](https://github.com/Tossan99/absolut-zero/issues/28)
+- [USER STORY: Contact Details](https://github.com/Tossan99/absolut-zero/issues/29)
+- [USER STORY: Profile Image](https://github.com/Tossan99/absolut-zero/issues/30)
+- [USER STORY: Delete Profile](https://github.com/Tossan99/absolut-zero/issues/31)
+- [USER STORY: View Public Profile](https://github.com/Tossan99/absolut-zero/issues/32)
+- [USER STORY: Success and Error Messages](https://github.com/Tossan99/absolut-zero/issues/33)
+- [USER STORY: Retrieve Password](https://github.com/Tossan99/absolut-zero/issues/34)
+- [USER STORY: Rating Products](https://github.com/Tossan99/absolut-zero/issues/35)
+- [USER STORY: Review Products](https://github.com/Tossan99/absolut-zero/issues/36)
+- [USER STORY: Newsletter](https://github.com/Tossan99/absolut-zero/issues/37)
+- [USER STORY: Live Help Chat](https://github.com/Tossan99/absolut-zero/issues/38)
 
-### [EPIC 4: Site Owner Moderating Content](https://github.com/Tossan99/osrs-tips/issues/4)
+### [EPIC 4: Site Owner Moderating Content](https://github.com/Tossan99/absolut-zero/issues/4)
 
-- [USER STORY: Placeholder]()
+- [USER STORY: Testing](https://github.com/Tossan99/absolut-zero/issues/39)
+- [USER STORY: Documentation](https://github.com/Tossan99/absolut-zero/issues/40)
+- [USER STORY: Product CRUD Capabilities](https://github.com/Tossan99/absolut-zero/issues/41)
+- [USER STORY: Reviews CRUD Capabilities](https://github.com/Tossan99/absolut-zero/issues/42)
+- [USER STORY: Sales CRUD Capabilities](https://github.com/Tossan99/absolut-zero/issues/43)
+- [USER STORY: User Profiles CRUD Capabilities](https://github.com/Tossan99/absolut-zero/issues/44)
+- [USER STORY: Categories CRUD Capabilities](https://github.com/Tossan99/absolut-zero/issues/45)
 
 These user stories provide a framework for developing features and functionalities that cater to different aspects of the e-commerce platform, ensuring a seamless user experience from the initial impression to ongoing engagement and moderation.
 
