@@ -499,85 +499,155 @@ These are some features that weren't added due to lack of time.
 
 ## Testing
 
+the Absolut Zero E-commerce website went through a comprehensive testing process to guarantee its functionality, accessibility, and performance. This included checking the code, such as code validation, accessibility assessment, performance testing, cross-device testing, verification of browser compatibility, assessment of user stories, and the integration of user feedback to enhance the overall user experience.
+
 All testing was conducted and documented in [Testing.md](TESTING.md) for easy accessibility.
 
 [Back to top ⇧](#table-of-contents)
 
 ## Deployment and Local Development
 
-Live deployment can be found here [Absolute Zero]()
+Live deployment can be found here [Absolute Zero](https://absolut-zero-9622981fe97d.herokuapp.com/)
 
-### How to Fork
+### App Deployment
+For deploying Your app, Heroku is used. Follow these steps:
 
-1. Log in (or Sign Up) to Github
-2. Go to repository for this project [Absolute Zero Github page]()
-3. Click the fork button in the top right corner
+ **Create a New App:**
+   - Create a new app on Heroku dashboard.
 
-### How to Clone
+ **Configure Settings:**
+   - Navigate to "Settings" in new app.
 
-1. Log in (or Sign Up) to Github
-2. Go to repository for this project [Absolute Zero Github page]()
-3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
-4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
-5. Type the following command in the terminal (after the git clone you will need to paste the link you copied in step 3 above)
-6. Set up a virtual environment.
-7. Install the packages from the requirements.txt file - run Command pip3 install -r requirements.txt
+ **Config Vars Setup:**
+   - In "Config Vars," add `PORT` as the key and `8000` as its value.
 
-### ElephantSQL Database
+ **Add PostgreSQL Database:**
+   - Choose PostgreSQL as database.
 
-Absolute Zero is using [ElephantSQL](https://www.elephantsql.com/) PostgreSQL Database
+        Example "ElephantSQL" was used in this project
 
-1. Click Create New Instance to start a new database.
-2. Provide a name.
-3. Select the Tiny Turtle (Free) plan.
-4. You can leave the Tags blank.
-5. Select the Region and Data Center closest to you.
-6. Once created, click on the new database name, where you can view the database URL and Password.
+ **Configure DATABASE_URL:**
+   - In "Config Vars," add `DATABASE_URL` and copy the URL from PostgreSQL dashboard.
 
-### AWS
+     Note: If using ElephantSQL as PostgreSQL provider, you can use the URL provided by ElephantSQL.
 
-### Heroku Deployment
+ **Environment Variable Setup:**
+   - Create a new file in workspace called `env.py`.
+   - Import the `os` library and set the environment variable for `DATABASE_URL` to the Heroku address (or ElephantSQL URL)
+   - Add a secret key using `os.environ["SECRET_KEY"] = "your secret key here"`.
 
-* Log into [Heroku](https://www.heroku.com/) account or create an account.
-* Click the "New" button at the top right corner and select "Create New App".
-* Enter a unique application name
-* Select your region
-* Click "Create App"
+ **Heroku Config Vars:**
+   - Add the secret key to the Heroku app's config vars in the settings.
 
-### Prepare environment and settings.py
+ **Django Settings:**
+   - In `settings.py` of Django app, import `Path` from `pathlib`, `os`, and `dj_database_url`.
+   - Add `if os.path.isfile("env.py"): import env` to the file.
+   - Replace the SECRET_KEY with `SECRET_KEY = os.environ.get('SECRET_KEY')`.
+   - Replace the database section with `DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}`.
 
-* In your workspace, create an env.py file in the main directory.
-* Add the DATABASE_URL value and your chosen SECRET_KEY value to the env.py file.
-* Update the settings.py file to import the env.py file and add the SECRETKEY and DATABASE_URL file paths.
-* Comment out the default database configuration.
-* Save all files and make migrations.
-* Add the Cloudinary URL to env.py
-* Add the Cloudinary libraries to the list of installed apps.
-* Add the STATIC files settings - the url, storage path, directory path, root path, media url and default file storage path.
-* Link the file to the templates directory in Heroku.
-* Change the templates directory to TEMPLATES_DIR
-* Add Heroku to the ALLOWED_HOSTS list the format ['app_name.heroku.com', 'localhost']
+ **Migrate Models:**
+   - In workspace terminal, migrate the models to the new database connection.
 
-### Add the following Config Vars in Heroku
+### Custom Domain configuration
 
-* SECRET_KEY - This can be any Django random secret key
-* CLOUDINARY_URL - Insert your own Cloudinary API key
-* DISABLE_COLLECTSTATIC = 1 - this is temporary, and can be removed for the final deployment
-* DATABASE_URL - Insert your own ElephantSQL database URL here
+1. **Register Domain:**
+   - Register a domain with a domain registrar (e.g., GoDaddy).
 
-### Heroku needs two additional files to deploy properly
+2. **Add Custom Domain in Heroku:**
+   - Go to the "Settings" tab of your Heroku app.
+   - Scroll down to "Domains" and click "Add Domain."
+   - Enter your custom domain (e.g., `www.absolutzero.com`).
+   - Copy the provided DNS target. It will look something like `shallow-atoll-32t56jvds3s5fhf8767d9a9c.herokudns.com`.
 
-* requirements.txt
-* Procfile
+3. **Configure DNS Records:**
+   - Log in to your domain registrar.
+   - Navigate to DNS settings.
+   - Add a CNAME record:
+      - Type: CNAME
+      - Name: www
+      - Value: Paste Heroku's DNS target
+      - TTL: Set to default
 
-### Deploy
+4. **Verify Domain Configuration:**
+   - Check the "Domains" section in your Heroku dashboard.
+   - Wait for DNS changes to propagate (up to 48 hours).
 
-1. Make sure DEBUG = False in the settings.py
-2. Go to the deploy tab on Heroku and connect to GitHub, then to the required repository.
-3. Scroll to the bottom of the deploy page and either click Enable Automatic Deploys for automatic deploys or Deploy Branch to deploy manually. Manually deployed branches will need re-deploying each time the GitHub repository is updated.
-4. Click 'Open App' to view the deployed live site.
+5. **HTTP and HTTPS Forwarding (Optional):**
+   - Optionally, configure forwarding in your domain registrar's settings.
 
-The site is now live
+6. **Verify Custom Domain:**
+   - After DNS propagation, access your app using the custom domain.
+
+6. **Add ACCESS_HOSTNAME to your project settings:**
+   - Add "www.yourdomain.com" to `ALLOWED_HOSTS` in your Django app's settings.py file.
+
+### Version Control
+To manage version control and push code to the main repository on GitHub using GitPod, follow these steps:
+
+ **Add Changes:**
+   - In the GitPod terminal, use the command `git add .` to stage changes.
+
+ **Commit Changes:**
+   - Commit changes with a descriptive comment using the command:
+     ```
+     git commit -m "Push comment here"
+     ```
+
+ **Push to GitHub:**
+   - Push the updates to the repository on GitHub with the command:
+     ```
+     git push
+     ```
+
+
+ **Migrate Models:**
+    - In the terminal, migrate the models to the new database connection.
+
+### Forking the Repository
+
+By forking the GitHub Repository, can create a copy of the original repository without affecting the original. Follow these steps:
+
+ **GitHub Account Setup:**
+   - Log into GitHub account or create one if you don't have one.
+
+ **Locate the Repository:**
+   - Find the repository at [https://github.com/Tossan99/absolut-zero](https://github.com/Tossan99/absolut-zero).
+
+ **Fork the Repository:**
+   - At the top right of the repository page, click "Fork" to create a copy in your own GitHub repository.
+
+### Clone of the Repository:
+
+Creating a clone allows you to have a local copy of the project. Follow these steps:
+
+ **Repository URL:**
+   - Navigate to [https://github.com/Tossan99/absolut-zero](https://github.com/Tossan99/absolut-zero).
+   - Click the green "Code" button at the top right.
+
+ **Clone the Repository:**
+   - Select the "Clone by HTTPS" option and copy the provided URL to the clipboard.
+
+ **Terminal and Git:**
+   - Open your code editor or terminal and navigate to the directory where you want to clone the repository.
+   - Run `git clone` followed by the copied URL.
+   - Press enter, and Git will clone the repository to your local machine.
+
+
+To fork the repository, follow these steps:
+
+1. Go to the GitHub repository.
+2. Click on the Fork button in the upper right-hand corner.
+3. Wait for the forking process to complete. Once done, you will have a copy of the repository in your GitHub account.
+
+To clone the repository, follow these steps:
+
+1. Go to the GitHub repository.
+2. Locate the Code button above the list of files and click it.
+3. Select your preferred method for cloning: HTTPS, SSH, or GitHub CLI, and click the copy button to copy the repository URL to your clipboard.
+4. Open Git Bash (or your preferred terminal).
+5. Change the current working directory to the location where you want the cloned directory to be created.
+6. Type the command `git clone` followed by the URL you copied in step 3. The command should look like this: `git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY`.
+7. Press Enter to create your local clone.
 
 [Back to top ⇧](#table-of-contents)
 
