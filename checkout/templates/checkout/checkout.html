@@ -42,8 +42,8 @@
                     <div class="row">
                         <div class="col-2 mb-3 text-center">
                             <a href="{% url 'product_details' item.product.slug %}">
-                                <img class="" src="https://product-cdn.systembolaget.se/productimages/1036900/1036900_400.png?q=75&w=2000" 
-                                    height="150" alt="{{ product.name }}">
+                                <img class="" src="{{ item.product.image.url }}" 
+                                    height="150" alt="{{ item.product.name }}">
                             </a>
                         </div>
                         <div class="col-7 mt-2">

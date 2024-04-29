@@ -24,41 +24,41 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 col-12">
                     <div class="col-megamenu">
-                        <a href="" class="fs-4 fw-bold">
+                        <a href="{% url 'products_list' %}?category=wine" class="fs-4 fw-bold">
                             <h3 class="mb-0">Wine</h3>
                             <hr class="m-0 p-0 mb-2">
                         </a>
                         
                         <ul class="list-unstyled fs-5">
-                            <li><a href="#">White</a></li>
-                            <li><a href="#">Red</a></li>
-                            <li><a href="#">Rosé</a></li>
+                            <li><a href="{% url 'products_list' %}?subcategory=white">White</a></li>
+                            <li><a href="{% url 'products_list' %}?subcategory=red">Red</a></li>
+                            <li><a href="{% url 'products_list' %}?subcategory=rose">Rosé</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 col-12">
                     <div class="col-megamenu">
-                        <a href="" class="fs-5 fw-bold">
+                        <a href="{% url 'products_list' %}?category=cider-mixed-drinks" class="fs-5 fw-bold">
                             <h3 class="mb-1 fs-4">Cider & Mixed Drinks</h3>
                             <hr class="m-0 p-0 mb-2">
                         </a>
                         <ul class="list-unstyled fs-5">
-                            <li><a href="#">Cocktails</a></li>
-                            <li><a href="#">Cider</a></li>
-                            <li><a href="#">Alcohol-free Mix</a></li>
+                            <li><a href="{% url 'products_list' %}?subcategory=cocktails">Cocktails</a></li>
+                            <li><a href="{% url 'products_list' %}?subcategory=cider">Cider</a></li>
+                            <li><a href="{% url 'products_list' %}?subcategory=alcohol-free-mix">Alcohol-free Mix</a></li>
                         </ul>
                     </div>
                 </div>    
                 <div class="col-lg-3 col-sm-6 col-12">
                     <div class="col-megamenu">
-                        <a href="" class="fs-4 fw-bold">
+                        <a href="{% url 'products_list' %}?category=sparkling-wine" class="fs-4 fw-bold">
                             <h3 class="mb-0">Sparkling Wine</h3>
                             <hr class="m-0 p-0 mb-2">
                         </a>
                         <ul class="list-unstyled fs-5">
-                            <li><a href="#">Sparkling White</a></li>
-                            <li><a href="#">Sparkling Rosé</a></li>
-                            <li><a href="#">Other</a></li>
+                            <li><a href="{% url 'products_list' %}?subcategory=sparkling-white">Sparkling White</a></li>
+                            <li><a href="{% url 'products_list' %}?subcategory=sparkling-rose">Sparkling Rosé</a></li>
+                            <li><a href="{% url 'products_list' %}?subcategory=other">Other</a></li>
                         </ul>
                     </div>
                 </div>

@@ -31,7 +31,7 @@
                             {% for product in random_products %}
                             <div class="carousel-item {% if forloop.first %}active{% endif %}" 
                                 data-bs-interval="4000">
-                                <img src="{% static 'images/leitz-eins.png' %}" 
+                                <img src="{{ product.image.url }}" 
                                     class="d-block mx-auto carousel-img" alt="{{ product.name }}">
                                 <div class="carousel-caption position-static text-black p-0 m-0">
                                     <h4 class="mt-2 mb-1 h4 fw-bold">{{ product.name }}</h4>
