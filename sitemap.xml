@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/accounts/login/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/shopping_cart/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/about/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/faq/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/?category=beer</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/?subcategory=ale</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/?subcategory=light-lager</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/?subcategory=wheat-beer</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/?subcategory=dark-lager</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/?subcategory=sour-beer</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/oppigards-easter-ale-20240403164031/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/mikkeller-drinkin-the-snow-20240403164140/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/omnipollo-maz-oat-pale-ale-20240403164255/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/samuel-smith-sams-brown-ale-20240403164359/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/nils-oscar-running-free-20240403164523/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/nils-oscar-god-lager-20240403164852/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/mikkeller-drinkin-the-sun-20240403165142/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/1664-blanc-20240403165248/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/hoegaarden-20240403165338/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/nils-oscar-paskol-20240403165539/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/mariestads-paskbrygd-20240403165439/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/gotlands-bryggeri-wisby-jul-20240403165814/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/mikkeller-raspberry-rush-20240403165949/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/mikkeller-limbo-yuzu-20240403170048/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/mikkeller-limbo-series-raspberry-20240403170142/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/omnipollo-julmumma-sour-20240403170230/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/rothaus-tannenzapfle-20240403165016/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/kukko-pils-20240403164623/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://absolut-zero-9622981fe97d.herokuapp.com/products/mariestads-julol-20240403165900/</loc>
+  <lastmod>2024-04-29T13:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://absolut-zero-9622981fe97d.herokuapp.com/sitemap.xml
