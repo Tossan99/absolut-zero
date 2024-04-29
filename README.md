@@ -653,24 +653,44 @@ To clone the repository, follow these steps:
 
 ## Credits
 
+### Media
+Images are taken from the following page:
+- []() **Used as a landing page hero image**
+- []() **Used for some of the product images, this images are not made by me or easy keyboard maker**
+
+
 ### Django Documentation
+The official Django documentation has been an invaluable resource throughout the project, providing comprehensive guidance on models, forms, templates, and various aspects of Django development.
 
-- [Placeholder]()
+- [Models](https://docs.djangoproject.com/en/4.2/topics/db/models/)
+- [Form Validation](https://docs.djangoproject.com/en/4.1/ref/forms/validation/)
+- [Model Field Types](https://docs.djangoproject.com/en/4.2/ref/models/fields/#model-field-types)
+- [CSRF Trusted Origins](https://docs.djangoproject.com/en/4.0/ref/settings/#csrf-trusted-origins)
+- [Built-in template tags and filters](https://docs.djangoproject.com/en/4.2/ref/templates/builtins/)
+- [Creating forms from models](https://docs.djangoproject.com/en/4.2/topics/forms/modelforms/)
+- [Model instance reference](https://docs.djangoproject.com/en/4.2/ref/models/instances/)
+- [Signals](https://docs.djangoproject.com/en/4.2/topics/signals/)
+- [Using mixins with class-based views](https://docs.djangoproject.com/en/4.2/topics/class-based-views/mixins/#detailview-working-with-a-single-django-object)
+- [Using widgets in the form](https://docs.djangoproject.com/en/4.2/ref/forms/widgets/)
+- [Date string form](https://docs.djangoproject.com/en/3.2/ref/templates/builtins/#date)
+- [Custom Clearables](https://github.com/django/django/blob/main/django/forms/templates/django/forms/widgets/clearable_file_input.html)
+- [Annotate() used to add aggregate values to each objects in a queryset](https://docs.djangoproject.com/en/3.2/ref/models/querysets/#annotate)
+- [Avg calculates the average value of my review star rating](https://docs.djangoproject.com/en/3.2/topics/db/aggregation/#avg)
+- ['help_text' used to perform sub text under input field in forms](https://docs.djangoproject.com/en/3.2/ref/forms/fields/#help-text)
+- [DoesnotExist, used to check is product is existing](https://docs.djangoproject.com/en/3.2/ref/models/class/#django.db.models.Model.DoesNotExist)
 
-### Bootstrap Documentation
+### W3 Schools
+- [Overrite Bootstraps css variables](https://www.w3schools.com/css/css_important.asp)
 
-- [Placeholder]()
+### Bootstrap docs
+- [Increase knowledge of bootstrap framework](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 
-### Stripe Documentation
+### Content
+- Paragraphs/text for the webpage/readme was written together with [ChatGPT](https://chat.openai.com/) and [Phind](https://www.phind.com/search?home=true)
 
-- [Placeholder]()
+[Back to top ⇧](#table-of-contents)
 
-### Other guides
-
-- [Placeholder]()
-
-### Content 
-
-- [Placeholder]()
+## Acknowledgments
+- Code Institute Slack Channel: #community-sweden I received feedback from numerous users in a channel where I shared my E-commerce project. I am genuinely appreciative of the valuable feedback I received from the community.
 
 [Back to top ⇧](#table-of-contents)
