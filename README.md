@@ -102,9 +102,6 @@ Visit Absolute Zero repository here! [Git Hub Absolute Zero](https://github.com/
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 ## Project Goals
 
 ### User Goals
@@ -145,9 +142,9 @@ For our registered users, Absolut Zero offers added convenience and personalized
 
 As a site owner, Absolut Zero provides you with comprehensive tools to manage and grow your e-commerce business efficiently. Easily update product listings and manage content through the admin panel.
 
-## User Stories
+### User Stories
 
-### [Epic 1: Users First Impression](https://github.com/Tossan99/absolut-zero/issues/1)
+#### [Epic 1: Users First Impression](https://github.com/Tossan99/absolut-zero/issues/1)
 
 - [USER STORY: Landing page](https://github.com/Tossan99/absolut-zero/issues/5)
 - [USER STORY: Navigation](https://github.com/Tossan99/absolut-zero/issues/6)
@@ -163,7 +160,7 @@ As a site owner, Absolut Zero provides you with comprehensive tools to manage an
 - [USER STORY: SEO](https://github.com/Tossan99/absolut-zero/issues/17)
 - [USER STORY: Favicon ](https://github.com/Tossan99/absolut-zero/issues/46)
 
-### [EPIC 2: Users Purchasing Products](https://github.com/Tossan99/absolut-zero/issues/2)
+#### [EPIC 2: Users Purchasing Products](https://github.com/Tossan99/absolut-zero/issues/2)
 
 - [USER STORY: FAQ Page](https://github.com/Tossan99/absolut-zero/issues/11)
 - [USER STORY: Add Products](https://github.com/Tossan99/absolut-zero/issues/18)
@@ -176,7 +173,7 @@ As a site owner, Absolut Zero provides you with comprehensive tools to manage an
 - [USER STORY: Related Products](https://github.com/Tossan99/absolut-zero/issues/26)
 - [USER STORY: Free Shipping](https://github.com/Tossan99/absolut-zero/issues/27)
 
-### [EPIC 3: User Interaction and Engagement](https://github.com/Tossan99/absolut-zero/issues/3)
+#### [EPIC 3: User Interaction and Engagement](https://github.com/Tossan99/absolut-zero/issues/3)
 
 - [USER STORY: Redirecting](https://github.com/Tossan99/absolut-zero/issues/23)
 - [USER STORY: Profile Page](https://github.com/Tossan99/absolut-zero/issues/28)
@@ -191,7 +188,7 @@ As a site owner, Absolut Zero provides you with comprehensive tools to manage an
 - [USER STORY: Newsletter](https://github.com/Tossan99/absolut-zero/issues/37)
 - [USER STORY: Live Help Chat](https://github.com/Tossan99/absolut-zero/issues/38)
 
-### [EPIC 4: Site Owner Moderating Content](https://github.com/Tossan99/absolut-zero/issues/4)
+#### [EPIC 4: Site Owner Moderating Content](https://github.com/Tossan99/absolut-zero/issues/4)
 
 - [USER STORY: Testing](https://github.com/Tossan99/absolut-zero/issues/39)
 - [USER STORY: Documentation](https://github.com/Tossan99/absolut-zero/issues/40)
@@ -205,43 +202,63 @@ These user stories provide a framework for developing features and functionaliti
 
 For more information visit the complete [Kanban Board here.](https://github.com/users/Tossan99/projects/7)
 
-![Kanban Board](documentation/readme_images/absolut_zero_kanban_board.JPG)
+![Kanban Board](documentation/readme_images/kanban-board.JPG)
 
 [Back to top ⇧](#table-of-contents)
 
-# Design
+## Design
 
-## Logo
+### Logo
+Our logo, ABSOLUT ZERO, embodies the essence of our brand with its bold and distinctive design. The word "ABSOLUT" is rendered in a big, bold black font reminiscent of the iconic Absolut Vodka logo. Meanwhile, "ZERO" is presented in the same font but with a color resembling frost, symbolizing purity and reminds customer the refreshing feeling of a cold drink. This combination creates a striking visual impact that instantly captures attention.
 
-![Logo]()
+![Logo](documentation/readme_images/absolut-logo-black.png)
 
-## Fonts
+### Fonts
+For the design of our website, we've chosen Roboto for all normal texts and Roboto Slab for headings. This combination provides a modern and clean aesthetic, ensuring readability and visual appeal across all devices and screen sizes. Roboto's versatility and sleek design perfectly complement our minimalist approach, while Roboto Slab adds a touch of sophistication to our headings, enhancing the overall user experience.
 
-![Fonts]()
+![Fonts](documentation/readme_images/font.JPG)
 
-## Background
+### Color
+Our color palette is intentionally limited to black, white, blue, and light gray. This minimalist approach creates a clean and cohesive visual identity, allowing the content and products to take center stage. The use of black and white provides a timeless and elegant backdrop, while blue is strategically employed for small details such as buttons and borders, adding subtle pops of color without overwhelming the design. The light gray serves as a soft background color, enhancing readability and creating a sense of space and tranquility throughout the website.
 
-![Background]()
+![Color Palette Image](documentation/readme_images/color-palette.JPG)
 
-## Color
+### Wireframes
 
-![Color Palette Image]()
-
-## Wireframes
+These wireframes is a simple layout sketch used in the early design stages to plan the structure and key elements of the E-commerce. It provides a visual guide without delving into specific details, aiding in the initial planning of the design.
+All wireframes was created with the help of [Balsamiq](https://balsamiq.com/).
 
 <details><summary>Home page</summary>
-<img src="README_files/home_page.JPG">
+<img src="documentation/wireframes/landing-page.png">
 </details>
-<details><summary>About page</summary>
-<img src="README_files/about_page.JPG">
+<details><summary>About age</summary>
+<img src="documentation/wireframes/about-page.png">
 </details>
-<details><summary>Log In page</summary>
-<img src="">
+<details><summary>FAQ page</summary>
+<img src="documentation/wireframes/faq-page.png">
 </details>
+<details><summary>Products page</summary>
+<img src="documentation/wireframes/products-page.png">
+</details>
+<details><summary>Products details page</summary>
+<img src="documentation/wireframes/product-details-page.png">
+</details>
+<details><summary>Shopping cart page</summary>
+<img src="documentation/wireframes/shopping-cart-page.png">
+</details>
+<details><summary>Login page</summary>
+<img src="documentation/wireframes/login-page.png">
+</details>
+<details><summary>Error page</summary>
+<img src="documentation/wireframes/error-page.png">
+</details>
+<br>
+During development, the designs have evolved and changed due to testing and user feedback. As a result, the final implementation may vary from these initial wireframes.
+
 
 [Back to top ⇧](#table-of-contents)
 
-# Database
+## Database
 
 Mapping out the database structure before coding is crucial for organizing information, reducing errors, and improving efficiency. That is why a simple Database schema was made before the start of development.
 
