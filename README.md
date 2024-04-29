@@ -255,28 +255,61 @@ All wireframes was created with the help of [Balsamiq](https://balsamiq.com/).
 <br>
 During development, the designs have evolved and changed due to testing and user feedback. As a result, the final implementation may vary from these initial wireframes.
 
-
 [Back to top ⇧](#table-of-contents)
 
 ## Database
 
-Mapping out the database structure before coding is crucial for organizing information, reducing errors, and improving efficiency. That is why a simple Database schema was made before the start of development.
+ElephantSQL was used as a database for the whole project
 
-![Database Schema Image]()
+Mapping out the database structure before coding is crucial for organizing information, reducing errors, and improving efficiency. That is why a Database schema was made before the start of development.
 
-## User Model
+The Database schema has been slightly altered through development due to new ideas.
 
-## Product Model
+![Database Schema Image](documentation/readme_images/database-schema.png)
 
-## Category Model
+### Product Model
 
-## Profile Model
+The ``Product`` model is the main model and is linked to the ``Category``, ``Subcategory``, ``DiscountProduct``, ``ProductRating``, ``ProductReview`` and ``OrderLineItem`` models. It's main purpose is to store information about a product.
 
-## Order Model
+### Category Model
+
+The ``Category`` model is linked to the ``Product`` model and stores the different types of categories for the ``Product`` model.
+
+### Subcategory Model
+
+The ``Subcategory`` model is linked to the ``Product`` model and stores the different types of subcategories for the ``Product`` model.
+
+### DiscountProduct Model
+
+The ``DiscountProduct`` model is linked to the ``Product`` model and is used to set discounts linked to the ``Product`` model.
+
+### ProductRating Model
+
+The ``ProductRating`` model is linked to the ``Product`` model and is used to det ratings linked to the ``Product`` model.
+
+### ProductReview Model
+
+The ``DiscountProduct`` model is linked to the ``Product`` model and is used to write reviews linked to the ``Product`` model.
+
+### User(Allauth) Model
+
+The ``User`` model is an integral component of Django Allauth, featuring pre-established fields as part of its standard configuration. This model primarily serves the purpose of user authentication, which is why it is not recommended to make direct alterations to it. Furthermore, the ``User`` model is linked to the ``UserProfile`` model through a one-to-one relationship, facilitating the management of user-specific data and interactions.
+
+### UserProfile Model
+
+The ``UserProfile`` model is linked to the ``User`` model and stores the contact information of the user.
+
+### Order Model
+
+The ``Order`` model is linked to the ``UserProfile`` model and stores information about a users order. It grabs the product information through the ``OrderLineItem`` model to get the type of product, quantity and total price.
+
+### OrderLineItem Model
+
+The ``OrderLineItem`` model is linked to the ``Order`` model and assists it to complete and store the order.
 
 [Back to top ⇧](#table-of-contents)
 
-# Technologies Used
+## Technologies Used
 
 ### Languages
 
@@ -289,9 +322,8 @@ Mapping out the database structure before coding is crucial for organizing infor
 
 - **Django:** Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.
 - **Crispy Forms:** Django-crispy-forms is an application that helps to manage Django forms. It allows adjusting forms' properties (such as method, send button or CSS classes) on the backend without having to re-write them in the template.
-- **Summernote:** Summernote is a lightweight, open-source WYSIWYG (What You See Is What You Get) text editor for web development. It allows users to easily create and customize rich-text content on websites, providing a user-friendly interface for text editing and formatting.
 - **Bootstrap v5.0:** Bootstrap is a free, open source front-end development framework for the creation of websites and web apps. Designed to enable responsive development of mobile-first websites, Bootstrap provides a collection of syntax for template designs.
-- **Cloudinary:** A cloud-based media management platform used for storing and serving images in the Blog Collective project.
+- **AWS:** A cloud-based media management platform used for storing and serving images in the E-commerce project.
 
 ### Database
 
@@ -308,7 +340,7 @@ Mapping out the database structure before coding is crucial for organizing infor
 
 [Back to top ⇧](#table-of-contents)
 
-# Agile Methodology
+## Agile Methodology
 
 This project was developed using the Agile methodology.<br>
 All epics and user stories implementation progress was registered using [GitHub](https://github.com/). As the user stories were accomplished, they were moved in the GitHub Kanban board from **ToDo**, to **In Progress**, **Done** and **Incomplete** lists.
@@ -356,7 +388,7 @@ As seen in the chart below, the user stories prioritized as `Must Have` account 
 
 [Back to top ⇧](#table-of-contents)
 
-# Features
+## Features
 
 ### Home/Landing Page
 
@@ -394,13 +426,13 @@ These are some features that weren't added due to lack of time.
 
 [Back to top ⇧](#table-of-contents)
 
-# Testing
+## Testing
 
 All testing was conducted and documented in [Testing.md](TESTING.md) for easy accessibility.
 
 [Back to top ⇧](#table-of-contents)
 
-# Bugs
+## Bugs
 
 ### Known bugs
 
@@ -414,11 +446,9 @@ For more information visit the complete [Kanban Board here.]()
 
 [Back to top ⇧](#table-of-contents)
 
-# Deployment and Local Development
+## Deployment and Local Development
 
 Live deployment can be found here [Absolute Zero]()
-
-## Local Development
 
 ### How to Fork
 
@@ -447,14 +477,7 @@ Live deployment can be found here [Absolute Zero]()
 5. Select the Region and Data Center closest to you.
 6. Once created, click on the new database name, where you can view the database URL and Password.
 
-### Cloudinary
-
-[Absolute Zero]() is using [Cloudinary](https://cloudinary.com/)
-
-1. For Primary interest, you can choose Programmable Media for image and video API.
-2. Optional: edit your assigned cloud name to something more memorable.
-3. On your Cloudinary Dashboard, you can copy your API Environment Variable.
-4. Be sure to remove the CLOUDINARY_URL= as part of the API value; this is the key.
+### AWS
 
 ### Heroku Deployment
 
@@ -501,7 +524,7 @@ The site is now live
 
 [Back to top ⇧](#table-of-contents)
 
-# Credits
+## Credits
 
 ### Django Documentation
 
