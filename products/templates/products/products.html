@@ -9,14 +9,14 @@
 <!-- products.html content starts here -->
 
 <!-- Hero image section -->
-<section class="hero-img py-5">
+<div class="hero-img py-5">
     <div class="container-xxl">
         <div class="d-flex">
             <img src="{% static 'images/absolut-zero-logo.png' %}" id="logo" 
                 class="mx-auto my-0 my-sm-3 my-md-4" alt="Absolut Zero logo">
         </div>
     </div>
-</section>
+</div>
 
 <section class="py-4">
     <div class="container-xxl px-2 px-md-4 px-lg-5">
@@ -100,7 +100,7 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
         $('#sort-selector').change(function() {
             var selector = $(this);
             var currentUrl = new URL(window.location);

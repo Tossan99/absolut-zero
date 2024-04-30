@@ -9,14 +9,14 @@
 <!-- product_details.html content starts here -->
 
 <!-- Hero image section -->
-<section class="hero-img py-5">
+<div class="hero-img py-5">
     <div class="container-xxl">
         <div class="d-flex">
             <img src="{% static 'images/absolut-zero-logo.png' %}" id="logo" 
                 class="mx-auto my-0 my-sm-3 my-md-4" alt="Absolut Zero logo">
         </div>
     </div>
-</section>
+</div>
 
 <section class="pt-md-5 pt-3">
     <div class="container-xxl px-4 px-lg-5 my-5">
@@ -147,7 +147,7 @@
                 <form id="reviewForm" method="post" action="{% url 'product_details' product.slug %}">
                     {% csrf_token %}
                     <input type="hidden" name="review_form" value="review_form">
-                    <textarea type="text" id="content" name="content" rows="5" cols="200" 
+                    <textarea id="content" name="content" rows="5" cols="200" 
                         class="form-control mb-3">{{ review.content | safe }}</textarea>
                     <button class="main-btn fs-6" type="submit" id="submitButton">Submit Review</button>
                 </form>

@@ -13,7 +13,7 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Discover quality and affordable alcohol-free drinks at our e-commerce store. Shop now for the best alcohol-free beverages available!">
     <meta name="keywords" content="Alcohol-free beverages, Non-alcoholic drinks, Alcohol substitute, Alcohol alternatives, Alcohol-free beer, Non-alcoholic refreshments">
     
@@ -84,8 +84,9 @@
                             <a class="fs-1 {% if request.path == profile_url %}profile-icon-active" 
                                 aria-current="page{% endif %}" href="#" data-bs-toggle="dropdown" 
                                     aria-expanded="true">
-                                <i class="fa-solid fa-user profile-icon"></i></a>
-                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                <i class="fa-solid fa-user profile-icon"></i>
+                            </a>
+                            <div class="dropdown-menu border-0">
                                 {% if request.user.is_authenticated %}
                                     <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                     <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
@@ -96,7 +97,7 @@
                             </div>
                         </div>
                         <div class="col-6 col-sm-3 col-md-2 col-lg-5 col-xl-5 col-xxl-4 p-0 text-center">
-                            <a href="{% url 'shopping_cart' %}" class="main-btn cart-btn fs-6" type="submit">
+                            <a href="{% url 'shopping_cart' %}" class="main-btn cart-btn fs-6">
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 <span class="text-white ms-1">
                                     {% if grand_total %}
@@ -175,7 +176,7 @@
     <!-- Footer -->
     <footer class="text-center text-lg-start text-muted mt-auto">
         <!-- Section: Social Media  -->
-        <section class="d-flex justify-content-center justify-content-lg-between pt-4 pb-1 container-xxl text-white">
+        <div class="d-flex justify-content-center justify-content-lg-between pt-4 pb-1 container-xxl text-white">
             <div class="me-5 d-none d-lg-block">
                 <span>Get connected with us on social networks:</span>
             </div>
@@ -205,7 +206,7 @@
                     <i class="fab fa-github social-icon"></i>
                 </a>
             </div>
-        </section>
+        </div>
         <hr class="m-0 text-white">
 
         <!-- Section: Links  -->
@@ -214,7 +215,7 @@
                 <div class="row mt-3">
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <a href="{% url 'home' %}"><img src="{% static 'images/absolut-logo-black.png' %}" 
-                            class="mb-2" alt="Absolut Zero logo" width="70%">
+                            class="mb-2 footer-logo" alt="Absolut Zero logo">
                         </a>
                         <p>
                             Welcome to Absolute Zero, your ultimate destination for exquisite alcohol-free 
@@ -289,14 +290,8 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
     </script>
 
-    <!-- Mailchimp js -->
-    <script type="text/javascript" 
-        src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js">
-    </script>
-    <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-    
     <!-- Toasts js -->
-    <script type="text/javascript">
+    <script>
         $(document).ready(function(){
             $('.toast').toast('show');
         });

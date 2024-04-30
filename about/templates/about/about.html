@@ -10,14 +10,14 @@
 <!-- about.html content starts here -->
 
 <!-- Hero image section -->
-<section class="hero-img py-5">
+<div class="hero-img py-5">
     <div class="container-xxl">
         <div class="d-flex">
             <img src="{% static 'images/absolut-zero-logo.png' %}" id="logo" 
                 class="mx-auto my-0 my-sm-3 my-md-4" alt="Absolut Zero logo">
         </div>
     </div>
-</section>
+</div>
 
 <section class="py-5">
     <div class="container-xxl my-4">
@@ -41,14 +41,14 @@
     </div>
 </section>
 
-<section class="beer-img">
+<div class="beer-img">
     <div class="container-fluid">
         <div class="row">
             <div class="col">
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <section class="py-5">
     <div class="container-xxl my-4">
@@ -73,14 +73,14 @@
     </div>
 </section>
 
-<section class="drinks-img">
+<div class="drinks-img">
     <div class="container-fluid">
         <div class="row">
             <div class="col">
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <section class="pt-5 pb-4">
     <div class="container-xxl my-4">
@@ -155,8 +155,8 @@
 {% block postloadjs %}
     {{ block.super }}
     <!-- Mailchimp js -->
-    <script type="text/javascript" 
+    <script
         src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js">
     </script>
-    <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+    <script>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 {% endblock %}

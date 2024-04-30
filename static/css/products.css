@@ -50,6 +50,10 @@
     color: var(--blue);
 }
 
+.cart-product-img {
+    height: 230px;
+}
+
 .product-img {
     height: 400px;
 }

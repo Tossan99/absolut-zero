@@ -10,14 +10,14 @@
 <!-- shopping_cart.html content starts here -->
 
 <!-- Hero image section -->
-<section class="hero-img py-5">
+<div class="hero-img py-5">
     <div class="container-xxl">
         <div class="d-flex">
             <img src="{% static 'images/absolut-zero-logo.png' %}" id="logo" 
                 class="mx-auto my-0 my-sm-3 my-md-4" alt="Absolut Zero logo">
         </div>
     </div>
-</section>
+</div>
 
 <section>
     <div class="container-xxl py-5">
@@ -37,7 +37,7 @@
                             <div class="col-12 col-sm-4 col-md-3">
                                 <div class="text-center">
                                     <img src="{{ item.product.image.url }}" 
-                                        class="" height="230px" alt="{{ item.product.name }}"/>
+                                        class="cart-product-img" alt="{{ item.product.name }}">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-8 col-md-9">
@@ -95,7 +95,7 @@
                                                             <i class="fa-solid fa-rotate"></i>
                                                         </button>
                                                         <a href="{% url 'remove_from_shopping_cart' item.item_id %}" 
-                                                            class="remove-btn" type="button"><i class="fa-solid fa-trash-can"></i>
+                                                            class="remove-btn"><i class="fa-solid fa-trash-can"></i>
                                                         </a>
                                                     </div>
                                                 </form>

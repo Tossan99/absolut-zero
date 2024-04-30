@@ -108,6 +108,10 @@ footer a:hover {
     color: var(--blue);
 }
 
+.footer-logo {
+    width: 70%;
+}
+
 
 /* Buttons and icons -------------------------------------------------- */
 .main-btn {
