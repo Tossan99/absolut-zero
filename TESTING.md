@@ -9,6 +9,8 @@ Developer: [Erik Guldbrand](https://github.com/Tossan99) <br>
 
 ## Table of Content
 
+[Back to top ⇧](#table-of-contents)
+
 ## Code Validation
 
 ### HTML Validation
@@ -83,6 +85,28 @@ During all validation of the python files the "line too long error" was ignored 
 |models.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\pep8-profilesmodels.JPG)</details>| ✅
 |forms.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\pep8-profilesforms.JPG)</details>| ✅
 
+[Back to top ⇧](#table-of-contents)
+
+## Performance
+I conducted a comprehensive evaluation of The Absolut Zero website using [Google Lighthouse in Google Chrome Developer Tools](https://developer.chrome.com/docs/lighthouse/). This evaluation was performed in Google Chrome browser's incognito mode to eliminate all potential impacts from other addons and cached files.
+
+| **Tested** | **Performance Score** | **View Result** | **Pass** |
+--- | --- | --- | :---:
+| **Home App** |
+|index.html| 73 / 100 |<details><summary>Screenshot of result</summary>![Result](documentation\lighthouse\lighthouse-home.JPG)</details> | ✅
+| **Products App** |
+|product_details.html| 73 / 100 | <details><summary>Screenshot of result</summary>![Result](documentation\lighthouse\lighthouse-product-details.JPG)</details>| ✅
+|products.html| 69 / 100 | <details><summary>Screenshot of result</summary>![Result](documentation\lighthouse\lighthouse-products.JPG)</details>| ✅
+| **Shopping Cart App** |
+|shopping_cart.html| 74 / 100 | <details><summary>Screenshot of result</summary>![Result](documentation\lighthouse\lighthouse-cart.JPG)</details>| ✅
+| **Checkout App** |
+|checkout.html| 70 / 100 | <details><summary>Screenshot of result</summary>![Result](documentation\lighthouse\lighthouse-checkout.JPG)</details>| ✅
+| **Profiles App** |
+|profile.html| 75 / 100 | <details><summary>Screenshot of result</summary>![Result](documentation\lighthouse\lighthouse-profile.JPG)</details>| ✅
+
+The tests indicate a performance issue with the website, likely stemming from the presence of a large background heading image. This issue will be addressed in future updates, and subsequent tests will be conducted to monitor improvements.
+
+[Back to top ⇧](#table-of-contents)
 
 ## Browser compatibility
 The website was tested on the following:
@@ -93,7 +117,11 @@ The website was tested on the following:
 3. Mozilla Firefox 	
 4. Safari
 
+[Back to top ⇧](#table-of-contents)
+
 ## Automated Testing
 
 Due to lack of time no automated testing has been implemented.
+
+[Back to top ⇧](#table-of-contents)
 
