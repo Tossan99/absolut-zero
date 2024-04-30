@@ -34,3 +34,15 @@
     border: 1px solid var(--blue);
     border-radius: 8px;
 }
+
+@media screen and (max-width: 640px) {
+    #mc_embed_signup{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #mc_embed_signup{
+        width: 275px;
+    }
+}

@@ -655,8 +655,9 @@ To clone the repository, follow these steps:
 
 ### Media
 Images are taken from the following page:
-- []() **Used as a landing page hero image**
-- []() **Used for some of the product images, this images are not made by me or easy keyboard maker**
+- [Adobe Stock](https://stock.adobe.com/se/) **Used for landing page hero image**
+- [Pexels](https://www.pexels.com/sv-se/) **Used for about and homepage**
+- [Systembolaget](https://www.systembolaget.se/) **Used for all product images**
 
 
 ### Django Documentation
