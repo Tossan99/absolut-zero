@@ -9,6 +9,22 @@ Developer: [Erik Guldbrand](https://github.com/Tossan99) <br>
 
 ## Table of Content
 
+- [Easy Keyboard Maker Testing](#easy-keyboard-maker-testing)
+  * [Table of Content](#table-of-content)
+  * [Code Validation](#code-validation)
+    + [HTML Validation](#html-validation)
+    + [CSS Validation](#css-validation)
+    + [PYTHON Validation](#python-validation)
+  * [Performance](#performance)
+  * [Browser compatibility](#browser-compatibility)
+  * [Automated Testing](#automated-testing)
+  * [Manual Testing](#manual-testing)
+    + [Responsiveness](#responsiveness)
+    + [Full Testing](#full-testing)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 [Back to top ⇧](#table-of-contents)
 
 ## Code Validation
@@ -86,7 +102,7 @@ During all validation of the python files the "line too long error" was ignored 
 |forms.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\pep8-profilesforms.JPG)</details>| ✅
 
 
-[Back to top ⇧](#table-of-contents)
+[Back to top ⇧](##table-of-contents)
 
 ## Performance
 I conducted a comprehensive evaluation of The Absolut Zero website using [Google Lighthouse in Google Chrome Developer Tools](https://developer.chrome.com/docs/lighthouse/). This evaluation was performed in Google Chrome browser's incognito mode to eliminate all potential impacts from other addons and cached files.
