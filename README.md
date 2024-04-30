@@ -102,6 +102,7 @@ Visit Absolute Zero repository here! [Git Hub Absolute Zero](https://github.com/
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
+
 ## Project Goals
 
 ### User Goals
@@ -122,6 +123,151 @@ Visit Absolute Zero repository here! [Git Hub Absolute Zero](https://github.com/
 5. **Quality Control:** Implement rigorous quality control measures to uphold the quality and integrity of products, ensuring customer satisfaction and trust.
 6. **Continuous Improvement:** Regularly gather and analyze user feedback to identify areas for improvement and implement enhancements to the website, product offerings, and overall customer experience.
   
+[Back to top ⇧](#table-of-contents)
+
+
+## Business Model & Marketing  
+
+### Business Overview
+Absolut Zero is a thriving **B2C e-commerce** platform with a mission to provide high-quality alcohol-free beverages to our valued customers through our online store. Our product range includes a variety of non-alcoholic beers, wines, mixed drinks, ciders, and sparkling wines.
+
+#### Key Advantages for the Business:
+1. **Scalability:** Our business can grow seamlessly as our customer base expands.
+2. **Online Presence:** By operating online, we save on physical locations, allowing us to focus resources on product quality and customer satisfaction.
+3. **Global Reach:** We can reach customers worldwide, eliminating geographical restrictions.
+4. **Niche Focus:** We cater to health-conscious individuals seeking premium alcohol-free beverages, building a brand that resonates with our audience.
+5. **Cost-Efficiency:** Low startup costs allow us to allocate a significant budget for customer acquisition and marketing.
+6. **Impulse Buying:** Competitive pricing encourages spontaneous purchases from customers exploring alcohol-free options.
+
+#### Challenges to Address:
+1. **Customer Acquisition:** It may be challenging to attract customers in a competitive market. Effective marketing strategies are essential.
+2. **Building Brand Awareness:** Creating a brand from scratch takes time. Immediate success requires a well-planned marketing strategy.
+3. **Marketing Efforts:** Attracting organic customers takes time. We'll need to actively promote our business and consider paid advertising.
+4. **Building Trust:** Operating online can make it harder to build trust and loyalty. Offering discounts and promotions may help.
+5. **Order Volume:** Due to competitive pricing, we need a reasonable number of orders to ensure business viability.
+
+#### Preferred Approach
+Our primary strategy is to offer products in a traditional pay-as-you-go e-commerce format. As our business grows and customer loyalty deepens, the implementation of a subscription model may become a more viable option in the future. This approach ensures our immediate success while allowing flexibility for future expansion.
+
+### Goals for the Website
+- Create a user-friendly website with a clear purpose.
+- Provide products that meet user expectations.
+- Enable users to access, read, and engage with informative articles.
+- Offer insights and tips on alcohol-free beverages to build trust and loyalty.
+- Allow users to checkout quickly and easily.
+- Enable users to create profiles for order history and profile updates.
+
+### Marketing Strategy
+Our marketing strategy includes the following elements:
+1. Utilizing social media platforms for store promotion and building community.
+2. Sharing the page with friends and family to expand our reach.
+3. Organizing a soft online launch sale to stimulate early adoption and attract potential clients for initial purchases.
+4. Building a subscriber base through email marketing and sending out special offers and promotions.
+5. Crafting informative articles and blog posts to enhance SEO ranking.
+6. Exploring paid advertising channels to target the desired demographic.
+7. Collaborating with influencers in the alcohol-free beverage niche to promote our products.
+8. Hosting regular social media contests and giveaways to foster engagement and brand loyalty.
+
+#### Social Media and Newsletter
+Facebook will serve as the primary platform, with a dedicated business page promoting products and fostering customer interaction. Posts will be made on the business page as well as information pertaining to the website. A automated bot will be setup to answer FAQ questions. Live link to our [Facebook page](https://www.facebook.com/profile.php?id=61558765032425)
+<details><summary>Facebook page</summary>
+<img src="documentation/readme_images/absolut-zero-facebook-page.JPG">
+</details>
+<br>
+
+Additionally, Mailchimp will be utilized for weekly newsletters, updating subscribers on new offerings, promotions, and site enhancements. Emails of users can then be input into FB, google and other online providers to build an audience list.
+<details><summary>Mailchimp</summary>
+<img src="documentation/readme_images/mailchimp.JPG">
+</details>
+
+### SEO (Search Engine Optimization)
+
+When embarking on our SEO journey for Absolut Zero, our first step was brainstorming a comprehensive list of relevant keywords that resonate with our target audience. We conducted thorough research using tools like Google Trends, Wordtracker, and SEOquake to identify popular search terms in the alcohol-free beverage niche.
+
+#### First draft of the list
+
+**short tail keywords**
+
+- Alcohol-free beverages
+- Non-alcoholic drinks
+- Alcohol-free beer
+- Non-alcoholic wine
+- Mocktails
+- Alcohol substitute
+- Alcohol-free cocktails
+- Alcohol alternatives
+- Non-alcoholic cider
+- Alcohol-free sparkling wine
+- Non-alcoholic mixed drinks
+- Alcohol-free options
+- Non-alcoholic refreshments
+- No-alcohol drinks
+
+**long tail keywords**
+
+- Best alcohol-free beer brands
+- Where to buy non-alcoholic wine online
+- Buy non-alcoholic cider online
+- Top-rated non-alcoholic wine options
+- Best alcohol-free cocktail recipes
+- Alcohol-free drinks for parties
+- Where to find non-alcoholic sparkling wine
+- Alcohol-free beverage gift ideas
+- Non-alcoholic beer for sports events
+- Alcohol-free drinks for designated drivers
+- Alcohol-free beverages for health-conscious individuals
+- Non-alcoholic drinks for summer picnics
+- Best non-alcoholic wine alternatives
+- Alcohol-free drinks for weddings
+- Where to buy non-alcoholic beverages online
+- Non-alcoholic options for home bartending
+- Alcohol-free drink suggestions
+
+#### Final draft of the list
+
+**Short tail keywords**
+
+- Alcohol-free beverages
+- Non-alcoholic drinks
+- Alcohol substitute
+- Alcohol alternatives
+- Alcohol-free beer
+- Non-alcoholic refreshments
+
+
+**Long tail keywords**
+
+- Where to buy non-alcoholic wine online
+- Alcohol-free drinks for parties
+- Where to find non-alcoholic sparkling wine
+- Alcohol-free drinks for designated drivers
+- Alcohol-free beverages for health-conscious individuals
+- Non-alcoholic drinks for summer picnics
+- Best non-alcoholic wine alternatives
+- Where to buy non-alcoholic beverages online
+
+Once we compiled a list of potential keywords, we meticulously analyzed their relevance, search volume, and competition level to determine their effectiveness in driving organic traffic to our website. We focused on both short-tail and long-tail keywords to capture a wide range of search queries.
+
+After selecting the most promising keywords, we strategically integrated them throughout our website content, including headings (H1, H2, H3), body texts, alt texts for images, meta tags, and meta descriptions. Each keyword was thoughtfully placed to ensure a natural flow of language while maximizing our website's visibility on search engine results pages (SERPs).
+
+Furthermore, we optimized our website's structure and navigation to enhance user experience and search engine crawlability. We created a sitemap.xml file to facilitate indexing by search engines and implemented a robots.txt file to guide crawlers on which pages to prioritize.
+
+Regular monitoring and analysis of our SEO performance allowed us to refine our keyword strategy over time, ensuring continuous improvement and maximizing our website's potential for organic traffic growth. By combining strategic keyword usage with other SEO best practices, we aim to position Absolut Zero as a prominent authority in the alcohol-free beverage market and drive sustainable long-term success.
+
+In addition to our keyword strategy, we took proactive steps to enhance our website's search engine optimization (SEO) by creating a sitemap.xml file and a robots.txt file.
+
+The sitemap.xml file provides search engines with a comprehensive map of our website's structure, making it easier for them to crawl and index our pages efficiently. This ensures that our content is discovered and ranked accurately in search engine results pages (SERPs).
+
+Meanwhile, the robots.txt file guides search engine crawlers on which pages to crawl and which to exclude, optimizing the crawl budget and directing traffic to our most valuable content.
+
+Together, these files play a crucial role in improving our website's visibility and accessibility, ultimately contributing to our overall SEO success.
+
+
+### Logo
+Our logo was designed with a clean and modern aesthetic, reflecting our commitment to quality and sophistication. It features the name "Absolut Zero" in bold black font resembling the Absolut Vodka logo, with "Zero" in a frost-like color to symbolize purity and the absence of alcohol.
+
+
+
 [Back to top ⇧](#table-of-contents)
 
 ## User Experience
