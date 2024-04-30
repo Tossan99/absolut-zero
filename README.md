@@ -24,7 +24,7 @@ Visit Absolute Zero repository here! [Git Hub Absolute Zero](https://github.com/
 
 ![Bootstrap Badge](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=fff&style=for-the-badge)
 ![Django Badge](https://img.shields.io/badge/Django-092E20?logo=django&logoColor=fff&style=for-the-badge)
-![Stripe Badge]()
+
 
 </center>
 
@@ -607,39 +607,35 @@ As seen in the chart below, the user stories prioritized as `Must Have` account 
 
 ## Features
 
-### Home/Landing Page
+### Landing page
 
--  <details><summary>See **Landing/About Page**</summary><img src="README_files/landing_page.JPG"></details>
+- Hero img <details><summary>See Screenshot **Hero img**</summary><img src="documentation\features\landingpage.JPG"></details>
 
-### About Page
+- Navbar <details><summary>See Screenshot **Navbar**</summary><img src="documentation\features\navbar.JPG"></details>
 
--  <details><summary>See **Landing/About Page**</summary><img src="README_files/landing_page.JPG"></details>
+- Footer Sections <details><summary>See Screenshot **Footer**</summary><img src="documentation\features\footer.JPG"></details>
 
-### Products Page
+### Product Page
+- All products <details><summary>See Screenshot **All products**</summary><img src="documentation\features\products.JPG"></details>
 
--  <details><summary>See **Landing/About Page**</summary><img src="README_files/landing_page.JPG"></details>
+- Ordered list dropdown <details><summary>See Screenshot **Ordered list dropdown**</summary><img src="documentation\features\sort.JPG"></details>
 
-### Product Details Page
+### Product Detail Page
+- Product information section <details><summary>See Screenshot **Product information section**</summary><img src="documentation\features\details.JPG"></details>
+- Review section <details><summary>See Screenshot **Review section**</summary><img src="documentation\features\review.JPG"></details>
+- Add to cart section <details><summary>See Screenshot **Add to cart section**</summary><img src="documentation\features\add.JPG"></details>
+- Rating section<details><summary>See Screenshot **Rating**</summary><img src="documentation\features\rating.JPG"></details>
 
--  <details><summary>See **Landing/About Page**</summary><img src="README_files/landing_page.JPG"></details>
+### Support Page
+- FAQ page <details><summary>See Screenshot **FAQ page**</summary><img src="documentation\features\faq.JPG"></details>
+- About section <details><summary>See Screenshot **About section**</summary><img src="documentation\features\about.JPG"></details>
 
-### Profile Page
 
--  <details><summary>See **Landing/About Page**</summary><img src="README_files/landing_page.JPG"></details>
-
-### Account Pages
-
--  <details><summary>See **Landing/About Page**</summary><img src="README_files/landing_page.JPG"></details>
-
-### Error pages
-
--  <details><summary>See **Landing/About Page**</summary><img src="README_files/landing_page.JPG"></details>
-
-### Future Features
-
-These are some features that weren't added due to lack of time.
-
-- **Placeholder:**
+### User Account Management
+- User profile page <details><summary>**User profile page**</summary><img src="documentation\features\profile.JPG"></details>
+- User profile update <details><summary>**User profile update**</summary><img src="documentation\features\information.JPG"></details>
+- User order history <details><summary>**User order history**</summary><img src="documentation\features\history.JPG"></details>
+- User delete profile <details><summary>**User delete profile**</summary><img src="documentation\features\delete-profile.JPG"></details>
 
 [Back to top ⇧](#table-of-contents)
 

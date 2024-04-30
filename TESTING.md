@@ -85,13 +85,6 @@ During all validation of the python files the "line too long error" was ignored 
 |models.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\pep8-profilesmodels.JPG)</details>| ✅
 |forms.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\pep8-profilesforms.JPG)</details>| ✅
 
-### Responsiveness
-
-- All sections of the website has been rigorously tested for responsiveness from 350px width, 650px height and up.
-  
-- No images are stretched or pixelated.
-  
-- No element overlap each other
 
 [Back to top ⇧](#table-of-contents)
 
@@ -135,6 +128,14 @@ Due to lack of time no automated testing has been implemented.
 
 
 ## Manual Testing
+
+### Responsiveness
+
+- All sections of the website has been rigorously tested for responsiveness from 350px width, 650px height and up.
+  
+- No images are stretched or pixelated.
+  
+- No element overlap each other
 
 ### Full Testing
 
