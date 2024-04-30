@@ -36,3 +36,18 @@ Google Chrome web browser and the 'Inspect' function were used to capture the HT
 |about.html| All clear, no errors found. | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\validator-about.JPG)</details>| ✅
 | **FAQ App** |
 |faq.html| All clear, no errors found. | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\validator-faq.JPG)</details>| ✅
+
+### CSS Validation
+[W3C Jigsaw](https://jigsaw.w3.org/css-validator/) is a tool provided by the World Wide Web Consortium (W3C) that allows you to validate and check the correctness of your HTML and CSS code. It helps ensure that your web pages comply with the standards set by the W3C, promoting interoperability and accessibility.
+
+| **Tested** | **Result** | **View Result** | **Pass** |
+--- | --- | --- | :---:
+|base.css | No errors or warnings |<details><summary>Screenshot of result</summary>![Result](documentation\validator_images\validator-basecss.JPG)</details>| ✅
+|about.css | No errors or warnings |<details><summary>Screenshot of result</summary>![Result](documentation\validator_images\validator-aboutcss.JPG)</details>| ✅
+|checkout.css | No errors or warnings |<details><summary>Screenshot of result</summary>![Result](documentation\validator_images\validator-checkoutcss.JPG)</details>| ✅
+|faq.css | No errors or warnings |<details><summary>Screenshot of result</summary>![Result](documentation\validator_images\validator-faqcss.JPG)</details>| ✅
+|home.css | No errors or warnings |<details><summary>Screenshot of result</summary>![Result](documentation\validator_images\validator-homecss.JPG)</details>| ✅
+|products.css | No errors or warnings |<details><summary>Screenshot of result</summary>![Result](documentation\validator_images\validator-productscss.JPG)</details>| ✅
+|profile.css | No errors or warnings |<details><summary>Screenshot of result</summary>![Result](documentation\validator_images\validator-profilecsss.JPG)</details>| ✅
+|shopping-cart.css | No errors or warnings |<details><summary>Screenshot of result</summary>![Result](documentation\validator_images\validator-shopping-cartcss.JPG)</details>| ✅
+
