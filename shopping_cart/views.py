@@ -4,7 +4,8 @@ from products.models import Product
 
 
 def view_shopping_cart(request):
-    return render (request, "shopping_cart/shopping_cart.html")
+    return render(request, "shopping_cart/shopping_cart.html")
+
 
 def view_add_to_shopping_cart(request, item_id):
     """Adds items to the shopping cart"""
@@ -24,6 +25,7 @@ def view_add_to_shopping_cart(request, item_id):
     request.session["shopping_cart"] = shopping_cart
     return redirect(redirect_url)
 
+
 def view_adjust_shopping_cart(request, item_id):
     """Changes the quantity of products to the specified amount"""
 
@@ -41,6 +43,7 @@ def view_adjust_shopping_cart(request, item_id):
     request.session["shopping_cart"] = shopping_cart
     return redirect(reverse("shopping_cart"))
 
+
 def view_remove_from_shopping_cart(request, item_id):
     """Removes items from shopping cart"""
 
@@ -53,4 +56,3 @@ def view_remove_from_shopping_cart(request, item_id):
         return redirect(reverse("shopping_cart"))
     except Exception as e:
         messages.error(request, f"Error removing {product}.")
-   

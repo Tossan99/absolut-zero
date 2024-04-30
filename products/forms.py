@@ -1,6 +1,7 @@
 from django import forms
 from .models import ProductReview, ProductRating
 
+
 class RatingForm(forms.ModelForm):
     """
     Form for leaving product ratings
@@ -16,6 +17,7 @@ class RatingForm(forms.ModelForm):
         if rating < 1 or rating > 5:
             raise forms.ValidationError("Rating must be between 1 and 5.")
         return rating
+
 
 class ReviewForm(forms.ModelForm):
     class Meta:
@@ -36,5 +38,5 @@ class ReviewForm(forms.ModelForm):
             """
             "content": forms.TextInput(
                 attrs={"class": "form-control form-field",
-                       "placeholder": "Max 500 characters",}),
+                       "placeholder": "Max 500 characters", }),
         }

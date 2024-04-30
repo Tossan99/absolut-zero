@@ -51,3 +51,49 @@ Google Chrome web browser and the 'Inspect' function were used to capture the HT
 |profile.css | No errors or warnings |<details><summary>Screenshot of result</summary>![Result](documentation\validator_images\validator-profilecsss.JPG)</details>| ✅
 |shopping-cart.css | No errors or warnings |<details><summary>Screenshot of result</summary>![Result](documentation\validator_images\validator-shopping-cartcss.JPG)</details>| ✅
 
+
+### PYTHON Validation 
+[PEP 8](https://pep8ci.herokuapp.com/) serves as a comprehensive style guide for writing Python code, emphasizing consistency and readability as its core principles. It offers guidance on code formatting, variable and function naming conventions, and various best practices. Adhering to PEP 8 principles contributes to enhancing code quality, making it more readable and maintainable.
+
+During all validation of the python files the "line too long error" was ignored due to lack of time. this will be fixed in the future.
+
+| **Tested** | **Result** | **View Result** | **Pass** |
+--- | --- | --- | :---:
+| **Home App** |
+|views.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\pep8-homeview.JPG)</details>| ✅
+|urls.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\pep8-homeurls.JPG)</details>| ✅
+| **Products App** |
+|views.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\pep8-productsviews.JPG)</details>| ✅
+|urls.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\pep8-productsurls.JPG)</details>| ✅
+|models.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\pep8-productsmodels.JPG)</details>| ✅
+|forms.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\pep8-productsforms.JPG)</details>| ✅
+| **Shopping Cart App** |
+|views.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\pep8-cartviews.JPG)</details>| ✅
+|urls.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\pep8-carturls.JPG)</details>| ✅
+| **Checkout App** |
+|views.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\pep8-checkoutviews.JPG)</details>| ✅
+|urls.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\pep8-checkouturls.JPG)</details>| ✅
+|models.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\pep8-checkoutmodels.JPG)</details>| ✅
+|forms.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\pep8-checkoutforms.JPG)</details>| ✅
+|webhooks.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\pep-checkoutwh.JPG)</details>| ✅
+|webhook_handler.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\pep8-checkoutwhh.JPG)</details>| ✅
+| **Profiles App** |
+|views.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\pep8-profilesviews.JPG)</details>| ✅
+|urls.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\pep8-profilesurls.JPG)</details>| ✅
+|models.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\pep8-profilesmodels.JPG)</details>| ✅
+|forms.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](documentation\validator_images\pep8-profilesforms.JPG)</details>| ✅
+
+
+## Browser compatibility
+The website was tested on the following:
+
+<ins>Browsers</ins>
+1. Microsoft Edge
+2. Google Chrome 	
+3. Mozilla Firefox 	
+4. Safari
+
+## Automated Testing
+
+Due to lack of time no automated testing has been implemented.
+

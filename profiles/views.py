@@ -46,9 +46,10 @@ def view_order_history(request, order_number):
 
     return render(request, "checkout/checkout_success.html", context)
 
+
 def view_delete_profile(request):
-    """ 
-    Delete the user's profile. 
+    """
+    Delete the user's profile.
     """
     if request.method == "POST":
         user = request.user

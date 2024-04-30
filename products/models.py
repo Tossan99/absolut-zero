@@ -6,7 +6,6 @@ from django.utils.crypto import get_random_string
 from django.db.models import Avg, Count
 
 
-
 class Category(models.Model):
 
     class Meta:
@@ -72,7 +71,7 @@ class Product(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        Generate a unique sku and a slug based on the name and the sku 
+        Generate a unique sku and a slug based on the name and the sku
         """
         if not self.sku:
             self.sku = get_random_string(8).upper()

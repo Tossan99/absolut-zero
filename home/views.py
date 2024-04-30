@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from products.models import Product
 
+
 def view_home_page(request):
     """
     View to render home page and 3 random products
@@ -10,13 +11,14 @@ def view_home_page(request):
     context = {
         "random_products": random_products,
     }
-    return render (request, "home/index.html", context)
+    return render(request, "home/index.html", context)
+
 
 def view_privacy(request):
     """
     View to render privacy page
     """
-    return render (request, "home/privacy.html")
+    return render(request, "home/privacy.html")
 
 
 # Custom error views

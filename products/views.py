@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Product, Category, Subcategory, ProductRating, ProductReview
 from .forms import RatingForm, ReviewForm
 
+
 def view_products_list(request):
     """ Shows all products and handles sorting and search queries """
 
@@ -73,7 +74,6 @@ def view_product_details(request, slug):
     queryset = Product.objects.all()
     product = get_object_or_404(queryset, slug=slug)
     product_reviews = product.product_reviews.all().order_by("-created_on")
-
 
     user_rating = False
     if request.user.is_authenticated:
