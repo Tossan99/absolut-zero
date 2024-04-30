@@ -10,7 +10,9 @@ from .forms import RatingForm, ReviewForm
 
 
 def view_products_list(request):
-    """ Shows all products and handles sorting and search queries """
+    """ 
+    Shows all products and handles sorting and search queries 
+    """
 
     products = Product.objects.all()
     query = None
@@ -69,7 +71,9 @@ def view_products_list(request):
 
 
 def view_product_details(request, slug):
-    """ Shows product details """
+    """ 
+    Shows product details, rating, reviews
+    """
 
     queryset = Product.objects.all()
     product = get_object_or_404(queryset, slug=slug)

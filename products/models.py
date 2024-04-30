@@ -7,7 +7,9 @@ from django.db.models import Avg, Count
 
 
 class Category(models.Model):
-
+    """
+    Model to store categories
+    """
     class Meta:
         verbose_name_plural = 'Categories'
 
@@ -22,7 +24,9 @@ class Category(models.Model):
 
 
 class Subcategory(models.Model):
-
+    """
+    Model to store subcategories
+    """
     class Meta:
         verbose_name_plural = "Subbategories"
 
@@ -37,6 +41,9 @@ class Subcategory(models.Model):
 
 
 class Product(models.Model):
+    """
+    Model to store products
+    """
     name = models.CharField(max_length=100, blank=False)
     category = models.ForeignKey(
         "Category", null=True, blank=False, on_delete=models.SET_NULL,
@@ -85,6 +92,9 @@ class Product(models.Model):
         super().save(*args, **kwargs)
 
     def average_rating(self):
+        """
+        Calculates the avg rating for a product
+        """
         reviews = ProductRating.objects.filter(product=self).aggregate(average=Avg("rating"))
         avg = 0
         if reviews["average"] is not None:
@@ -92,6 +102,9 @@ class Product(models.Model):
         return avg
 
     def count_rating(self):
+        """
+        Counts the amount of ratings for a product
+        """
         reviews = ProductRating.objects.filter(product=self).aggregate(count=Count("id"))
         count = 0
         if reviews["count"] is not None:
@@ -100,6 +113,9 @@ class Product(models.Model):
 
 
 class ProductRating(models.Model):
+    """
+    Model for product ratings by users
+    """
     product = models.ForeignKey("Product", on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     rating = models.FloatField(validators=[MinValueValidator(1), MaxValueValidator(5)])
@@ -110,7 +126,7 @@ class ProductRating(models.Model):
 
 class ProductReview(models.Model):
     """
-    Model for product comments by users
+    Model for product reviews by users
     """
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="product_reviewer")
@@ -123,6 +139,9 @@ class ProductReview(models.Model):
 
 
 class DiscountProduct(models.Model):
+    """
+    Model for discounts on products by site owner
+    """
     product = models.ForeignKey(
         "Product", on_delete=models.CASCADE, related_name="discounts"
     )
