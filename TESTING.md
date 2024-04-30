@@ -1,6 +1,6 @@
 # Easy Keyboard Maker Testing 
 
-![Absolut Zero am i responsive]()
+![Logo](documentation/readme_images/absolut-logo-black.png)
 
 Developer: [Erik Guldbrand](https://github.com/Tossan99) <br>
 [Live webpage](https://absolut-zero-9622981fe97d.herokuapp.com/)<br>
