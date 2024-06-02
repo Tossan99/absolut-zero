@@ -142,7 +142,8 @@
             </div>
         </div>
         <div class="row mt-4 mt-sm-5">
-            <div class="col-12 col-lg-7">
+            <div class="col-12 col-lg-7 my-3">
+                {% if user.is_authenticated %}
                 <h4 id="reviewHeading">Leave a Product Review</h4>
                 <form id="reviewForm" method="post" action="{% url 'product_details' product.slug %}">
                     {% csrf_token %}
@@ -151,6 +152,17 @@
                         class="form-control mb-3">{{ review.content | safe }}</textarea>
                     <button class="main-btn fs-6" type="submit" id="submitButton">Submit Review</button>
                 </form>
+                {% else %}
+                <h3 class="mb-3">Log in To Leave a Review</h3>
+                <a href="{% url 'account_login' %}" class="main-btn fs-6 me-2">
+                    <span class="text-uppercase">Log In<i class="fa-solid fa-right-to-bracket ms-2">
+                    </i></span>
+                </a>
+                <a href="{% url 'account_signup' %}" class="second-btn fs-6">
+                    <span class="text-uppercase">Register<i class="fa-solid fa-user-plus ms-2">
+                    </i></span>
+                </a>
+                {% endif %}
             </div>
             <div class="col-12">
                 <div class="row justify-content-start">
