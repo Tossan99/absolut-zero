@@ -28,14 +28,20 @@
 
 .progress-bar-sweetness {
     background-color: #80CBC4;
+    color: black;
+    font-weight: 600;
 }
 
 .progress-bar-bitterness {
     background-color: #B0BEC5;
+    color: black;
+    font-weight: 600;
 }
 
 .progress-bar-body {
     background-color: #A1887F;
+    color: black;
+    font-weight: 600;
 }
 
 /* Products list page -------------------------------------------------- */
