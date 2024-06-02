@@ -172,13 +172,14 @@
                         </div>
                         <hr class="m-0">
                         <div class="mt-2" id="review{{ review.id }}">{{ review.content | linebreaks }}</div>
+                        <div class="row mt-2 justify-content-end">
                         {% if user.is_authenticated and review.author == user %}
-                        <div class="row mt-2">
                             <div class="col-5">
                                 <button class="edit-btn me-2" review_id="{{ review.id }}">Edit</button>
                                 <a class="delete-btn mt-2" href="{% url 'delete_product_review' product.slug review.id %}">
                                     Delete</a>
                             </div>
+                        {% endif %}
                             <div class="col-7">
                                 <p class="text-muted text-italic float-end m-0">
                                     Created on: {{ review.created_on }}
@@ -186,7 +187,6 @@
                                 </p>
                             </div>
                         </div>
-                        {% endif %}
                     </div>
                     {% endfor %}
                 </div>
