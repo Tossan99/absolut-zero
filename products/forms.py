@@ -1,5 +1,5 @@
 from django import forms
-from .models import ProductReview, ProductRating
+from .models import ProductReview, ProductRating, Product, Category, Subcategory
 
 
 class RatingForm(forms.ModelForm):
@@ -40,3 +40,22 @@ class ReviewForm(forms.ModelForm):
                 attrs={"class": "form-control form-field",
                        "placeholder": "Max 500 characters", }),
         }
+
+
+class ProductForm(forms.ModelForm):
+
+    class Meta:
+        model = Product
+        fields = "__all__"
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        categories = Category.objects.all()
+        subcategories = Subcategory.objects.all()
+        subcategories_friendly_names = [(c.id, c.get_friendly_name()) for c in subcategories]
+        categories_friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
+
+        self.fields["category"].choices = categories_friendly_names
+        self.fields["subcategory"].choices = subcategories_friendly_names
+        for field_name, field in self.fields.items():
+            field.widget.attrs["class"] = "form-control form-field"

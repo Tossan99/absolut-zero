@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/products.css' %}">
+{% endblock %}
+
+{% block extra_title %}Add Product{% endblock %}
+
+{% block content %}
+<!-- product_add.html content starts here -->
+
+<!-- Hero image section -->
+<div class="hero-img py-5">
+    <div class="container-xxl">
+        <div class="d-flex">
+            <img src="{% static 'images/absolut-zero-logo.png' %}" id="logo" 
+                class="mx-auto my-0 my-sm-3 my-md-4" alt="Absolut Zero logo">
+        </div>
+    </div>
+</div>
+
+<section class="mt-2">
+    <div class="container-xxl px-4 px-lg-5 my-5">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center h1">Add a Product</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-7 col-md-10">
+                <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div class="text-right">
+                        <a class="second-btn me-2" href="{% url 'products_list' %}">Cancel</a>
+                        <button class="main-btn" type="submit">Add Product</button>
+                    </div>
+                </form>
+            </div>            
+        </div>
+    </div>
+</section>
+
+<!-- product_add.html content ends here -->
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+{% endblock %}

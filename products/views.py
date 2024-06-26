@@ -6,7 +6,7 @@ from django.db.models.functions import Lower
 from django.contrib.auth.decorators import login_required
 
 from .models import Product, Category, Subcategory, ProductRating, ProductReview
-from .forms import RatingForm, ReviewForm
+from .forms import RatingForm, ReviewForm, ProductForm
 
 
 def view_products_list(request):
@@ -171,3 +171,25 @@ def view_edit_product_review(request, slug, review_id):
             messages.add_message(request, messages.ERROR, "Error editing product review")
 
     return HttpResponseRedirect(reverse("product_details", args=[slug]))
+
+
+def view_add_product(request):
+    """
+    View to add products as admin
+    """
+    if request.method == "POST":
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Successfully added product!")
+            return redirect(reverse("add_product"))
+        else:
+            messages.error(request, "Failed to add product. Please ensure the form is valid.")
+    else:
+        form = ProductForm()
+
+    context = {
+        "form": form,
+    }
+
+    return render(request, "products/product_add.html", context)

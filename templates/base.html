@@ -124,6 +124,17 @@
             </button>
             <div class="navbar-collapse collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
+                    {% if request.user.is_superuser %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-text dropdown-toggle fs-5 fw-bold" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Admin Features</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'admin:index' %}">Admin Panel</a></li>
+                            <li><a class="dropdown-item" href="{% url 'add_product' %}">Add Products</a></li>
+                            <li><a class="dropdown-item" href="#">Approve Reviews</a></li>
+                        </ul>
+                    </li>
+                    {% endif %}
                     <li class="nav-item">
                         <a class="nav-link nav-text fs-5 fw-bold {% if request.path == home_url %}active" 
                             aria-current="page{% endif %}" href="{% url 'home' %}">Home</a>
@@ -138,8 +149,8 @@
                     </li>
                     <li class="nav-item dropdown has-megamenu">
                         <a class="nav-link nav-text dropdown-toggle fs-5 fw-bold {% if request.path == products_url %}active" 
-                            aria-current="page{% endif %}" href="#" data-bs-toggle="dropdown" 
-                            aria-expanded="true">Beverages</a>
+                            aria-current="page{% endif %}" href="" data-bs-toggle="dropdown" 
+                            aria-expanded="false">Beverages</a>
                         {% include "includes/megamenu.html" %}
                     </li>
                 </ul>
