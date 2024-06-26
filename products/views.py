@@ -193,3 +193,28 @@ def view_add_product(request):
     }
 
     return render(request, "products/product_add.html", context)
+
+
+def view_edit_product(request, product_id):
+    """
+    View to edit a product in the store
+    """
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == "POST":
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Successfully updated product!")
+            return redirect(reverse("product_details", args=[product.slug]))
+        else:
+            messages.error(request, "Failed to update product. Please ensure the form is valid.")
+    else:
+        form = ProductForm(instance=product)
+        messages.info(request, f"You are editing {product.name}")
+
+    context = {
+        "form": form,
+        "product": product,
+    }
+
+    return render(request, "products/product_edit.html", context)

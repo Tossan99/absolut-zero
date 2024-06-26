@@ -8,7 +8,7 @@
 {% block extra_title %}Add Product{% endblock %}
 
 {% block content %}
-<!-- product_add.html content starts here -->
+<!-- product_edit.html content starts here -->
 
 <!-- Hero image section -->
 <div class="hero-img py-5">
@@ -24,18 +24,18 @@
     <div class="container-xxl px-4 px-lg-5 my-5">
         <div class="row">
             <div class="col-12">
-                <h2 class="text-center h1">Add a Product</h2>
+                <h2 class="text-center h1">Edit Product</h2>
                 <hr>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-12 col-lg-7 col-md-10">
-                <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-right mt-4">
                         <a class="second-btn me-2" href="{% url 'products_list' %}">Cancel</a>
-                        <button class="main-btn" type="submit">Add Product</button>
+                        <button class="main-btn" type="submit">Edit Product</button>
                     </div>
                 </form>
             </div>            
@@ -43,7 +43,7 @@
     </div>
 </section>
 
-<!-- product_add.html content ends here -->
+<!-- product_edit.html content ends here -->
 {% endblock %}
 
 {% block postloadjs %}

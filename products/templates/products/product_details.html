@@ -20,8 +20,16 @@
     </div>
 </div>
 
-<section class="pt-md-5 pt-3">
+<section class="">
     <div class="container-xxl px-4 px-lg-5 my-5">
+        {% if request.user.is_superuser %}
+        <div class="row mb-4 mb-md-0">
+            <div class="col-12 text-center text-md-start">
+                <a href="{% url 'edit_product' product.id %}" class="edit-btn fs-5 me-2">Edit<i class="fa-regular fa-pen-to-square ms-2"></i></a>
+                <a href="{% url 'edit_product' product.id %}" class="delete-btn fs-5">Delete<i class="fa-regular fa-trash-can ms-2"></i></a>
+            </div>
+        </div>
+        {% endif %}
         <div class="row gx-4 gx-lg-5 align-items-center">
             <div class="col-md-6 mb-md-0 mb-4 justify-content-center d-flex"> 
                 <img class="product-img" 

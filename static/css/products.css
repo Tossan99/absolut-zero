@@ -58,17 +58,20 @@
 
 .product-img {
     height: 400px;
+    max-width: 400px;
 }
 
 @media screen and (max-width: 767px) {
     .product-img {
         height: 300px;
+        max-width: 300px;
     }
 }
 
 @media screen and (max-width: 500px) {
     .product-img {
         height: 200px;
+        max-width: 200px;
     }
 }
 
