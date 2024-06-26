@@ -13,11 +13,12 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural = 'Categories'
 
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100,
+            help_text="Write the name in all lower case, no special characters and use - as blank spaces")
     friendly_name = models.CharField(max_length=100, null=True, blank=True)
 
     def __str__(self):
-        return self.name
+        return self.friendly_name
 
     def get_friendly_name(self):
         return self.friendly_name
@@ -30,11 +31,12 @@ class Subcategory(models.Model):
     class Meta:
         verbose_name_plural = "Subbategories"
 
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100,
+        help_text="Write the name in all lower case, no special characters and use - as blank spaces")
     friendly_name = models.CharField(max_length=100, null=True, blank=True)
 
     def __str__(self):
-        return self.name
+        return self.friendly_name
 
     def get_friendly_name(self):
         return self.friendly_name
@@ -55,23 +57,24 @@ class Product(models.Model):
         help_text="Leave this field empty, it will be set when creating the product")
     slug = models.SlugField(max_length=300, blank=True, editable=False, unique=True,
         help_text="Leave this field empty, it will be set when creating the product")
-    description = models.TextField(max_length=2000, blank=True)
+    description = models.TextField(max_length=2000, blank=False)
     volume = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10000)],
-                                 blank=False, help_text="Volume in ml")
+                                blank=False, help_text="Volume in ml")
     price = models.DecimalField(max_digits=7, decimal_places=2, blank=False,
-        help_text="Price in SEK")
+                                help_text="Price in SEK")
     percentage = models.DecimalField(max_digits=4, decimal_places=2, blank=False,
-        help_text="(e.g. 0,30 if 0.30%)")
-    image = models.ImageField(null=True, blank=True)
+                                    help_text="(e.g. 0,30 if 0.30%)")
+    image = models.ImageField(null=True, blank=False)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    sweetness = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
-    bitterness = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
-    body = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
+    sweetness = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)],
+                                    help_text="On a scale from 1-10")
+    bitterness = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)],
+                                    help_text="On a scale from 1-10")
+    body = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)],
+                                help_text="On a scale from 1-10")
     organic = models.BooleanField(default=False)
-    discount = models.BooleanField(default=False,
-        help_text="Leave this checkbox empty, it will be set to True if a discount is set")
-    old_price = models.DecimalField(max_digits=7, decimal_places=2, blank=True, null=True,
-        help_text="Leave this field empty, it will be set later")
+    discount = models.BooleanField(default=False)
+    old_price = models.DecimalField(max_digits=7, decimal_places=2, blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -151,7 +154,7 @@ class DiscountProduct(models.Model):
     )
     discount_percentage = models.DecimalField(
         max_digits=4, decimal_places=2, blank=False,
-        help_text="The percentage of the discount applied to the product. (1-100)"
+        help_text="The percentage discount applied to the product (e.g. 25 will give a 25% discount)"
     )
 
     def __str__(self):

@@ -46,7 +46,9 @@ class ProductForm(forms.ModelForm):
 
     class Meta:
         model = Product
-        fields = "__all__"
+        fields = ("name", "category", "subcategory", "description",
+              "volume", "price", "percentage", "sweetness",
+              "bitterness", "body", "organic", "image")
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -58,4 +60,5 @@ class ProductForm(forms.ModelForm):
         self.fields["category"].choices = categories_friendly_names
         self.fields["subcategory"].choices = subcategories_friendly_names
         for field_name, field in self.fields.items():
-            field.widget.attrs["class"] = "form-control form-field"
+            if field_name!= "organic":
+                field.widget.attrs["class"] = "form-control form-field"
