@@ -173,10 +173,15 @@ def view_edit_product_review(request, slug, review_id):
     return HttpResponseRedirect(reverse("product_details", args=[slug]))
 
 
+@login_required
 def view_add_product(request):
     """
     View to add products as admin
     """
+    if not request.user.is_superuser:
+        messages.error(request, "Sorry, only store owners have access to that feature.")
+        return redirect(reverse("home"))
+
     if request.method == "POST":
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -195,10 +200,15 @@ def view_add_product(request):
     return render(request, "products/product_add.html", context)
 
 
+@login_required
 def view_edit_product(request, product_id):
     """
     View to edit a product in the store
     """
+    if not request.user.is_superuser:
+        messages.error(request, "Sorry, only store owners have access to that feature.")
+        return redirect(reverse("home"))
+    
     product = get_object_or_404(Product, pk=product_id)
     if request.method == "POST":
         form = ProductForm(request.POST, request.FILES, instance=product)
@@ -219,10 +229,16 @@ def view_edit_product(request, product_id):
 
     return render(request, "products/product_edit.html", context)
 
+
+@login_required
 def view_delete_product(request, product_id):
     """
     View to delete a product from the store
     """
+    if not request.user.is_superuser:
+        messages.error(request, "Sorry, only store owners have access to that feature.")
+        return redirect(reverse("home"))
+    
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, f"Successfully deleted product {product.name}!")
