@@ -75,7 +75,12 @@
                                     <div class="text-rating fs-6 mt-2">
                                         {% include "includes/rating.html" %}
                                     </div>
-                                    <div class="fs-6 mb-2 d-flex justify-content-start mt-auto fw-bold">
+                                    {% if product.organic == True %}
+                                        <div class="mt-2 fs-6">
+                                            <span class="eco-tag mb-0">Eco <i class="fa-solid fa-leaf ms-2"></i></span>
+                                        </div>
+                                    {% endif %}
+                                    <div class="fs-6 d-flex justify-content-start mt-auto fw-bold">
                                         <p class="">{{ product.volume }}ml</p>
                                         <p class="px-2 fw-bold">·</p>
                                         <p class="">{{ product.percentage }}%</p>

@@ -61,6 +61,14 @@
     max-width: 400px;
 }
 
+.eco-tag {
+    background-color: #43A047;
+    color: #F5F5F5;
+    padding: 5px 12px;
+    border-radius: 12px;
+
+}
+
 @media screen and (max-width: 767px) {
     .product-img {
         height: 300px;
