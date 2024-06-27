@@ -6,6 +6,8 @@
 ![Logo](documentation/readme_images/absolut-logo-black.png)
 
 Welcome to Absolute Zero, your ultimate destination for exquisite alcohol-free beverages! At Absolute Zero, we believe that enjoyment shouldn't compromise your lifestyle choices. Our carefully curated collection spans a wide range of flavors and styles, from sparkling sodas to artisanal mocktails, ensuring there's something to tantalize every taste bud. With a commitment to quality, innovation, and customer satisfaction, Absolute Zero is more than just a store – it's a lifestyle. Join us on a journey of flavor discovery and elevate your drinking experience with Absolute Zero. Because here, zero alcohol never means zero excitement. Cheers to a life of taste without compromise!🥂
+
+![Am I Responsive](documentation/readme_images/am-i-responsive.JPG)
     
 Visit Absolute Zero live website here! [Absolute Zero](https://absolut-zero-9622981fe97d.herokuapp.com/)
 

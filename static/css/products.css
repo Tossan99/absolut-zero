@@ -56,31 +56,35 @@
     color: var(--blue);
 }
 
-.product-img {
-    height: 400px;
-    max-width: 400px;
-}
-
 .eco-tag {
     background-color: #43A047;
     color: #F5F5F5;
     padding: 5px 12px;
     border-radius: 12px;
+}
 
+.product-img {
+    height: 400px;
+    max-width: 300px;
 }
 
 @media screen and (max-width: 767px) {
     .product-img {
         height: 300px;
-        max-width: 300px;
+        max-width: 200px;
     }
 }
 
 @media screen and (max-width: 500px) {
     .product-img {
         height: 200px;
-        max-width: 200px;
+        max-width: 150px;
     }
+}
+
+.product-list-img {
+    height: 200px;
+    max-width: 150px;
 }
 
 /* Product reviews-------------------------------------------------- */

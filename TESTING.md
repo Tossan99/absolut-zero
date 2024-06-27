@@ -2,6 +2,8 @@
 
 ![Logo](documentation/readme_images/absolut-logo-black.png)
 
+![Am I Responsive](documentation/readme_images/am-i-responsive.JPG)
+
 Developer: [Erik Guldbrand](https://github.com/Tossan99) <br>
 [Live webpage](https://absolut-zero-9622981fe97d.herokuapp.com/)<br>
 [Project Repository](https://github.com/Tossan99/absolut-zero)<br>

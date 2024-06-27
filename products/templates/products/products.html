@@ -59,8 +59,8 @@
                         <div class="card container-fluid h-100 p-0">
                             <div class="row mx-0">
                                 <div class="col-4 d-flex justify-content-center">
-                                    <img class="py-3" 
-                                        src="{{ product.image.url }}" height="200" alt="{{ product.name }}">
+                                    <img class="py-3 product-list-img" 
+                                        src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </div>
                                 <div class="col-8 d-flex flex-column p-0 pt-2">
                                     <div class="p-0">
@@ -76,7 +76,7 @@
                                         {% include "includes/rating.html" %}
                                     </div>
                                     {% if product.organic == True %}
-                                        <div class="mt-2 fs-6">
+                                        <div class="mt-2 mb-2 fs-6">
                                             <span class="eco-tag mb-0">Eco <i class="fa-solid fa-leaf ms-2"></i></span>
                                         </div>
                                     {% endif %}
