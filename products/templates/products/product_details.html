@@ -26,7 +26,7 @@
         <div class="row mb-4 mb-md-0">
             <div class="col-12 text-center text-md-start">
                 <a href="{% url 'edit_product' product.id %}" class="edit-btn fs-5 me-2">Edit<i class="fa-regular fa-pen-to-square ms-2"></i></a>
-                <a href="{% url 'edit_product' product.id %}" class="delete-btn fs-5">Delete<i class="fa-regular fa-trash-can ms-2"></i></a>
+                <a href="#" data-product-id="{{ product.id }}" class="delete-btn delete-product fs-5">Delete<i class="fa-regular fa-trash-can ms-2"></i></a>
             </div>
         </div>
         {% endif %}
@@ -197,7 +197,7 @@
                         <div class="row mt-2 justify-content-end">
                         {% if user.is_authenticated and review.author == user %}
                             <div class="col-5">
-                                <button class="edit-btn me-2" review_id="{{ review.id }}">Edit</button>
+                                <button class="edit-btn me-2" data-review-id="{{ review.id }}">Edit</button>
                                 <a class="delete-btn mt-2" href="{% url 'delete_product_review' product.slug review.id %}">
                                     Delete</a>
                             </div>
@@ -217,29 +217,30 @@
     </div>
 </section>
 
+<!-- Delete confirmation modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true" >
+    <div class="modal-dialog">
+        <div class="modal-content content-background">
+            <div class="modal-header">
+                <h4 class="modal-title" id="deleteModalLabel">Placeholder Title</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="deleteModalText">Placeholder text</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a id="deleteConfirm" href="" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- product_details.html content ends here -->
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
-    <script>
-        const editButtons = document.getElementsByClassName("edit-btn");
-        const reviewText = document.getElementById("content");
-        const reviewForm = document.getElementById("reviewForm");
-        const submitButton = document.getElementById("submitButton");
-        const reviewHeading = document.getElementById("reviewHeading");
-
-        for (let button of editButtons) {
-            // Edits the targeted review
-            button.addEventListener("click", (e) => {
-                let reviewId = e.target.getAttribute("review_id");
-                let reviewContent = document.getElementById(`review${reviewId}`).innerText;
-                reviewText.value = reviewContent;
-                submitButton.innerText = "Update";
-                reviewHeading.innerText = "Edit your review";
-                reviewForm.setAttribute("action", `edit_product_review/${reviewId}`);
-            });
-        }
-    </script>
+<script src="{% static 'js/product_details.js' %}"></script>
 {% endblock %}
